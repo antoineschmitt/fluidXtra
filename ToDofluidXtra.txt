@@ -1,0 +1,80 @@
+--- To Do Now fluidsynth ---
+
+----
+
+Clarify the doc for download sondonft in shockwave :
+for shockwave, please just do not call the function, so that it will use the default location. In shockwave, this is the way to go : do not specify any download location, start download : downloadFolderStartDownload("http://myserver/mysoundfont.sf2", "mysoundfont.sf2"). The soundfont will be downloaded to the default (hidden) location, use downloadFolderGetDownloadRatio() to check when download is done. Then use just the soundfont filename when calling loadSoundFont, it will be found in the download folder : loadSoundFont("mysoundfont.sf2"). I realize that the documentation is not clear about this, sorry.
+
+-------
+
+package string "fluidXtra is a full-featured soundfont sound synthesizer"
+-------- API for V2 ----------API changes needed for the Xtra------- SUMMARY --------// **** in synth.h ****fluid_synth_get_pitch_wheel_sensfluid_synth_get_reverb_onfluid_synth_get_chorus_on// **** in ramsfont.h ****fluid_ramsfont_create_izone // replaces fluid_ramsfont_add_izonefluid_ramsfont_izone_set_keyrangefluid_ramsfont_izone_set_namefluid_ramsfont_izone_get_genfluid_ramsfont_izone_get_loopfluid_ramsfont_izone_get_keyrange--------- DETAILS ----------// **** in synth.h ****FLUIDSYNTH_API int fluid_synth_get_pitch_wheel_sens(fluid_synth_t* synth, int chan, int* pval);(When implemented, remove the fluid_chanmockup file from fluidXtra)fluid_synth_get_reverb_onfluid_synth_get_chorus_on(when done, remove the reverbOn and chorusOn variables from Xtra)// **** in ramsfont.h ****fluid_ramsfont_izone_get_genfluid_ramsfont_izone_get_loop(bool*, int*, int*)fluid_ramsfont_izone_get_keyrange(ramsf, bank, presetNum, sample, *lokey, *hikey);(When implemented, simplify the fluid_xtra_sample_t struct)int fluid_ramsfont_add_izone(fluid_ramsfont_t* sfont,				unsigned int bank, unsigned int num, fluid_sample_t* sample,				int lokey, int hikey);// should include a way to set the preset name (for now, it uses the sample name, which is not good).// maybe:int fluid_ramsfont_create_izone(fluid_ramsfont_t* sfont,				unsigned int bank, unsigned int num, fluid_sample_t* sample);fluid_ramsfont_izone_set_keyrange(ramsf, bank, presetNum, sample, lokey, hikey);fluid_ramsfont_izone_set_name(ramsf, bank, presetNum, sample, char*);--- DONE --------------------------------------- DONE ------------------------------11.7.02Xtra API	- init(object me, plist initParams)	- free12.7.02- getError : error management- log/debug management- loadSoundFont- unloadSoundFont- getSoundFontsStack- getSoundFontInfo- programChange- getProgram13.7- cleanup instance/Xtra init + unique instance- noteon- noteoff- controlChange	- pitchbend	- volume	- pan- getControl- getControls- allNotesOff15.7- incorporated Xtra on PC17.7- check values- sustain- reverbsend, chorussend, modulation- changer NO_MIDI_IN en WITHOUT_MIDI_IN5-7/8- sequencer implAPI setTimeUnitAPI getTimeUnitAPI getTimeseq processing:	noteon	noteoff	programchange	controlChange	allnotesoffAPI allsoundsoffAPI note8/8- event_t private- heap in event.h- separated seq from synth- clients become dests9/8Seq :=> mettre time in event, virer event_entry	- pour usage futur de timestamp d'eventIIWU_SEQ_ANYCONTROLCHANGEalways process lateevents in right orderXtra API	getDestinations	destination processing10/8- callbacks	- store plist callbackNb->callbackInfo+done	- send timer event with callbackNb, pointer to MoaMmValue	- removeEvents:		- if callback			- cleanup our callback plist (same filter as seq: dest and src)		- call seq	- in callback from seq:		- mark done (no malloc !)	- poll (or idle)		- callHandler on done		- remove from plist- sources11/8bug : notification process :	- does not go through the Destroy method any more	- freezes the machine on Director quit- remove the getCallbacks call- bug: getError is strange sometimes- bug : sequencer looses events ?12/8- reverb4/10- bug si load unexisting sound font (voir démo et loader unexisting one)- crash en sortie du séquenceur sur PC (stop de démo)- all integer/float arguments/properties : accept float/integer- change minmax values for control, etc.. 0.0 to 1.0 / -1 to 15/10- iiwusynth = DLL Mac/Windows15/10 - 5/11- added a createSoundFont API- added loadSampleFile API- added loadSampleMember APIXtra : optimize poll (only push context if some callback to call...)- sample : loop, envelope- Xtra : change chorus 'delay' name : phasing ?- Corrected bug in Xtra sequencer with 'done'- Corrected bug in Xtra sequencer with 'sources'- corrected a bug in sequencer when changing timeUnit/timeScaleRELEASE 2.614.11- Some events are lost/not-removed with the sequencer	- often on Mac : with ticks = 10ms, metronome = 500ms	- rare on PC : ticks = 1ms, metronome = 50ms	NOT TRUE : only a side effect of Noteoff	21.11- Bug : Sequnecer:	- si 4 events posted, only one is actually done, sometimes 2	- test : metronome, avec 4 mesures postés à la fois	- Mac and Windows...	FIXED : in seq.c- made the heap more secure22.11- getTimeUnit/setTimeUnit cleanup and uses float29.11- Bug DISCUSS : Sequencer is not precise if in ms on Mac	- test : ticks = 1 ms, metronome = 500ms	- only for sound event, not callback event (strange)	==> CORRECTED : virtual memory...RELEASE 2.74/12- Port to new iiwu	- pan		- iiwu : pan actually spans from 32 to 96... (64 +- 32)		- sf2.0 specs : -50% = full left 50% = full right			so I think that range of pan should be -500/500			mod[pan].amount = 500. ?			For now, I set the range of the pan, in the Xtra to 32<>96	- DEFAULT SETTINGS- Sequencer :	- problems with early events	- test with the music box .dir	- FIXED iiwu_seq.c- TImeScale can now slide slowly, no events lost or delayed	- FIXED iiwu_seq.c9/1/03BUG on callbacks :	- some callbacks are called after the unschedule on their source OK	- the args of callbacks are not freed (refcount augments...) OK	- crash sometimes when schedule is called during a callback (I think) OKFixed in branch of 2.7 : 2.71Reported also in current22/1/03- added pitchwheel to controlChange. Only in 2.72-- start 2.88/3/03	- test the sndmanager code		- remove the portaudio code	- pitchwheel value is in semitones		- document Xtra API and change impl	- all sounds off	- reset	- iiwu_synth_get_cpu_load		- CPUusage	- add 'poll' API to force polling (during mouseDown for example)27.3- XtraTest	- cpuLoad	- program_select8.5- test App		- claviers = channel			- only one note playing OK		- zone de controle pour channel sélectionné + ctrls globaux		- zone de chargement de bank, une bank samples	- reset7 Mai 2003in fluid/Xtra/TestApp	- pitchsensibility	- ProgramChange can use #soundFont (use program_select) TEST		- change Doc and Xtra APIMai 11 2003	- setGen/getGen	- XTraTest : generatorsMai 12		- struct en mémoire :			- int sampleID			- ramizone* izone			- sample* sam;			-- avec callback pour nettoyer				- si sfont unloaded (ou catch up the unload)		- change loadSampleFile et loadSampleMember			- pour nécessiter un soundFont (ram) en arg			- retourne un sampleID						- getFrameCount(sampleID)		- setLoop(sampleID, isLoop)		- getLoop(sampleID)		- setLoopPoints(sampleID, loopStart, loopEnd)		- getLoopPoints(sampleID) -- loopStart, loopEnd		-- attack, *hold?*, sustain, decay, release ?		- setEnvelope(sampleID, delay, attack, hold, sustain, decay, release)		- getEnvelope(sampleID) -- delay, attack, hold, sustain, decay, releaseMai 13API	- getKeyRange	- getRootKey	- getSampleName	- deleteSample(sampleID)	- loopStart/End values to document and check in function	- manque une prop #sampleIDs dans getSoundFontInfo (pour ramsfont)	- document the new APIs		- API getFrameRate	- accept other samplerates		- Pour les echantillons:		- fluid_sample_t: sample->samplerate = <samnple-rate>;XtraTest		- loop		- getSoundFontInfo has a sampleIDs prop in ramsfonts		- keyRange, rootKey, name			- sampleRate		- envelope	- stereo live sample :		- make 2 izones- BUG : deleteSample should really deletes sample (free it..). But it should wait for the sample not to be used any more: wait for clarification about the use of the sample refcount in fluidsynth...- reloadsoundfont in Xtra
+
+
+-- Jan 2005
+
+Port of fluidsynth1.0.5 to carbon
+
+- file config_macosCARB.h
+- macro SNDMANCARBON_SUPPORT in
+	- fluid_adriver.c
+- file fluid_sndmgr_carbon.c
+- #if JACK_SUPPORT in fluid_jack.c
+- in fluid_midishare.c, change:
+#include "config.h"
+to
+#include "fluidsynth_priv.h"
+- in file fluid_sys.c, change:
+NewTimerProc(_timerCallback)
+in
+NewTimerUPP(&_timerCallback)
+
+and change the _timerCallback function 
+void_timerCallback
+in
+pascal void_timerCallback
+
+
+JUNE 2005
+30 JUNE : autodownloadble + packages
+
+Release 4.1 MacOSX and Windows
+
+JULY 5th 2005
+- cleanup Destroy function : do not eat CPU any more, nor crash on exit
+- added 'free' Xtra API for explicit free
+
+AUGUST 2005
+- local fluid itself : fixed crash bug when unloading a ram soundfont after having released some of its internal samples (in fluid_ramsfont.c)
+
+MAY12
+- sound output setting OK
+- setting option list OK
+- record to file
+	- using audio.driver set to 'file doesn't work : it is a non realtme sound renderer : you schedule all the events and then call this, which creates a file (for midi to aiff conversion).
+	- I could use new_fluid_audio_driver2, with a callback of mine, that needs to call fluid_synth_process to do the processing, but then can store data to a file....
+		- which means that I would provide this in addition.
+	fluid_synth_process(fluid_synth_t* synth, int len, int nin, float** in,
+                    int nout, float** out)
+
+Plan
+	- rewrite fifo for pure bytes. Port on glib mutex OK
+	- create FILE
+	- on Mac
+		- new2 on driver, get data, and copy to fifo
+	- on Windows
+		- patch fluidsynth to get the data (like in old fluidRecord), copy to fifo
+	- make a thread that reads fifo and flushes to file (like old fluidRecord) OK
+
+- problème pour lire members sons de Director
+	- function MyParseSndHeader -206
+		- même problème dans previous version !
+
+11jun12
+- outbuffer larger : ex 64 audio buffers OK
+- set the output sample rate of the file to synth.sample-rate OK
+- change the documentation NOT to state mono OK
+- use the imported sound sample rate to tell it to fluidSynth OK
+- loadSampleFile on UNICODE filenames (windows) OK
+- TEST all PC
+- improve panning of stereo sounds ? BUG dans fluidsynth...

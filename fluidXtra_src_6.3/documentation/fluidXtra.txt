@@ -1,0 +1,1323 @@
+FluidSynth Xtra Documentation
+Version 6.2 - Oct 2013
+www.schmittmachine.com/fluidXtra.html
+
+--- Introduction
+The fluidXtra is an Xtra for Adobe Director which integrates the fluidsynth software sound synthesizer into Director. It gives access to all the features of fluidsynth, and adds a few features, especially the ability to load sound files and sound cast members directly into the synth.
+
+Non-exhaustive feature-list :
+- implements the full soundfont2 specification
+- MIDI compatible
+- uses sample file or sound cast member as instrument
+- unlimited number of sound channels and voices
+- realtime effects through generators (pitchbend, LFOs, loops, ...)
+- global reverb, chorus
+- independent sequencer (millisecond precision)
+
+The fluidXtra has been developed by Antoine Schmitt (www.schmittmachine.com) as part of the "infiniteCD Author" project (www.infiniteCD.org) managed by Antoine Schmitt and produced by Hyptique (www.hyptique.com), with support from the PRIAM funds from the French government. It is now available for free and open source under the GNU LGPL license.
+Source code may be found on http://savannah.nongnu.org/projects/fluid/ (if not yet, soon).
+
+The OSX version has been developed with the support of Morton Subotnick of Wizard Music.
+
+The port to fluidsynth 1.1.5 and the recording API has been developed with the support of Marcel Blum for his Soundplant project (www.soundplant.org).
+
+The fluidsynth software synthesizer has been designed by Peter Hanappe, and is available under the GNU LGPL license. It emulates in software the SoundFont 2.01 Specifications (www.soundfont.com) designed by Creative Labs (SoundBlaster maker). It is basically a small, fast and robust wavetable synthesizer, with a MIDI-like interface, integrated sequencer and realtime effects.
+For more information on the fluidsynth synthesizer: www.fluidsynth.org
+For source code : http://savannah.nongnu.org/projects/fluid/
+
+The fluidXtra uses SoundFont banks. Free SoundFont banks can be found on the Net, for example on the HammerSound site or the Real Midi site. For a free SoundFont editor (Windows), check out Vienna.
+www.hammersound.net
+realmidi.virtualave.net
+http://developer.creative.com/music/DC_D&H_Music-sfmix.asp
+
+
+--- Licensing
+
+/* FluidXtra
+ *
+ * Copyright (C) 2004  Antoine Schmitt, Hyptique, Peter Hanappe and others.
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public License
+ * as published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *  
+ * You should have received a copy of the GNU Library General Public
+ * License along with this library; if not, write to the Free
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+ * 02111-1307, USA
+ */
+
+--- Release notes
+Version 2.0.1 : first beta version - October 2002
+Version 2.0.1 : first beta version - October 2002
+Version 2.5 : second beta - November 2002
+Version 2.6 : third beta - November 2002
+Version 2.7 : fourth beta - November 2002
+Version 3.0 : fifth beta - April 2003
+Version 4.0 : LGPL release - May 2004
+compiled with fluidsynth v0.2.4 and libsndfile 0.0.16
+Version 4.0.1 : May 2004 : does not depend on MSVCR71(D).DLL any more
+Version 4.0.2 : Aug 2004 : corrected bug when loading stereo cast member
+Version 4.1 : ported to fluid  1.0.5
+Version 4.2 : fixed misc crash bugs. Added the free() method.
+Version 4.3 : added access to all settings at startup
+Version 5.0 : added soundfont download mechanism, ported to d11, fixed sequencer precision bug
+Version 5.1 : fixed bug with loadSoundMember on MacIntel/d11
+Version 5.2: fixed bug on MacIntel D11 "loadSoundFont failed" (endianness problems)
+Version 5.3: fixed 2 bugs with soundfont downloading on D11 (paths problems)
+Version 5.4 : added the possibility to set a soundfont download folder in shockwave
+Version 5.5 : added the possibility to reset the soundfont download folder
+Version 5.6 : added the downloadFolderGetLocalProps API
+Version 6.0 : ported to fluidsynth 1.1.5, added getSettingsOptions, added the recording API, fixed the sound members on Macintosh that were not recognized anymore in D11.x
+Version 6.1 : channel 9 works again as a melodic channel
+Version 6.2 : improved memory management for allowing loading of very large sound files. Improved error reporting related to this.
+
+--- Technical Requirements
+- Macintosh MacOSX
+- Windows >= 95
+- Director >= 11.0
+- Sound Card
+
+
+--- Installation
+
+Drop the fluidXtra, fluidXtra.xtra or fluidXtra.x32 file into the Xtras folder of Director.
+
+File to use :
+MacOSX : fluidXtra.xtra
+Windows : fluidXtra.x32
+
+
+---------------------------------------------------
+--- Documentation
+---------------------------------------------------
+
+- Calls
+
+All function calls are done using lingo's call syntax:
+
+object.func(args...)
+or
+func(object, args...)
+
+Where object is the instance of the Xtra created with the 'new'
+method.  All functions return either a value, which can be either 0 (zero),
+meaning that the function executed without errors, or a negative
+number, meaning that an error occurred. If an error occurred, the
+function 'getError' returns a human-readable string describing the
+error.
+
+- Instances
+
+Many instances of the Xtra may coexist at the same time.
+Instances are created with the 'new' function, and deleted by assigning
+the lingo variable to VOID, as usual for Xtra instances.
+
+- SoundFont file, stack, presets
+
+A SoundFont bank is typically stored in a file, called a SoundFont
+file, of extension .sf2. In the following documentation, we will refer
+to the SoundFont file or SoundFont bank by the term
+'SoundFont'. Please note that the term 'bank' will always refer to a
+MIDI bank, not a SoundFont bank.
+
+A SoundFont has a name and contains 'presets'. A preset represents a
+way to play a sound, as a combination of sample data and parameters on
+how to play it. The preset is the fundamental sound object of the
+SoundFont format.
+
+A preset has a name, and is defined uniquely by a MIDI bank number and
+a preset number in the bank. The MIDI bank number ranges from 0 to
+16383 and the preset number from 0 to 127. Thus a SoundFont file may
+contain up to 128x16384=2097152 presets.
+
+SoundFont files may be loaded in the synthesizer, using the
+'loadSoundFont' function, thus making its presets available for
+playing. A SoundFont may be unloaded using the 'unloadSoundFont'
+function.
+
+If more than one SoundFont file is loaded, the SoundFonts are stacked
+in the synthesizer : when a preset is requested by the 'programChange'
+function, it is looked up in all successive SoundFonts, from first to
+last, until the preset with the right preset number and bank number is
+found. The SoundFont stack may be examined but not changed : the
+SoundFonts are stacked in inverse loading order: the last loaded
+SoundFont is the first searched.
+
+A special SoundFont is maintained by the synthesizer, corresponding to
+user-defined presets, built from user-provided samples. These presets
+are defined using the 'loadSample' and 'loadSoundMember'
+functions. This user SoundFont is inserted in the SoundFont stack at
+the first call of one of these functions. All subsequent calls to one
+of these functions will insert the created preset in the same user
+SoundFont.
+
+- Channels
+
+According to the MIDI format and protocol, the synthesizer has a fixed
+number of channels. This is the maximum number of presets that may be
+playing at the same time. At all times, one given channel plays at
+most one preset (but can play many notes from this preset). A preset
+is associated to a channel using the 'programChange' function. The
+number of channels of the synthesizer is defined at init time using
+the 'new' function. A given preset may be associated to many
+channels.
+
+
+-----------------
+-- Initialization
+-----------------
+
+new(Xtra "fluidsynth")
+new(Xtra "fluidsynth", plist settings)
+-----------------
+
+ fluidObj = new(Xtra "fluidsynth", ["synth.midi-channels": 32])
+
+Creates a new instance of the FluidSynth Xtra, and creates the synthesizer and a sequencer.
+To destroy the Xtra, you can simply set its variable to VOID or to be cleaner, use the 'free' method.
+
+The optional 'settings' argument is a property-list of key-value pairs defining the settings.
+All the fluid settings are accessible through this API. The standard fluidsynth settings are defined in the fluidsynth documentation at http://sourceforge.net/apps/trac/fluidsynth/wiki/FluidSettings. Here are some interesting ones :
+
+- synth.gain : same as the master gain
+- synth.sample-rate : The sample rate of the audio generated by the synthesizer.  Max 96000.000, but note that not all sound hardware properly supports higher rates.
+- synth.polyphony : The polyphony defines how many voices can be played in parallel. The number of voices is not necessarily equivalent to the number of notes played simultaneously.
+- synth.midi-channels : This setting defines the number of MIDI channels of the synthesizer. 
+- synth.reverb.active : When set to "yes" the reverb effects module is activated.
+- synth.chorus.active : When set to "yes" the chorus effects module is activated.
+- audio.sample-format : On Mac can be "16bits" or "float", on Windows only "16bits".
+- audio.period-size : buffer size (related to latency)
+- audio.periods : buffers count (related to latency)
+- audio.coreaudio.device : output sound device (Mac)
+- audio.dsound.device : output sound device (Windows)
+
+
+
+These settings can only be set when the synth is created not after. If you need to change a setting, first free the synth and recreate it with the desired settings.
+
+Returns an error code (unable to create, hardware error, bad arguments).
+
+
+
+free(object me)
+-----------------
+
+ex : fluidObj.free()
+
+Stops all sound at ounce, cleans up all memory used by the synth and the Xtra, and frees the synth.
+No other function should be called after the 'free' function. this function is used to cleanly clean the synth, for example before re-creating the Xtra.
+
+Returns an error code (unable to create, hardware error, bad arguments).
+
+
+
+getSetting(object me)
+-----------------
+
+ex : sampleRate = fluidObj.getSetting("synth.sample-rate")
+
+Returns the value of the given setting. Or an error code (no synth).
+
+
+
++ getSettingsOptions(string option)
+-----------------
+ex :   xtraObj = (xtra "fluidsynth")
+xtraObj.getSettingsOptions("audio.coreaudio.device") -- mac
+xtraObj.getSettingsOptions("audio.dsound.device") -- windows
+
+Returns the list of possible values for the given option, in the form of a comma-separated string of options.  Its primary intended use is to identify all possible sound output device values for the audio.dsound.device/audio.coreaudio.device settings.  Does not work with most other settings.
+
+
+
+getChannelsCount(object me)
+-----------------
+
+ex : nbchan = getChannelsCount(fluidObj)
+
+Returns the number of channels of the synthesizer. By default, there are 16 channels.
+
+Returns an error code (no synth).
+
+
+getMasterGain(object me)
+-----------------
+
+ex : gain = getMasterGain(fluidObj)
+
+Returns the master gain of the synthesizer. By default the gain is 0.2.
+The gain is between 0.0 and 2.0.
+Returns an error code (no synth).
+
+
+setMasterGain(object me, float gain)
+-----------------
+
+ex : setMasterGain(fluidObj, 0.5)
+
+Sets the master gain of the synthesizer. By default the gain is 0.2.
+The gain should between 0.0 and 2.0. 
+Gains superior to 1.0 (full volume, no attenuation) should be handled
+carefully, as distortion may happen.
+Note that setting the gain to 0.0 triggers a "all note off". To temporarily
+silence the global output without stopping the notes, set the gain to 0.0001.
+Returns an error code (no synth).
+
+
+-----------------
+-- Reverb/Chorus
+-----------------
+
+setReverb(object me)
+setReverb(object me, int onOrOff)
+-----------------
+
+ex : setReverb(fluidObj)
+ex : setReverb(fluidObj, FALSE)
+
+Sets the reverb module of the synthesizer on or off.
+
+Returns an error code (no synth, bad arguments).
+
+
+getReverb(object me)
+-----------------
+
+ex : revOn = getReverb(fluidObj)
+
+Return 1 of the reverb module is on (default), 0 if it is off.
+
+Returns an error code (no synth, bad arguments).
+
+
+setReverbProp(object me, symbol prop, float value)
+-----------------
+
+ex : setReverbProp(fluidObj, #roomsize, 0.9)
+ex : setReverbProp(fluidObj, #level, 0.2)
+
+Sets the value of a property of the reverb module.
+Accepted properties are:
+- #level : the level of the reverb (0.0 = no reverb, 1.0 = full reverb).
+- #roomsize : the size of the room. 0.0 means a very small room, 1.0 means outerspace.
+- #width : the spatial width of the reverb. 0.0 means a very narrow reverb, 1.0 a wide one.
+- #damping : how much power is lost at each reverberation. 1.0 : mostly lost, 0.0 : full reverberation.
+
+All values are between 0.0 and 1.0.
+
+Returns an error code (no synth, bad arguments).
+
+
+getReverbProp(object me, symbol prop)
+-----------------
+
+ex : roomsiz = getReverbProp(fluidObj, #roomsize)
+ex : damping = getReverbProp(fluidObj, #damping)
+
+Returns the float value of the given property of the reverb module. Accepted properties are listed above.
+Returns an error code (no synth, bad arguments).
+
+
+setChorus(object me)
+setChorus(object me, int onOrOff)
+-----------------
+
+ex : setChorus(fluidObj)
+ex : setChorus(fluidObj, FALSE)
+
+Sets the chorus module of the synthesizer on or off.
+
+Returns an error code (no synth, bad arguments).
+
+
+getChorus(object me)
+-----------------
+
+ex : chorusOn = getChorus(fluidObj)
+
+Return 1 of the chorus module is on (default), 0 if it is off.
+
+Returns an error code (no synth, bad arguments).
+
+
+setChorusProp(object me, symbol prop, float value)
+-----------------
+
+ex : setChorusProp(fluidObj, #number, 3)
+ex : setChorusProp(fluidObj, #level, 0.2)
+
+Sets the value of a property of the chorus module.
+Accepted properties are:
+- #level : the level of the chorus. Min is 0.0, maximum accepted is 10.0.
+- #number : the number of secondary voices. Maximum is 99.
+- #speed : the amplitude of the frequency modulation, in Hz. Min is 0.29, max is 5.0.
+- #depth : the maximum delay between secondary voices, in ms. Min is 0, maximum is 100.0.
+
+Returns an error code (no synth, bad arguments).
+
+
+getChorusProp(object me, symbol prop)
+-----------------
+
+ex : number = getChorusProp(fluidObj, #number)
+ex : modulation = getChorusProp(fluidObj, #modulation)
+
+Returns the float value of the given property of the chorus module. Accepted properties are listed above.
+Returns an error code (no synth, bad arguments).
+
+-----------------
+-- Sound Data
+-----------------
+
+loadSoundFont(object me, string filePath)
+-----------------
+
+ex : soundFontID = loadSoundFont(fluidObj, the moviePath & "MySoundFonts.sf2")
+
+Loads a SoundFonts file in the synthesizer and places it at the top of
+the SoundFont stack : it will be the first searched when looking for a
+preset.
+
+The path is absolute, and should be expressed with the local file
+system conventions.
+
+The loaded soundFont will be of type #file.
+
+Returns an ID, an integer uniquely identifying the SoundFont in the stack, or an error
+code (no synth, no file, bad file format, not enough
+memory).
+
+
+createSoundFont(object me)
+createSoundFont(object me, string name)
+-----------------
+
+ex : soundFontID = createSoundFont(fluidObj)
+ex : soundFontID = createSoundFont(fluidObj, "mysoundfont in memory")
+
+Creates an empty SoundFont in memory (type #ram) and places it at the top of
+the SoundFont stack : it will be the first searched when looking for a
+preset using the programChange function.
+
+The returned soundFontID can be used in the #soundFont property of the loadSampleFile or
+loadSampleMember functions.
+
+The created soundFont can be removed from memory, using the unloadSoundFont function.
+
+The 'name' argument is optional and defaults to EMPTY (the empty string).
+
+Returns an ID, an integer uniquely identifying the SoundFont in the stack, or an error
+code (no synth, no file, bad file format, not enough
+memory).
+
+
+unloadSoundFont(object me)
+unloadSoundFont(object me, int soundFontID)
+-----------------
+
+ex : unloadSoundFont(fluidObj, 1)
+ex : unloadSoundFont(fluidObj)
+
+Unloads the SoundFont of the given ID of the SoundFont stack.
+The soundFontID argument is optional, and defaults to the first searched
+SoundFont (the last loaded).
+
+All types of soundFonts can be unloaded from memory. If a ram soundfont is unloaded, all samples that have been added to it are unloaded too, and thus must not be addressed any more (see loadSampleFile and loadSampleMember functions).
+
+Returns an error code (no synth, bad ID).
+
+
+reloadSoundFont(object me)
+reloadSoundFont(object me, int soundFontID)
+-----------------
+
+ex : reloadSoundFont(fluidObj, 1)
+ex : reloadSoundFont(fluidObj)
+
+Reloads the SoundFont of the given ID of the SoundFont stack.
+The soundFontID argument is optional, and defaults to the first searched
+SoundFont (the last loaded).
+This is useful when a soundFont is known to have changed outside
+the synthesizer.
+Only SoundFonts of type #file can be reloaded.
+
+Returns an error code (no synth, bad ID).
+
+
+getSoundFontsStack(object me)
+-----------------
+
+ex : aList = getSoundFontsStack(fluidObj)
+
+Returns a lingo list containing all the IDs of the SoundFonts in the stack, sorted from first searched to last searched (last loaded to first loaded).
+May return an error code (no synth).
+
+
+getSoundFontInfo(object me)
+getSoundFontInfo(object me, int soundFontID)
+-----------------
+
+ex : nam = getSoundFontInfo(fluidObj)
+
+Returns information about the SoundFont of the given soundFontID of the SoundFont stack.
+The soundFontID argument is optional, and defaults to the first searched
+SoundFont (the last loaded).
+
+The information is returned in the form of a lingo property-list,
+containing key-value pairs describing the SoundFont: its name, and
+info about its presets (name, preset number and bank number):
+
+[
+    #name:"SoundFontName",
+   	#type:#file or #ram,
+    #presets:
+    [
+        [#name:"preset1Name", #bank:preset1bankNb, #number:preset1Number, #sampleIDs:[sampleID1, sampleID2, ...]],
+        [#name:"preset2Name", #bank:preset2bankNb, #number:preset2Number],
+        ...
+    ]
+]
+
+The #sampleIDs property is only given for ram soundFonts. It lists the sampleIDs that have been attached to the soundfont presets using the loadSampleFile and loadSampleMember functions.
+
+(More information may be added in future versions of the Xtra)
+
+Can return an error code (no synth, bad soundFontID).
+
+
+-----------------
+-- Downloading soundfonts from the internet
+-----------------
+
+
+downloadFolderSetPath(object me, string localAbsolutePath)
+-----------------
+ex :  downloadFolderSetPath(fluidObj, the moviePath&"SoundFonts")
+ex :  downloadFolderSetPath(fluidObj, the moviePath)
+ex :  downloadFolderSetPath(fluidObj, "C:\tmp\myname\dswmedia\") -- shockwave
+ex :  downloadFolderSetPath(fluidObj, ":tmp:myname:dswmedia:") -- shockwave Mac
+ex :  downloadFolderSetPath(fluidObj, "") -- resets to default Shockwave support folder
+
+Sets the downloadFolder path : the folder into which the soundfonts are downloaded by the downloadFolderStartDownload command. The given path can have the trailing path separator or not. The given path must exist.
+
+If localAbsolutePath is VOID or "", this resets the download path to the default value.
+
+In projectors and authoring, there is no default download folder and this function must be called with a valid argument before any soundfont is downloaded, otherwise the soundfont download will fail.
+
+In shockwave, by default, the soundfonts are downloaded inside the Shockwave support folder, which is considered safe for shockwave. This path depends on the platform and is managed entirely by the Xtra. The lingo developer never has access directly to this folder nor its path : this ensures shockwave-safeness.
+
+In shockwave, the default download folder can be changed, using the downloadFolderSetPath function. The given path must contain a folder named 'dswmedia' (example : "C:\tmp\myname\dswmedia\").
+
+On Mac, the disk name is prepended to the given path (if not already) so that one can provide an absolute path without needing to know the disk name (which is unknowable in Shockwave for example). example : ":tmp:myname:dswmedia:" actually refers to "mydiskname:tmp:myname:dswmedia:".
+
+Returns an error code (no synth, bad path, no dswmedia).
+
+
+downloadFolderContainsLocal(object me, string localName)
+-----------------
+ex :  does_it = downloadFolderContainsLocal(fluidObj, "mySondFont.sf")
+
+Returns true if the downloadFolder contains the given file. False otherwise. This is useful to know if the loadSoundFont function will succeed in loading the given soundfont file. And if not to trigger the download.
+
+Can return an error code (no synth, download folder not found/defined).
+
+
+downloadFolderDeleteLocal(object me, string localName)
+-----------------
+ex :  downloadFolderDeleteLocal(fluidObj, "mySondFont.sf")
+
+Deletes the given file from the downloadFolder. Useful for housekeeping.
+
+Can return an error code (no synth, download folder not found/defined).
+
+
+downloadFolderGetLocalProps(object me, string localName)
+-----------------
+ex :  downloadFolderGetLocalProps(fluidObj, "mySondFont.sf")
+
+Returns properties of the local file in the download folder, or 0 if the file does not exist.
+Returns a property list containing the following properties :
+#size : the size in bytes of the file
+#year : the year of the last modification
+#month : the month of the last modification
+#day : the day of the last modification
+
+Can return an error code (no synth, download folder or file not found/defined).
+
+
+
+downloadFolderStartDownload(object me, string url, string localName)
+-----------------
+ex :  downloadFolderStartDownload(fluidObj, "http://www.xxx.com/mySondFont.sf", "mySondFont.sf")
+
+Starts downloading a soundfont from the given url. When the download is complete, the soundfont is stored in the downloadFolder (see downloadFolderSetPath) under the given local name.
+The download happens in the background. You should check the status of the download using the downloadFolderGetDownloadPercent function. You can abort the download using the downloadFolderAbortDownload functions. Only one download can be issued at a given time = a second call to the downloadFolderStartDownload function aborts the previous download.
+After download a call to loadSoundFont(localName) will succeed, as the loadSoundFont function looks into the download folder for its soundfonts.
+The Soundfont download process uses the standard Director download mechanism : the standard director cache is used and the standard Director cache management functions can be applied (clearCache, cacheSize, cachedocverify). For example the 'clearCache' function clears the cache.
+
+Can return an error code (no synth, download folder not found/defined, etc..).
+
+
+
+downloadFolderAbortDownload(object me)
+-----------------
+ex :  downloadFolderStartDownload(fluidObj)
+
+Aborts the current soundfont download.
+
+Can return an error code (no synth, download folder not found/defined, etc..).
+
+
+
+downloadFolderGetDownloadRatio(object me)
+-----------------
+ex :  percent = downloadFolderGetDownloadRatio(fluidObj)
+
+Returns the ratio (i.e. downloadedBytes/totalBytes), which is a float between 0.0 and 1.0. When the ratio is 1.0, the download is complete. If the ratio is a negative number, there was an error and it corresponds to the error code (no synth, download folder not found/defined, bad url, etc..).
+
+
+
+-----------------
+-- Managing samples directly
+-----------------
+
+loadSampleFile(object me, string filePath, int soundFontID, plist presetInfo)
+loadSampleFile(object me, string filePath, int soundFontID, int presetNumber)
+-----------------
+ex : sampleID = loadSampleFile(fluidObj, the moviePath&"Piano.aiff", 1, 2)
+ex : sampleID = loadSampleFile(fluidObj, the moviePath&"Piano.aiff", 1, [#number:2])
+ex : sampleID = loadSampleFile(fluidObj, the moviePath&"MidPiano.aiff", 1,
+[#name:"piano", #bank:0, #number:1, #rootKey:60, #keyRangeStart:50, #keyRangeEnd :70])
+
+
+Loads a sample file from filePath and adds it to a preset of a memory soundfont. This is a simple way of creating a preset from a specific sample.
+
+The 'filePath' is absolute, and should be expressed with the local
+file system conventions. Accepted sample formats are : wav and aiff.
+It must be 16 bits, mono or stereo, with a samplerate up to 192 kHz.
+
+The preset is in a ram (memory) SoundFont (type #ram), specified with the argument soundFontID, which should be created from a 'createSoundFont' function call. In all cases, the preset is given the name of the sample, if any.
+
+The preset is selected according to the 'presetNumber' argument, or to the 'presetInfo' lingo property list. This plist is a combination of key-value pairs describing the preset. The following keys are taken into account:
+
+- #number : integer, mandatory. Between 0 and 127 : the preset number in the bank. If this preset number (and bank if set) was already in use, the sample is added to the already preset samples of this preset. This is a handy way to define a keyRange for a preset.
+
+- #bank : integer, optional (default = 0). Between 0 and 16383: the number
+  of the MIDI bank that will be assigned to the preset.
+
+- #name : string : the name of the sample - optional. 20 char long max.
+
+- #presetname : string : the name of the preset - optional. Changes the name of the preset. 20 char long max.
+
+- #rootKey : int between 0 and 127 : the key at which the sample will
+   be played 'as is' - optional : if omitted, 60 (middle-C) is used.
+
+- #keyRangeStart : integer, optional (default = 0).
+   Defines the first of two keys between which the sample should be
+   played (the comparison is inclusive).
+   If a noteon asks for a key outside this range, the sample is not
+   played. If omitted, the whole range [0, 127] is used.
+
+- #keyRangeEnd : integer, optional (default = 127). See keyRangeStart.
+
+- #loop : boolean, optional. Specifies that the sample should be played
+as a loop. Default is FALSE.
+
+- #loopstart : float, optional (default = 0.0). Specifies the loopstart frame, taken from the first frame (starting at 0). loopstart = 0 means the first frame. There must be at least 64 frames between the loopstart and the loopend frame.
+
+- #loopend : float, optional (default = 0.0). Specifies the loopend frame. It is counted from the last frame, thus is always <= 0. There must be at least 64 frames between the loopstart and the loopend frame.
+
+- #delay : float, optional (default = 0.0). Duration, in milliseconds of
+the delay phase of the sound, i.e. the time between a noteon and the real start of the sample frames.
+
+- #attack : float, optional (default = 0.0). Duration, in milliseconds of
+the attack phase of the sound, i.e. the time for the sample to reach peak volume after a noteon is issued.
+
+- #hold : float, optional (default = 0.0). Duration, in milliseconds of
+the hold phase of the sound, i.e. the time during which the peak volume of the sound is maintained before the decay phase.
+
+- #decay : float, optional (default = 0.0). Duration, in milliseconds of
+the decay phase of the sound, i.e. the time for the sample to reach sustain volume
+after the attack.
+
+- #sustainlevel : float, optional (default = 0.0). Level, in dB relative to the
+peak level, of the sustain level. A sustainlevel of 0 means the same level than
+the peak level. A sustainlevel of 10 mean peak-10dB, which is very low.
+A sustainlevel of 100dB conventionally means full attenuation.
+
+- #release : float, optional (default = 0.0). Duration, in milliseconds of
+the release phase of the sound, i.e. the time for the sample to reach silence
+after a noteoff.
+
+Note that in one preset, two different samples may be used for two
+different key ranges.
+
+example :
+
+sampleID = loadSampleFile(fluidObj, the moviePath&"PianoLo.aiff", 1, [#name:"piano",
+#bank:0, #number:1, #rootKey:30, #keyrange:[0, 60]])
+
+sampleID = loadSampleFile(fluidObj, the moviePath&"PianoHi.aiff", 1, [#name:"piano",
+#bank:0, #number:1, #rootKey:90, #keyrange:[61, 127]])
+
+This example defines two samples for two ranges of the same preset.
+
+A preset may not be unloaded ; only the whole user SoundFont may be
+unloaded from the SoundFont stack, using the 'unloadSoundFont'
+function.
+
+Note : this function requires the "Sound Import Export" Xtra to be present. This is especially important if you build a projector.
+
+Returns a sampleID for the sample, or an error code (no synth, no file, bad file format, not enough memory, bad bank number, bad preset number, bad key).
+This sampleID can be used with functions that expect a sampleID (setLoop, getFrameCount, setLoopPoints, etc..)
+
+
+loadSampleMember(object me, obj member, int soundFontID, plist presetInfo)
+loadSampleMember(object me, obj member, int soundFontID, int number)
+-----------------
+ex : sampleID = loadSampleMember(fluidObj, member(3), 1, [#name:"piano", #bank:0, #number:1])
+
+Loads a sample from the given Director sound cast member and adds it to a preset of a memory soundfont.
+
+The preset is selected according to the 'presetInfo' lingo
+property-list. (see above for details on the presetInfo format).
+
+Note : this function requires the "Sound Import Export" and "Mix Services" Xtras to be present. This is especially important if you build a projector.
+
+Returns a sampleID for the sample, or an error code (no synth, no member, bad member, not enough memory, bad bank number, bad preset number, bad key).
+This sampleID can be used with functions that expect a sampleID (setLoop, getFrameCount, setLoopPoints, etc..)
+
+
+
+deleteSample(object me, int sampleID)
+-----------------
+ex : deleteSample(fluidObj, 1234)
+
+Deletes the sample specified by sampleID from the preset and soundfont in which it was loaded (see loadSampleMember and loadSampleFile functions).
+
+If the sample is being played, it will be removed from memory when it is over. In order to ensure that it is removed as soon as possible, issue a noteoff on the channels in which the sample is used (but beware that there may be a release time).
+
+The sampleID must have been returned by the loadSampleMember or loadSampleFile functions, and not belong to a soundfont that has been unloaded.
+
+May return an error code (no synth, not enough memory, bad sampleID, etc..).
+
+
+
+getFrameCount(object me, int sampleID)
+-----------------
+ex : nbFrames = getFrameCount(fluidObj, 1234)
+
+Returns the number of frames of the sound sample specified by sampleID.
+The number of frames / the samplerate in Hz = the length of the sound in seconds.
+The sampleID must have been returned by the loadSampleMember or loadSampleFile functions, and not belong to a soundfont that has been unloaded.
+
+May return an error code (no synth, not enough memory, bad sampleID, etc..).
+
+
+
+getFrameRate(object me, int sampleID)
+-----------------
+ex : samplerate = getFrameRate(fluidObj, 1234)
+
+Returns the sample rate of the sound sample in Hertz.
+
+May return an error code (no synth, not enough memory, bad sampleID, etc..).
+
+
+
+getKeyRange(object me, int sampleID)
+-----------------
+ex : keyRange = getKeyRange(fluidObj, 1234)
+
+Returns the keyRange of the sound sample specified by sampleID, in the form of a lingo list : [keyRangeStart, keyRangeEnd]. See loadSampleFile for a detailed explanation of the keyRange.
+
+The sampleID must have been returned by the loadSampleMember or loadSampleFile functions, and not belong to a soundfont that has been unloaded.
+
+May return an error code (no synth, not enough memory, bad sampleID, etc..).
+
+
+getRootKey(object me, int sampleID)
+-----------------
+ex : root = getRootKey(fluidObj, 1234)
+
+Returns the rootKey (integer) of the sound sample specified by sampleID. See loadSampleFile for a detailed explanation of the rootKey.
+
+The sampleID must have been returned by the loadSampleMember or loadSampleFile functions, and not belong to a soundfont that has been unloaded.
+
+May return an error code (no synth, not enough memory, bad sampleID, etc..).
+
+
+
+setLoop(object me, int sampleID, int looped)
+-----------------
+ex : setLoop(fluidObj, 1234, TRUE)
+
+Sets the loop property of a sample. The loop will be done according to the loopStart and loopEnd properties of the sample (see 'setLoopPoints' function).
+
+The sampleID must have been returned by the loadSampleMember or loadSampleFile functions, and not belong to a soundfont that has been unloaded.
+
+May be called while the sample is being played (as part of a preset on a channel), in which case the change is taken into account immediately.
+
+May return an error code (no synth, not enough memory, bad sampleID, etc..).
+
+
+getLoop(object me, int sampleID)
+-----------------
+ex : looped = setLoop(fluidObj, 1234)
+
+Gets the loop property of a sample. 
+
+Returns TRUE or FALSE.
+May return an error code (no synth, not enough memory, bad sampleID, etc..).
+
+
+setLoopPoints(object me, int sampleID, float loopStart, float loopEnd)
+-----------------
+ex : setLoopPoints(fluidObj, 1234, 10., -10.)
+
+Sets the loop points of a sample. See the loadSampleFile for explanation of the arguments.
+
+The loop points may be changed even if the sample is not looped, in which case these loop points will be taken into account as soon as the loop property of the sample is changed.
+
+The sampleID must have been returned by the loadSampleMember or loadSampleFile functions, and not belong to a soundfont that has been unloaded.
+
+May be called while the sample is being played (as part of a preset on a channel), in which case the change is taken into account immediately.
+
+May return an error code (no synth, not enough memory, bad sampleID, etc..).
+
+
+getLoopPoints(object me, int sampleID, float loopStart, float loopEnd)
+-----------------
+ex : looppoints = getLoopPoints(fluidObj, 1234)
+
+Returns the loop points of a sample, into a list of two values : the loopstart and the loopend. See the loadSampleFile for explanation of the loop points.
+
+The sampleID must have been returned by the loadSampleMember or loadSampleFile functions, and not belong to a soundfont that has been unloaded.
+
+May return an error code (no synth, not enough memory, bad sampleID, etc..).
+
+
+setEnvelope(object me, int sampleID, plist envelopeInfo)
+-----------------
+ex : setEnvelope(fluidObj, 1234, [#attack:100., #release:3000.])
+
+Sets the envelope of the sample. The argument is an envelopeInfo lingo property list, containing the description of the desired envelope. The following properties may be set:
+- #delay
+- #attack
+- #hold
+- #decay
+- #sustainlevel
+- #release
+
+For a precise explanation of the meaning of these properties, refer to the documentation of the loadSampleFile function.
+
+The sampleID must have been returned by the loadSampleMember or loadSampleFile functions, and not belong to a soundfont that has been unloaded.
+
+May be called while the sample is being played (as part of a preset on a channel), in which case the change is taken into account immediately.
+
+May return an error code (no synth, not enough memory, bad sampleID, etc..).
+
+
+getEnvelope(object me, int sampleID)
+-----------------
+ex : envelopeInfo = getEnvelope(fluidObj, 1234)
+
+Returns the envelope of the sample, in the form of a property list containing the following properties:
+- #delay
+- #attack
+- #hold
+- #decay
+- #sustainlevel
+- #release
+
+For a precise explanation of the meaning of these properties, refer to the documentation of the loadSampleFile function.
+
+The sampleID must have been returned by the loadSampleMember or loadSampleFile functions, and not belong to a soundfont that has been unloaded.
+
+May return an error code (no synth, not enough memory, bad sampleID, etc..).
+
+
+
+-----------------
+-- Event sequencer
+-----------------
+
+Introduction
+-----------------
+
+- Sequencer
+
+The API functions for playing music is derived from the MIDI
+protocol. This protocol defines the use of a number of presets for
+every synthesizer object. Application communicate with a preset in a
+synthesizer over a channel. The communication is event based (MIDI
+events). The API of the music functions (discussed below) can be
+thought of as sending an event over a channel to a preset. 
+
+The music API functions includes the optional use of a sequencer. A
+sequencer is an object that assures the delivery of an event at a
+future time. To use the sequencer object, the events have to specify a
+time property. Two property key values can be used:
+
+- #date: specifies the time on an absolute time axis (the creation
+   time of the synthesizer is used as time zero),
+
+- #delay: specifies the time relative to the sequencer's current time.
+
+The time is measured in 'ticks'. A 'tick' is an arbitrary unit that
+can be set by the application. See the sequencer API below.
+
+Example : 
+noteon(fluidObj , 1, 60, 1.0, [#date: 17000]) -- will play the noteon at the given date
+noteon(fluidObj , 1, 60, 1.0, [#delay: 1000]) -- will play the noteon in the given delay
+
+- Event destinations
+
+The API includes the use of several synthesizer objects. The property
+key '#dest' indicates the destination of the event. The destination
+value is the name of the synthesizer object. If no destination is
+specified, the event will be sent to the first known destination which
+is the default synthesizer.
+
+- Event sources
+
+Events can also specify an event source. This is useful when the
+sender of an event wants to cancel some time the event later. To use
+this feature, the event simply contains the key '#source' with a string
+as value.
+
+- Callbacks
+
+Lingo objects can ask the sequencer to schedule a callback function at
+a precise time. The callback is the name of a Lingo handler. The callbacks
+are called at idle time by the Xtra.
+
+
+- Sequencer API
+
+The following functions address the sequencer directly.
+
+setTimeUnit(object me, float ticksPerSecond)
+-----------------
+ex. setTimeUnit(fluidObj, 10.0) -- 1 tick equals 100 millisecond
+
+Sets the tick unit of the sequencer.
+ticksPerSecond is a float > 0.
+By default, ticksPerSecond is 1000.0 (1 tick = 1 millisecond).
+
+Returns an error indication (bad initialization).
+
+
+getTimeUnit(object me)
+-----------------
+ex. getTimeUnit(fluidObj)
+
+Returns the tick unit of the sequencer or an error indication (bad
+initialization).
+By default, ticksPerSecond is 1000.0 (1 tick = 1 millisecond).
+
+
+
+getTime(object me)
+-----------------
+ex. getTime(fluidObj)
+
+Returns the time in tick from the start of the synthesizer, in tick units
+of the sequencer or an error indication (bad initialization).
+
+
+getDestinations(object me)
+-----------------
+ex. getDestinations(fluidObj)
+
+Returns a list with all the names of possible event destinations.
+
+
+removeEvents(object me, plist filter)
+-----------------
+ex. removeEvents(fluidObj, [#dest: "fluidsynth", #source: "DrumMachine"])
+ex. removeEvents(fluidObj, [#source: "DrumMachine", #type: #note])
+
+Removes events that are queued for sending in the sequencer. The
+function takes property list as argument. The property list defines
+the events that should be filtered. Currently, any of the three
+following keys can be used:
+
+- #source: remove the events for the specified source (if not specified,
+removes all source)
+- #dest: remove the events sent by the specified destination (if not
+specified, removes all destination)
+- #type: remove the events according to this event type (if not
+specified, removes all events)
+
+Possible event types are:
+
+- #note
+- #noteon
+- #noteoff
+- #allsoundsoff
+- #allnotesoff
+- #programchange
+- #controlchange: includes all controlChange events (pitchbend, modulation,
+  sustain, pan, volume, reverbsend, chorussend)
+- #pitchbend
+- #modulation
+- #sustain
+- #pan
+- #volume
+- #reverbsend
+- #chorussend
+- #callback
+
+Returns an error code (no sequencer, invalid argument).
+
+
+
+scheduleCallback(object me, plist callbackInfo)
+-----------------
+ex. scheduleCallback(fluidObj, [#delay: 1200, #handler:"updateDrumMachine", #args: [1,2,3]])
+ex. scheduleCallback(fluidObj, [#delay: 1200, #source:"drumMachine", #handler:"updateDrumMachine"])
+
+Schedules a callback event. When the event is reached, the lingo handler defined in
+the 'callbackInfo' property list is called back. Note that the callback happens during
+idle time. Callbacks can be also be forced by calling the 'pollCallbacks' function (see below),
+in case Director idle time is not called (for example during repeat loops).
+
+The 'callbackInfo' property list has the following possible properties:
+
+- #handler, string, mandatory. It is the lingo handler that will be called.
+- #args, a lingo list, optional. This list contains the arguments of the handler.
+The scheduleCallback function retains a pointer to this list but does not copy it,
+according to the lingo tradition. The lingo eventually executed is equivalent
+to "handler(args[1], args[2], ...)". If the first argument is a child object,
+the corresponding handler will be called on that object.
+- #delay/#date : integer, optional. Specifies the time of the callback. Defaults to #delay:0
+- #source : optional. Specifies the source. Useful for removing callbacks.
+- #dest : optional. Specifies the destination.
+
+To remove a scheduled callback, use removeEvents:
+ex : removeEvents(fluidObj, [#source: "drumMachine", #type: #callback])
+ex : removeEvents(fluidObj, [#type: #callback])
+
+Returns an error code (no sequencer, invalid argument).
+
+
+pollCallbacks(object me)
+-----------------
+ex. pollCallbacks(fluidObj)
+
+Polls the sequencer for callback events. Normally, the callback events are sent to Director
+at idle. Idle time does not happen sometimes, for example during repeat loops (even if they contain
+an updatestage call). Explicitly calling pollCallbacks ensures that callbacks are executed.
+
+
+-----------------
+-- Playing music
+-----------------
+
+Most event functions accept an optional property list that describes
+the sequencing of the event. This is indicated by the 'seq' argument
+in the functions below. The following properties are recognized:
+
+- #date: the absolute time of the event
+- #delay: the time of the event relative to current time
+- #source: the event source
+- #dest: the event destination
+
+#date and #delay should not be specified together.
+
+
+programChange(object me, int channel, plist presetInfo, plist seq)
+programChange(object me, int channel, int presetNumber, plist seq)
+-----------------
+
+ex : programChange(fluidObj, 1, [#bank:1, #number:3, #soundFont:soundFontID])
+ex : programChange(fluidObj, 1, [#bank:1, #number:3])
+ex : programChange(fluidObj, 1, 3)
+
+Assigns the given preset to the given channel of the synthesizer.
+
+The preset may be defined using a property-list defining its MIDI bank
+number, its preset number and its soundFontID, using specific keys:
+
+- #soundFont : int : the soundFontID of the soundFont to use
+	- optional : if not present, the soundFont stack is looked up
+	starting from the last loaded soundFont, until a corresponding
+	bank/preset is found.
+
+- #bank : int between 0 and 16383: the number of the MIDI bank of the
+   preset - optional : if #bank is not present, 0 is the default.
+
+- #number : int between 0 and 127 : the preset number in the bank -
+  mandatory.
+
+The preset may also be defined by a unique int, which is treated as
+the preset number, assuming that the MIDI bank is 0 (zero) and that
+#soundFont is not present.
+
+If #soundFont is not present, the preset is looked up in the SoundFont
+stack, starting from the last loaded SoundFont in the stack, until
+a corresponding bank/preset is found. The found preset is assigned to
+the channel.
+
+The maximum number of channels are defined using the 'new' method.
+
+If a preset was previously assigned to that channel, it is forgotten,
+but all noteon finish normally.
+
+Returns an error code (no synth, no SoundFonts, bad
+channel, bad preset definition).
+
+
+getProgram(object me, int channel)
+-----------------
+
+ex : getProgram(fluidObj, 0)
+
+Returns information about the preset assigned to the channel.  The
+information is of the form : [#name:"presetName", #bank:presetBankNb,
+#number:presetNumber] The maximum number of channels are defined using
+the 'new' method.
+
+May return an error code (no synth, no preset
+assigned, bad channel number)
+
+
+note(object me, int channel, int key, float vel, int dur, plist seq)
+-----------------
+
+ex : note(fluidObj, 1, 38, 1.0, 1000) 
+
+Plays a note, using the specified 'channel' and 'key', with the
+specified velocity (strength). The duration 'dur' of the note is
+specified in ticks.
+
+0.0 <= vel <= 1.0 (automatically limited if smaller or greater)
+0 <= key <= 127
+
+The maximum number of channels are defined using the 'new' method.
+
+Returns an error code (no synth, no SoundFonts, bad
+channel, no preset assigned, bad key, bad vel).
+
+
+noteon(object me, int channel, int key, float vel, plist seq)
+-----------------
+ex : noteon(fluidObj, 1, 38, 1.0)
+ex : noteon(fluidObj , 1, 60, 1.0, [#date: 17000]) -- will play the noteon at the given date
+ex : noteon(fluidObj , 1, 60, 1.0, [#delay: 1000]) -- will play the noteon in the given delay
+
+Starts a note, using the specified 'channel' and 'key', with the
+specified velocity (strength).
+
+0.0 <= vel <= 1.0 (automatically limited if smaller or greater)
+0 <= key <= 127
+
+The maximum number of channels are defined using the 'new' method.
+
+Returns an error code (no synth, no SoundFonts, bad
+channel, no preset assigned, bad key, bad vel).
+
+
+noteoff(object me, int channel, int key, plist seq)
+-----------------
+ex : noteoff(fluidObj, 1, 60)
+
+Stops all playing notes on the given 'channel' and the given 'key'.
+
+The maximum number of channels are defined using the 'new' method.
+
+Returns an error code (no synth, no SoundFonts, bad
+channel, no preset assigned).
+
+
+controlChange(object me, int channel, plist controlParams, plist seq)
+-----------------
+ex:
+controlChange(obj, 1, [#pitchbend: 1.0, #sustain:1])
+controlChange(obj, 1, [#pan: -0.2, #sustain:1, #volume:0.5, #reverbsend:1.0]) 
+
+This function allows changing some control parameters of the given
+channel. The effect is immediate and allows for continuous
+modification of a sound.
+
+The 'controlParams' is a lingo property-list of key-value pairs, with
+the key describing the control parameter to affect, and the value
+specifying the amount of the change. For some keys, the value is not
+taken into account. The list of currently implemented keys is the
+following :
+
+- #pitchbend: float between -1.0 an 1.0: sets the pitchbend level
+  0.0 means no pitchbend.
+  The range of the pitchbend is defined by the #pitchsensitivity
+  control (see below). By default, it is 2 semi-tones (or one tone),
+  so a value of -1.0 means one tone down, and a value of 1.0 means one tone up.
+  
+- #pitchsensitivity : int between 0 and 127 : sets the range of the pitchbend,
+  in semi-tones. By default, it is 2, thus 1 tone.
+
+- #pan: float between -1.0 an 1.0: sets the pan level.
+   For mono sounds, -1.0 is all sound on left channel, 1.0 is all sound on right channel, 
+0.0 is sound in center. For stereo sounds, the synthesizer treats the left and right channels as 2 mono sounds, with the left channel having a pan value of -1.0 and the right channel 1.0, thus panning behaves a bit differently with stereo sounds. 
+The best option for stereo sounds is to use the pan generator 
+(17) instead of the #pan controlChange, where for example setGenerator(object, channel, 17, -1000.) has the effect of mixing both the left track and the right track of the sound entirely into the left channel.  See setGenerator() below.
+- #volume: float between 0.0 an 1.0: sets the volume level.
+   0.0 is silence, 1.0 is full volume.
+
+- #reverbsend: float between 0.0 an 1.0. Sets the volume of the auxiliary
+   output send to the reverb module. 0.0 is no signal, 1.0 is full
+   volume.
+
+- #chorussend: float between 0.0 an 1.0. Sets the volume of the auxiliary
+   output send to the chorus module. 0.0 is no signal, 1.0 is full
+   volume.
+
+- #sustain: int = 0 or 1: sets or removes the sustain from the
+   channel.
+
+- #modulation: float between 0.0 an 1.0. Amplitude modulation.
+   Vibrato.
+
+Returns an error code (no synth, no SoundFonts, bad
+channel, no preset assigned, unknown controlKey, bad controlValue).
+
+
+getControl(object me, int channel, symbol ctrl)
+-----------------
+ex. getControl(fluidObj, 1, #volume)
+
+Returns the value of a controller.
+
+
+getControls(object me, int channel)
+-----------------
+ex. getControls(fluidObj, 1)
+
+Returns a property list with the values of all controllers in the
+form: [#pan: 0.4, #sustain:1, #volume:0.8, #reverbsend:1.0, ...]
+
+
+allsoundsoff(object me, int channel, plist seq)
+-----------------
+
+Instantly stops all sound on the channel. The optional argument is
+the sequencer information. Returns an error code (no sequencer).
+
+
+allnotesoff(object me, int channel, plist seq)
+-----------------
+
+Sends a noteoff to all currently playing notes on the channel.  The
+optional argument is the sequencer information. Returns an error code
+(no sequencer).
+
+
+setGenerator(object me, int channel, int generator, float value)
+-----------------
+ex : setGenerator(fluidObj, 1, 12, 12000.)
+
+Changes directly and in realtime the 'generator' attached to the given channel.
+The generators and their effect are described in the SoundFont specifications (see the sfspec21.pdf file), chapters 8.1.2, 8.1.3. This function gives access to complex and thorough realtime effects on channels. 
+
+The maximum number of channels are defined using the 'new' method.
+
+- generator : int between 0 and 58. Some generators have no effect (check the specifications for more details).
+
+- value : float. The meaning of the value depends on the generator (see the soundFont specification)
+
+
+getGenerator(object me, int channel, int generator)
+-----------------
+ex : val = getGenerator(fluidObj, 1, 12)
+
+Returns the current value of the generator on that channel. See setGenerator for more details.
+
+
+reset(object me)
+-----------------
+
+Resets the synthesizer : stops all sound and resets all the controller values.
+
+
+---------------------------
+-- Recording
+---------------------------
+
+startRecord(object me, string soundFile)
+-----------------
+
+ex : fluidObj.startRecord(the moviePath&"record.wav")
+
+Starts recording the output of the synthesizer to a sound file.
+Whatever the name of the soundfile and the platform, the content will be WAV, 16bits, stereo.  The sample rate will be equal to the value of synth.sample-rate.
+If the soundfile already exists, it is overwritten.
+Records exactly what is sent to the sound output device, until the function stopRecord() is called.
+
+Note that multiple instances of the xtra can be used to record multiple tracks of audio output simultaneously.
+
+Returns an error code (cannot open/create sound file, already recording).
+
+
+stopRecord(object me)
+-----------------
+
+ex : fluidObj.stopRecord()
+
+Stops recording to a sound file.
+
+Returns an error code.
+
+
+boolean isRecording(object me)
+-----------------
+
+ex : fluidObj.isRecording()
+
+Returns true (1) if recording, false (0) otherwise.
+
+
+
+---------------------------
+-- Debug and maintenance
+---------------------------
+
+debug(object me, string logFile)
+-----------------
+
+ex : debug(fluidObj, the moviePath&"logfile")
+
+Sets the debug mode of the Xtra.
+If a logFile is provided, debug is set.
+If VOID is provided, debug is turned off.
+If debug is on, a log of all actions and errors is written in the logFile.
+
+Returns an error code (cannot open/create log file).
+
+
+getError(object me)
+-----------------
+ex : lastError = getError(fluidObj)
+
+returns a human readable string describing the last error that occurred
+in the Xtra.
+Does not work for all errors in which case it will return an empty string.
+
+getCPULoad(object me)
+-----------------
+ex : aPercent = getCPULoad(fluidObj)
+
+returns a float representing the estimation of the percentage of CPU
+used by the synthesizer, or an error code (no synth).
+
+ 
+
+-------------------------------
+-------------------------------
+-------------------------------

@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: fluidXtra - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Antoine\LOCALS~1\Temp\RSP4.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "c:\Program Files\Macromedia\XDKD7\Include" /I "..\src" /I "..\..\fluidsynth\include" /I "..\..\libsndfileWin32\Win32\\" /I "..\..\libsndfileWin32\src" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "FLUIDSYNTH_NOT_A_DLL" /Fo".\Release/" /Fd".\Release/" /FD /c 
+"C:\Documents and Settings\Antoine\Mes documents\Perso\Work\icds\FluidSynth\src\fluidXtra\src\asTimeBomb.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Antoine\LOCALS~1\Temp\RSP4.tmp" 
+Creating temporary file "C:\DOCUME~1\Antoine\LOCALS~1\Temp\RSP5.tmp" with contents
+[
+dsound.lib winmm.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib fluidsynth_lib.lib /nologo /dll /pdb:none /machine:I386 /def:"..\src\fluidxtra.def" /force /out:"Release\fluidXtra.x32" /implib:".\Release/fluidXtra.lib" /libpath:"..\..\fluidsynth\winbuild" 
+".\Release\fluid_chanmockup.obj"
+".\Release\fluidimportfile.obj"
+".\Release\fluidnotif.obj"
+".\Release\fluidreg.obj"
+".\Release\fluidxtra.obj"
+".\Release\xtra.obj"
+".\Release\aiff.obj"
+".\Release\alaw.obj"
+".\Release\au.obj"
+".\Release\common.obj"
+".\Release\pcm.obj"
+".\Release\raw.obj"
+".\Release\sndfile.obj"
+".\Release\ulaw.obj"
+".\Release\wav.obj"
+".\Release\wav_float.obj"
+".\Release\wav_ima_adpcm.obj"
+".\Release\wav_ms_adpcm.obj"
+".\Release\asTimeBomb.obj"
+"\Documents and Settings\Antoine\Mes documents\Perso\Work\icds\FluidSynth\src\fluidsynth\winbuild\fluidsynth_lib.lib"
+]
+Creating command line "link.exe @C:\DOCUME~1\Antoine\LOCALS~1\Temp\RSP5.tmp"
+<h3>Output Window</h3>
+Compiling...
+asTimeBomb.cpp
+Linking...
+   Creating library .\Release/fluidXtra.lib and object .\Release/fluidXtra.exp
+fluidXtra.exp : warning LNK4070: /OUT:IIWUSYNTH.x32 directive in .EXP differs from output filename "Release\fluidXtra.x32"; ignoring directive
+
+
+
+<h3>Results</h3>
+fluidXtra.x32 - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

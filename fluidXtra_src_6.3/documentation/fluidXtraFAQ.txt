@@ -1,0 +1,60 @@
+FluidXtra FAQ
+Version 5.0
+mar08
+
+--------------------------------------------
+1) Why do samples loaded by loadSampleMember or loadSampleFile stop working when in projector mode ?
+This is because FluidXtra needs the "Sound Import Export" Xtra in order to do sample conversion. To include this Xtra in the projector, add it to your main movie (Menu->Modify->Movie->Xtras + Add button) and rebuild the projector.
+
+--------------------------------------------
+2) Why do samples loaded with loadSampleMember play twice too fast (an octave too high) in shockwave ?
+This is a bug in the "Sound Import Export" Xtra (provided by macromedia) with stereo sound compressed below or equal to 32Kbps : these sounds are marked as stereo sounds while they are actually mono because of the compression. Thus fluidXtra plays them twice too fast.
+Workaround : in your publish setting, compress your sounds above 32Kbps.
+
+3) How do I make fluidXtra work in my shockwave movie
+
+The FluidXtra is autodownloadable from the internet, so that it is usable inside a Shockwave movie available on a web site.
+
+In order provide the FluidXtra for automatic download, follow these instructions:
+
+- locate the packages in the delivery that you have received. There should be one package per platform (currently fluidXtra.carb, fluidXtra.xpku and fluidXtra.w32)
+
+- put the packages in a single location on a server. eg:
+http://www.myserver.com/packs/fluidXtra.carb 
+http://www.myserver.com/packs/fluidXtra.xpku 
+http://www.myserver.com/packs/fluidXtra.w32
+(Do not put www.as-ci.net here, as the packages are *not* autodownloadable from the as-ci web site. Put them on your web site, alongside your Shockwave movie for example.)
+
+- modify the xtrainfo.txt file in the Director folder to reference this location, eg:
+; fluidXtra
+[#namePPC:"fluidXtra", #nameW32:"fluidXtra.X32", #package:"http://www.myserver.com/packs/fluidXtra"]
+
+- restart Director
+
+- add a reference to the package in your movie:
+Open a movie that uses FluidXtra. From the Modify\Movie\Xtras dialog in Director, select the FluidXtra in the list of xtras.
+The "Download if needed" checkbox should now be enabled. (If it's not enabled, make sure the filename in xtrainfo.txt matches the actual filename for the xtra.) 
+Click on the checkbox and director will load information from the package file for each platform and add it to the current movie. If it does not, remove the FluidXtra from the list and add it again. Director _must_ download the Xtra when the checkbox is checked.
+
+- publish your shockwave movie (as .dcr), and install it on your server. Each user that plays your Shockwave will automatically dowload the FluidXtra from the http address you have specified.
+
+For more information on the Packaging and Autodownload process, check Adobe's web site.
+
+--------------------------------------------
+3) How to build crossplatform Projectors (Mac proj on Windows, Windows proj on Mac) with my Xtra
+
+You can create Macintosh projectors on Windows and Windows projectors on Macintosh, using the options in the "Publish Settings" menu.
+
+But first, in order to do this:
+
+- Ensure that there is an entry for your Xtra extension in the xtrainfo.txt file that gives the proper filename for the Xtra extension on each platform. If this information is not provided, the code assumes your Xtra extension exists only for the current platform.
+
+- to build on a Macintosh, just copy the Windows Xtra to the /Cross Platform Resources/Windows/Xtras/ folder of the Mac Director installation. Relaunch Director.
+
+- to build on a Windows machine, you cannot copy the Mac Xtra, you need the right crossplatform version file(s) (which do not contain Mac resources nor are bundles). The crossplatform version file(s) are:
+- MYXTRA.data and MYXTRA.rsrc for Director MX 2004 and below
+- MYXTRA.cpio for Director 11
+Copy these file(s) to the /Cross Platform Resources/Mac/Xtras/ folder of the Windows Director installation. Relaunch Director.
+
+For more information, check Adobe's doc : http://help.adobe.com/en_US/Director/11.0/help.html?content=24_packaging_movies_for_dist_30.html et al.
+

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CABE0A1C-B6AD-41E9-BB91-6ADF92D5AA1A}</ProjectGuid>
+    <RootNamespace>fluidXtra</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/fluidXtra.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\src;../..\glib_dev\vs10\Win32/lib/glib-2.0/include/;../..\glib_dev\vs10\Win32/include/;../..\glib_dev\vs10\Win32/include/glib-2.0/;..\..\..\xdk11_win\Include;../..\fluidsynth-1.1.5\include;../..\fluidsynth-1.1.5\build_win\include;..\..\libsndfile\Win32\;..\..\libsndfile\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;FLUIDSYNTH_NOT_A_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Debug/fluidXtra.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>dsound.lib;winmm.lib;odbc32.lib;odbccp32.lib;libfluidsynth_debug.lib;gthread.lib;glib.lib;intl.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\products\fluidXtra.x32</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../..\fluidsynth-1.1.5\build_win\src\debug;../..\glib_dev\vs10\Win32\lib;../..\glib_dev\vs10\Win32\lib\glib-2.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>..\src\fluidxtra.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>.\Debug/fluidXtra.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/fluidXtra.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\..\..\xdk11_win\Include;..\src;../..\fluidsynth-1.1.5\include;../..\fluidsynth-1.1.5\build\include;..\..\libsndfile\Win32\;..\..\libsndfile\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;FLUIDSYNTH_NOT_A_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\Release/fluidXtra.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x040c</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>dsound.lib;winmm.lib;odbc32.lib;odbccp32.lib;libfluidsynth.lib;gthread-2.0.lib;glib-2.0.lib;gio-2.0.lib;gmodule-2.0.lib;Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\products\fluidXtra.x32</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../..\fluidsynth-1.1.5\build\src\release;C:\freesw\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>..\src\fluidxtra.def</ModuleDefinitionFile>
+      <ImportLibrary>.\Release/fluidXtra.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\bytesfifo.h" />
+    <ClInclude Include="..\src\dversion.h" />
+    <ClInclude Include="..\src\fluidimportfile.h" />
+    <ClInclude Include="..\src\fluidnotif.h" />
+    <ClInclude Include="..\src\fluidreg.h" />
+    <ClInclude Include="..\src\fluidxtra.h" />
+    <ClInclude Include="..\src\supportFolder.h" />
+    <ClInclude Include="..\..\libsndfile\src\alaw.h" />
+    <ClInclude Include="..\..\libsndfile\src\common.h" />
+    <ClInclude Include="..\..\libsndfile\Win32\config.h" />
+    <ClInclude Include="..\..\libsndfile\src\pcm.h" />
+    <ClInclude Include="..\..\libsndfile\src\sfendian.h" />
+    <ClInclude Include="..\..\libsndfile\src\sndfile.h" />
+    <ClInclude Include="..\..\libsndfile\src\ulaw.h" />
+    <ClInclude Include="..\..\libsndfile\src\wav.h" />
+    <ClInclude Include="..\src\win32\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\win32\dversion.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\bytesfifo.cpp" />
+    <ClCompile Include="..\src\fluidimportfile.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;FLUIDSYNTH_NOT_A_DLL</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;FLUIDSYNTH_NOT_A_DLL</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\src\fluidnotif.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;FLUIDSYNTH_NOT_A_DLL</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;FLUIDSYNTH_NOT_A_DLL</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\src\fluidreg.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;FLUIDSYNTH_NOT_A_DLL</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;FLUIDSYNTH_NOT_A_DLL</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\src\fluidxtra.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;FLUIDSYNTH_NOT_A_DLL</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;FLUIDSYNTH_NOT_A_DLL</PreprocessorDefinitions>
+      <PreprocessToFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PreprocessSuppressLineNumbers>
+    </ClCompile>
+    <ClCompile Include="..\src\supportFolder.cpp" />
+    <ClCompile Include="..\src\xtra.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;WIN32;_WINDOWS;FLUIDSYNTH_NOT_A_DLL</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;WIN32;_WINDOWS;FLUIDSYNTH_NOT_A_DLL</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="..\..\libsndfile\src\aiff.c" />
+    <ClCompile Include="..\..\libsndfile\src\alaw.c" />
+    <ClCompile Include="..\..\libsndfile\src\au.c" />
+    <ClCompile Include="..\..\libsndfile\src\common.c" />
+    <ClCompile Include="..\..\libsndfile\src\pcm.c" />
+    <ClCompile Include="..\..\libsndfile\src\raw.c" />
+    <ClCompile Include="..\..\libsndfile\src\sndfile.c" />
+    <ClCompile Include="..\..\libsndfile\src\ulaw.c" />
+    <ClCompile Include="..\..\libsndfile\src\wav.c" />
+    <ClCompile Include="..\..\libsndfile\src\wav_float.c" />
+    <ClCompile Include="..\..\libsndfile\src\wav_ima_adpcm.c" />
+    <ClCompile Include="..\..\libsndfile\src\wav_ms_adpcm.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\fluidxtra.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

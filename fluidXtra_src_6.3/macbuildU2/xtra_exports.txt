@@ -1,0 +1,6 @@
+_ppcSetFileRef
+_DllGetClassObject
+_DllGetInterface
+_DllGetClassForm
+_DllCanUnloadNow
+_DllGetClassInfo

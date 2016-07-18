@@ -1,0 +1,37 @@
+FluidXtra ToDo
+
+- The only problem I had was that PC version of xtra crashes when trying to set sampleStartOffset after the end of sample. I haven't tested Mac version. Let's consider a situation:
+ 
+1. I want to play short sound A (2s long) on one channel with startoffset==1s.
+2. While first sound is playing I want to play another sound B on the same channel, but with startoffset==3s.
+3. Fluid crashes, because startoffset of sound B is > length of sound A.
+ 
+To overcome this I had to split sounds on two channels, making sure that no "short sound" plays on the channel while I'm trying to play longer sound with startoffset > length of already played sound.
+
+startAddrsOffset - setGenerator(chanel,0,param)
+startAddrsCoarseOffset - setGenerator(chanel,4,param)
+
+
+- BUG : Real sequencer fix (Tom Dussek) : - comment implémenter proprement ? list... mutex? callbacks in audio thread. Architecture. 1 synth, many seqs
+
+- BUG : eats a lot of CPU even after it is stopped (MX2004)
+
+- BUG : crashes
+	- when unloading the soundfont (macOSX)
+	- when freeing the Xtra instance (macOSX)
+	- See BUGS/devox folder
+
+- BUG : hang director after playing the DEVOX.dir file for a few minutes (variable) (Win)
+	- See BUGS/devox folder
+
+- BUG : sound stops after playing the solo4 for a few hours
+	- See BUGS/solo4.dir
+	- and stops too in Soli (see in BUGS/DP3) quite early (30 seconds : must input souds using the microphone): cause narrowed down to the scheduler : if the scheduler is not used, it does not happen. Note : it could be in the Xtra code that manages samples too (a sample freed while still playing ??)
+ 
+- BUG : sometimes a sound starts playing looped
+	- seen on Mac OSX
+	- See BUGS/DP3 folder (bounce.dir and invaders.dir). Note : I wonder if it is not linked to the scheduler bug above.
+- BUG : changing the loop of a sample, while it is playing, resulting in a loop that is silence stops the voice. So if we set again a larger loop, the sound does not play. We have to restart it with a noteon. This is because the voice automatically stops when it is below a certain level. What to do ?? Maybe use a modulator to change the looppoints of a voice dynamically ?
+
+- feature : export the midi playback API
+- feature: AIFF includes a loopback information. It would be nice to use it to create a looped sample.		- but libsndfile does not read this information (it drops it : see INST in aiff.c)- feature: createSampleFromSamples(frameCount, left, right)		- may be stereo (interlaced frames)		- getFrames(sampleID) -- returns [lefts] or [lefts, rights] if stereo		- setFrames(??)		- setFrame(sampleID, frameNb, left {, right})

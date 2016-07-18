@@ -1,0 +1,206 @@
+Microsoft Developer Studio Workspace File, Format Version 5.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "MakeAll"=".\MakeAll.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name lossy_comp_test
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name error_test
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name libsndfile
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name read_seek_test
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name sfconvert
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name sfinfo
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name sndfile2oct
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name wav32_aiff24
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name make_sine
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name write_read_test
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "lossy_comp_test"=".\lossy_comp_test.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libsndfile
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "error_test"=".\error_test.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libsndfile
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "libsndfile"=".\libsndfile.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "make_sine"=".\make_sine.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libsndfile
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "read_seek_test"=".\read_seek_test.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libsndfile
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "sfconvert"=".\sfconvert.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libsndfile
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "sfinfo"=".\sfinfo.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libsndfile
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "sndfile2oct"=".\sndfile2oct.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libsndfile
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "wav32_aiff24"=".\wav32_aiff24.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libsndfile
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "write_read_test"=".\write_read_test.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libsndfile
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

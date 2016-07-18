@@ -1,0 +1,62 @@
+FluidXtra Versions
+
+August 2004 version 4.0.x
+- ported to carbon
+- corrected bug in windows version : stereo cast members where broken
+
+January 2005 version 4.1
+- ported to fluidsynth 1.0.5
+- added doc about pseq in the documentation
+
+September 2005 version 4.2
+- cleanup Destroy function : do not eat CPU any more, nor crash on exit
+- added 'free' Xtra API for explicit free
+- local fluid itself : fixed crash bug when unloading a ram soundfont after having released some of its internal samples (in fluid_ramsfont.c)
+
+March 2006 version 4.3
+- added a new settings API to set the settings at startup
+
+June 2007 version 4.5beta
+- changed internal sequencer API : real time really now
+
+Nov07 version 4.6
+- added API to download soundfont to local folder and use it
+
+Mar 08 Version 5.0 :
+- added soundfont download mechanism, ported to d11, fixed sequencer precision bug
+
+Apr 08 Version 5.1 :
+- fixed bug with loadSoundMember on MacIntel/d11 (SoundManager support + endian problems)
+
+Apr08 v5.2:
+- fixed bug on MacIntel D11 "loadSoundFont failed". Cause : WORDS_BIGENDIAN badly initialized
+
+Jun08 v5.3
+- fixed a bug in location the dswmedia folder (and creating it if not found)
+- fixed a bug in downloading a soundFont on D11 on Mac (POSIX paths vs. HFS paths)
+
+Aug08 : v5.4
+- Added the possibility to specify a soundfont download folder even in Shockwave
+
+v5.5 : ??
+
+April12 : v6.0.0
+- ported to fluidsynth1.1.5
+- added function getSettingsOptions
+- added the recording API
+- fixed the sound members on Macintosh that were not recognized anymore in D11.x
+
+June12 : v6.0.1
+- various bug fixes around file recording, unicode paths, etc..
+- support for D10 is removed.
+
+October 2012 : v6.1
+- reenabled channel 9 : it is not a drum channel by default any more, but a melodic channel.
+
+October 2013 : v6.2
+- improved memory management for large file samples.
+
+Dec13 : v6.3
+- fixed removeEvents source
+- compiled with latest VC with XP compatibility on Windows
+

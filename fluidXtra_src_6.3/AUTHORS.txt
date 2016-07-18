@@ -1,0 +1,1 @@
+FluidXtra Authors2001 : First early prototype by Peter Hanappe2002 : API design by Antoine Schmitt and Peter Hanappe August 2002 : Implementation by Antoine Schmitt as@gratin.org              as part of the infiniteCD author project              organized by Antoine Schmitt and produced by Hyptique              www.infiniteCD.org www.hyptique.com

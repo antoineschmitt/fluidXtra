@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="fluidxtra files">
+      <UniqueIdentifier>{20dd005e-4627-4ab5-963e-5fa251840902}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libsndfiles">
+      <UniqueIdentifier>{685e9d10-2b63-4295-892c-56d07b31fcd2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\dversion.h">
+      <Filter>fluidxtra files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fluidimportfile.h">
+      <Filter>fluidxtra files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fluidnotif.h">
+      <Filter>fluidxtra files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fluidreg.h">
+      <Filter>fluidxtra files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\fluidxtra.h">
+      <Filter>fluidxtra files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\supportFolder.h">
+      <Filter>fluidxtra files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libsndfile\src\alaw.h">
+      <Filter>libsndfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libsndfile\src\common.h">
+      <Filter>libsndfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libsndfile\Win32\config.h">
+      <Filter>libsndfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libsndfile\src\pcm.h">
+      <Filter>libsndfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libsndfile\src\sfendian.h">
+      <Filter>libsndfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libsndfile\src\sndfile.h">
+      <Filter>libsndfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libsndfile\src\ulaw.h">
+      <Filter>libsndfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libsndfile\src\wav.h">
+      <Filter>libsndfiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\win32\resource.h" />
+    <ClInclude Include="..\src\bytesfifo.h">
+      <Filter>fluidxtra files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\win32\dversion.rc">
+      <Filter>fluidxtra files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\fluidimportfile.cpp">
+      <Filter>fluidxtra files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fluidnotif.cpp">
+      <Filter>fluidxtra files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fluidreg.cpp">
+      <Filter>fluidxtra files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fluidxtra.cpp">
+      <Filter>fluidxtra files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\supportFolder.cpp">
+      <Filter>fluidxtra files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\xtra.cpp">
+      <Filter>fluidxtra files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libsndfile\src\aiff.c">
+      <Filter>libsndfiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libsndfile\src\alaw.c">
+      <Filter>libsndfiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libsndfile\src\au.c">
+      <Filter>libsndfiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libsndfile\src\common.c">
+      <Filter>libsndfiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libsndfile\src\pcm.c">
+      <Filter>libsndfiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libsndfile\src\raw.c">
+      <Filter>libsndfiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libsndfile\src\sndfile.c">
+      <Filter>libsndfiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libsndfile\src\ulaw.c">
+      <Filter>libsndfiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libsndfile\src\wav.c">
+      <Filter>libsndfiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libsndfile\src\wav_float.c">
+      <Filter>libsndfiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libsndfile\src\wav_ima_adpcm.c">
+      <Filter>libsndfiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libsndfile\src\wav_ms_adpcm.c">
+      <Filter>libsndfiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bytesfifo.cpp">
+      <Filter>fluidxtra files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\fluidxtra.def">
+      <Filter>fluidxtra files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
