@@ -1,0 +1,976 @@
+The system is: Windows - 5.1 - x86
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:41:34.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+PrepareForBuild:
+  Cr‚ation du r‚pertoire "cmTryCompileExec.dir\Debug\".
+  Cr‚ation du r‚pertoire "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\testCCompiler.c"  /Zm1000 
+  testCCompiler.c
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\testCCompiler.c"  /Zm1000 
+  
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\testCCompiler.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\testCCompiler.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:01:01.76
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:42:40.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCCompilerABI.c"  /Zm1000 
+  
+  CMakeCCompilerABI.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CMakeCCompilerABI.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CMakeCCompilerABI.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:28.39
+
+
+Determining if the include file string.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:44:02.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:34.73
+
+
+Determining if the include file stdlib.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:44:42.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:19.01
+
+
+Determining if the include file stdio.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:45:03.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:07.90
+
+
+Determining if the include file math.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:45:12.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:09.35
+
+
+Determining if the include file errno.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:45:22.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:06.89
+
+
+Determining if the include file stdarg.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:45:31.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:05.71
+
+
+Determining if the include file memory.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:45:37.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:06.04
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:45:48.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:05.71
+
+
+Determining if the include file sys/stat.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:45:59.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:06.84
+
+
+Determining if the include file fcntl.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:09.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:04.20
+
+
+Determining if the include file limits.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:21.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:04.35
+
+
+Determining if the include file signal.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:28.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:04.09
+
+
+Performing C SOURCE FILE Test _have___inline succeded with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:37.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _have___inline /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _have___inline /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c"  /Zm1000 
+  
+  src.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\src.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\src.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:04.40
+
+Source file was:
+typedef int foo_t;
+             static TESTKEYWORD foo_t static_foo(){return 0;}
+             foo_t foo(){return 0;}
+             int main(int argc, char *argv[]){return 0;}
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:44.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:03.96
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:49.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:03.92
+
+
+Determining size of unsigned short passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:54.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CheckTypeSize\CMAKE_SIZEOF_UNSIGNED_SHORT.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CheckTypeSize\CMAKE_SIZEOF_UNSIGNED_SHORT.c"  /Zm1000 
+  
+  CMAKE_SIZEOF_UNSIGNED_SHORT.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CMAKE_SIZEOF_UNSIGNED_SHORT.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CMAKE_SIZEOF_UNSIGNED_SHORT.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:04.68
+
+
+Determining if the include file windows.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:47:04.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:05.75
+
+
+Determining if the include file io.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:47:11.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:03.81
+
+
+Determining if the include file dsound.h exists passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:47:16.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFile.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:04.53
+
+
+Determining if files windows.h;mmsystem.h exist passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:47:21.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"  /Zm1000 
+  
+  CheckIncludeFiles.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFiles.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\CheckIncludeFiles.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:04.67
+
+

@@ -1,0 +1,607 @@
+Determining if files dlfcn.h;stdint.h;stddef.h;inttypes.h;stdlib.h;strings.h;string.h;float.h exist failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:43:37.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"  /Zm1000 
+  
+  CheckIncludeFiles.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'dlfcn.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'dlfcn.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps ‚coul‚ 00:00:14.48
+
+Source:
+/* */
+#include <dlfcn.h>
+#include <stdint.h>
+#include <stddef.h>
+#include <inttypes.h>
+#include <stdlib.h>
+#include <strings.h>
+#include <string.h>
+#include <float.h>
+
+
+int main(){return 0;}
+
+Determining if files unistd.h exist failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:43:54.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"  /Zm1000 
+  
+  CheckIncludeFiles.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'unistd.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFiles.c(2): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'unistd.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps ‚coul‚ 00:00:02.32
+
+Source:
+/* */
+#include <unistd.h>
+
+
+int main(){return 0;}
+
+Determining if the DIR symbol is defined as in AC_HEADER_DIRENT failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:43:59.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckDIRSymbolExists.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckDIRSymbolExists.c"  /Zm1000 
+  
+  CheckDIRSymbolExists.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckDIRSymbolExists.c(4): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'dirent.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckDIRSymbolExists.c(4): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'dirent.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps ‚coul‚ 00:00:01.81
+
+File C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/CheckDIRSymbolExists.c:
+/* */
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <dirent.h>
+
+int main()
+{if ((DIR *) 0) return 0;}
+
+Determining if the include file sys/mman.h exists failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:45:45.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'sys/mman.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'sys/mman.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps ‚coul‚ 00:00:01.46
+
+
+Determining if the include file sys/time.h exists failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:45:55.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'sys/time.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'sys/time.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps ‚coul‚ 00:00:01.71
+
+
+Determining if the include file sys/ioctl.h exists failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:07.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'sys/ioctl.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'sys/ioctl.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps ‚coul‚ 00:00:01.57
+
+
+Determining if the include file sys/socket.h exists failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:14.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'sys/socket.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'sys/socket.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps ‚coul‚ 00:00:00.85
+
+
+Determining if the include file netinet/in.h exists failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:16.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'netinet/in.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'netinet/in.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps ‚coul‚ 00:00:00.87
+
+
+Determining if the include file netinet/tcp.h exists failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:17.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'netinet/tcp.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'netinet/tcp.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps ‚coul‚ 00:00:00.85
+
+
+Determining if the include file arpa/inet.h exists failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:19.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'arpa/inet.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'arpa/inet.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps ‚coul‚ 00:00:00.84
+
+
+Determining if the include file pthread.h exists failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:26.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"  /Zm1000 
+  
+  CheckIncludeFile.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'pthread.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Impossible d'ouvrir le fichier includeÿ: 'pthread.h'ÿ: No such file or directory [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    1 Erreur(s)
+
+Temps ‚coul‚ 00:00:00.85
+
+
+Performing C SOURCE FILE Test _have_inline failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:33.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _have_inline /D _DEBUG /D TESTKEYWORD=inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _have_inline /D _DEBUG /D TESTKEYWORD=inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c"  /Zm1000 
+  
+  src.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(2): error C2054: '(' attendu aprŠs 'inline' [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(2): error C2085: 'static_foo'ÿ: ne figure pas dans la liste de paramŠtres formels [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(2): error C2143: erreur de syntaxeÿ: absence de ';' avant '{' [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(2): error C2054: '(' attendu aprŠs 'inline' [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(2): error C2085: 'static_foo'ÿ: ne figure pas dans la liste de paramŠtres formels [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(2): error C2143: erreur de syntaxeÿ: absence de ';' avant '{' [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    3 Erreur(s)
+
+Temps ‚coul‚ 00:00:01.10
+
+Source file was:
+typedef int foo_t;
+             static TESTKEYWORD foo_t static_foo(){return 0;}
+             foo_t foo(){return 0;}
+             int main(int argc, char *argv[]){return 0;}
+Performing C SOURCE FILE Test _have___inline__ failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:35.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _have___inline__ /D _DEBUG /D TESTKEYWORD=__inline__ /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _have___inline__ /D _DEBUG /D TESTKEYWORD=__inline__ /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c"  /Zm1000 
+  
+  src.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(2): error C2054: '(' attendu aprŠs '__inline__' [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(2): error C2085: 'static_foo'ÿ: ne figure pas dans la liste de paramŠtres formels [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(2): error C2143: erreur de syntaxeÿ: absence de ';' avant '{' [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(2): error C2054: '(' attendu aprŠs '__inline__' [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(2): error C2085: 'static_foo'ÿ: ne figure pas dans la liste de paramŠtres formels [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(2): error C2143: erreur de syntaxeÿ: absence de ';' avant '{' [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    3 Erreur(s)
+
+Temps ‚coul‚ 00:00:00.90
+
+Source file was:
+typedef int foo_t;
+             static TESTKEYWORD foo_t static_foo(){return 0;}
+             foo_t foo(){return 0;}
+             int main(int argc, char *argv[]){return 0;}
+Performing C SOURCE FILE Test _have_vla failed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:42.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _have_vla /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _have_vla /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c"  /Zm1000 
+  
+  src.c
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(1): error C2057: expression constante attendue [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(1): error C2466: impossible d'allouer un tableau de taille constante 0 [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(1): error C2133: 'arr'ÿ: taille inconnue [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut) -- CHEC.
+
+CHEC de la build.
+
+"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" (cible par d‚faut) (1) ->
+(ClCompile cible) -> 
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(1): error C2057: expression constante attendue [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(1): error C2466: impossible d'allouer un tableau de taille constante 0 [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+  C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c(1): error C2133: 'arr'ÿ: taille inconnue [C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj]
+
+    0 Avertissement(s)
+    3 Erreur(s)
+
+Temps ‚coul‚ 00:00:00.87
+
+Source file was:
+int main(int argc, char *argv[]){int arr[argc]; return 0;}
+Determining if the system is big endian passed with the following output:
+Change Dir: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe cmTryCompileExec.vcxproj /p:Configuration=Debug
+Microsoft (R) Build Engine, Version 4.0.30319.1
+[Microsoft .NET Framework, Version 4.0.30319.269]
+Copyright (C) Microsoft Corporationÿ2007. Tous droits r‚serv‚s.
+
+La g‚n‚ration a d‚marr‚ 16/05/2012 22:46:59.
+Projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" sur le noud 1 (cibles par d‚faut).
+InitializeBuildStatus:
+  Cr‚ation de "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild", car "AlwaysCreate" a ‚t‚ sp‚cifi‚.
+ClCompile:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\TestEndianess.c"  /Zm1000 
+  Compilateur d'optimisation Microsoft (R) 32ÿbits C/C++ versionÿ16.00.30319.01 pour 80x86
+  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec.dir\Debug\\" /Fd"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\TestEndianess.c"  /Zm1000 
+  
+  TestEndianess.c
+ManifestResourceCompile:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+Link:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\TestEndianess.obj  /machine:X86 /debug 
+Manifest:
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest" /manifest cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest
+  C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res" cmTryCompileExec.dir\Debug\cmTryCompileExec_manifest.rc 
+LinkEmbedManifest:
+  C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /ManifestFile:"cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.pdb" /SUBSYSTEM:CONSOLE /STACK:"10000000" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec.lib" /MACHINE:X86 cmTryCompileExec.dir\Debug\cmTryCompileExec.exe.embed.manifest.res
+  cmTryCompileExec.dir\Debug\TestEndianess.obj  /machine:X86 /debug 
+  cmTryCompileExec.vcxproj -> C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.exe
+FinalizeBuildStatus:
+  Suppression du fichier "cmTryCompileExec.dir\Debug\cmTryCompileExec.unsuccessfulbuild".
+  Mise … jour de l'horodatage "cmTryCompileExec.dir\Debug\cmTryCompileExec.lastbuildstate".
+G‚n‚ration du projet "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTryCompileExec.vcxproj" termin‚e (cibles par d‚faut).
+
+La g‚n‚ration a r‚ussi.
+    0 Avertissement(s)
+    0 Erreur(s)
+
+Temps ‚coul‚ 00:00:03.71
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+

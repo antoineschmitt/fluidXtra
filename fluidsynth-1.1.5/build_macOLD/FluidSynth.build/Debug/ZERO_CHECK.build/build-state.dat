@@ -1,0 +1,29 @@
+TZERO_CHECK
+v5
+r1
+cCheck dependencies
+cPhaseScriptExecution "CMake Rules" /Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/FluidSynth.build/Debug/ZERO_CHECK.build/Script-B81BD4E7A39C4894BCD45DB0.sh
+
+N/Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/FluidSynth.build/Debug/ZERO_CHECK.build/Script-B81BD4E7A39C4894BCD45DB0.sh
+c000000004FB8D91F00000000000000D3
+t1337514271
+s211
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies3ab044baa4adb741^d61a4abaa4adb741^---0#1#0#--18"Check dependencies36"07C5DB18-050E-4349-ADCD-7D14BF6230F1-
+
+CPhaseScriptExecution "CMake Rules" /Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/FluidSynth.build/Debug/ZERO_CHECK.build/Script-B81BD4E7A39C4894BCD45DB0.sh
+s397255866.293222
+e397255866.317869
+r0
+xPhaseScriptExecution
+xCMake Rules
+x/Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/FluidSynth.build/Debug/ZERO_CHECK.build/Script-B81BD4E7A39C4894BCD45DB0.sh
+oecho ""
+o
+omake -f /Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeScripts/ReRunCMake.make
+omake[1]: *** No rule to make target `/Applications/CMake 2.8-7.app/Contents/share/cmake-2.8/Modules/CMakeCInformation.cmake', needed by `CMakeFiles/cmake.check_cache'.  Stop.
+omake: *** [/Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/ZERO_CHECK] Error 2
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'55694bbaa4adb741^a26151baa4adb741^-425"echo ""make -f /Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeScripts/ReRunCMake.makemake[1]: *** No rule to make target `/Applications/CMake 2.8-7.app/Contents/share/cmake-2.8/Modules/CMakeCInformation.cmake', needed by `CMakeFiles/cmake.check_cache'.  Stop.make: *** [/Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/ZERO_CHECK] Error 2Command /bin/sh failed with exit code 25(21%IDEActivityLogMessage2@8"echo ""-397255866#0#8#-0#-----2@98"make -f /Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeScripts/ReRunCMake.make-397255866#9#98#-0#-----2@175"make[1]: *** No rule to make target `/Applications/CMake 2.8-7.app/Contents/share/cmake-2.8/Modules/CMakeCInformation.cmake', needed by `CMakeFiles/cmake.check_cache'.  Stop.-397255866#107#175#-0#-----2@103"make: *** [/Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/ZERO_CHECK] Error 2-397255866#282#103#-0#-----2@39"Command /bin/sh failed with exit code 2-397255866#18446744073709551615#0#-2#--29"Shell Script Invocation Error--0#0#0#--329"PhaseScriptExecution "CMake Rules" build_mac/FluidSynth.build/Debug/ZERO_CHECK.build/Script-B81BD4E7A39C4894BCD45DB0.sh    cd /Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5    /bin/sh -c /Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/FluidSynth.build/Debug/ZERO_CHECK.build/Script-B81BD4E7A39C4894BCD45DB0.sh36"065E2323-8877-4841-932B-03142CE082E7-
+

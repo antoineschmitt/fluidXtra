@@ -1,0 +1,4 @@
+C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/ALL_BUILD.dir
+C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/ZERO_CHECK.dir
+C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/src/CMakeFiles/fluidsynth.dir
+C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/src/CMakeFiles/libfluidsynth.dir

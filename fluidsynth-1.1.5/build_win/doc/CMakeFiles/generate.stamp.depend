@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/doc/CMakeLists.txt
+C:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindDoxygen.cmake
+C:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake 2.8/share/cmake-2.8/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake 2.8/share/cmake-2.8/Modules/CMakeParseArguments.cmake

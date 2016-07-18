@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{63FB4B6B-FF02-4BFC-8CE5-257965112095}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>libfluidsynth</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\src\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">libfluidsynth.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">libfluidsynth_debug</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\src\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">libfluidsynth.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">libfluidsynth</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\src\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">libfluidsynth.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">libfluidsynth</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\src\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">libfluidsynth.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">libfluidsynth</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/drivers;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/synth;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/rvoice;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/midi;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/utils;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/sfloader;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/bindings;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/include;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/include;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\glib_dev\vs10\Win32\include\glib-2.0;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\glib_dev\vs10\Win32\lib\glib-2.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FLUIDSYNTH_NOT_A_DLL;HAVE_CONFIG_H;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/src/Debug/libfluidsynth_debug.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;FLUIDSYNTH_DLL_EXPORTS;HAVE_CONFIG_H;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/drivers;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/synth;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/rvoice;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/midi;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/utils;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/sfloader;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/bindings;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/include;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/include;C:/freesw/include/glib-2.0;C:/freesw/lib/glib-2.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/drivers;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/synth;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/rvoice;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/midi;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/utils;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/sfloader;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/bindings;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/include;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/include;C:/freesw/include/glib-2.0;C:/freesw/lib/glib-2.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/drivers;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/synth;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/rvoice;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/midi;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/utils;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/sfloader;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/bindings;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/include;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/include;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\glib_dev\vs10\Win32\include\glib-2.0;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\glib_dev\vs10\Win32\lib\glib-2.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FLUIDSYNTH_NOT_A_DLL;HAVE_CONFIG_H;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Release</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/src/Release/libfluidsynth.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FLUIDSYNTH_DLL_EXPORTS;HAVE_CONFIG_H;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/drivers;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/synth;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/rvoice;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/midi;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/utils;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/sfloader;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/bindings;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/include;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/include;C:/freesw/include/glib-2.0;C:/freesw/lib/glib-2.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/drivers;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/synth;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/rvoice;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/midi;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/utils;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/sfloader;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/bindings;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/include;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/include;C:/freesw/include/glib-2.0;C:/freesw/lib/glib-2.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/drivers;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/synth;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/rvoice;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/midi;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/utils;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/sfloader;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/bindings;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/include;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/include;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\glib_dev\vs10\Win32\include\glib-2.0;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\glib_dev\vs10\Win32\lib\glib-2.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FLUIDSYNTH_DLL_EXPORTS;HAVE_CONFIG_H;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>MinSizeRel</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/src/MinSizeRel/libfluidsynth.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FLUIDSYNTH_DLL_EXPORTS;HAVE_CONFIG_H;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/drivers;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/synth;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/rvoice;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/midi;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/utils;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/sfloader;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/bindings;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/include;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/include;C:/freesw/include/glib-2.0;C:/freesw/lib/glib-2.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/drivers;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/synth;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/rvoice;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/midi;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/utils;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/sfloader;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/bindings;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/include;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/include;C:/freesw/include/glib-2.0;C:/freesw/lib/glib-2.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> /Zm1000 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/drivers;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/synth;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/rvoice;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/midi;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/utils;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/sfloader;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/bindings;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/include;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/include;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\glib_dev\vs10\Win32\include\glib-2.0;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\glib_dev\vs10\Win32\lib\glib-2.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FLUIDSYNTH_DLL_EXPORTS;HAVE_CONFIG_H;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>RelWithDebInfo</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/src/RelWithDebInfo/libfluidsynth.pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;FLUIDSYNTH_DLL_EXPORTS;HAVE_CONFIG_H;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/drivers;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/synth;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/rvoice;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/midi;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/utils;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/sfloader;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/bindings;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/include;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/include;C:/freesw/include/glib-2.0;C:/freesw/lib/glib-2.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/drivers;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/synth;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/rvoice;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/midi;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/utils;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/sfloader;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/bindings;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/include;C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/include;C:/freesw/include/glib-2.0;C:/freesw/lib/glib-2.0/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\src\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" "-HC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5" "-BC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win" --check-stamp-file "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\src\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\src\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" "-HC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5" "-BC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win" --check-stamp-file "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\src\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\src\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" "-HC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5" "-BC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win" --check-stamp-file "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\src\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\src\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" "-HC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5" "-BC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win" --check-stamp-file "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\src\CMakeFiles\generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/src/CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\src\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\config.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\config_win32.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\fluid_dll.c" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\drivers\fluid_dsound.c" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\drivers\fluid_winmidi.c" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\utils\fluid_conv.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\utils\fluid_conv.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\utils\fluid_hash.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\utils\fluid_hash.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\utils\fluid_list.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\utils\fluid_list.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\utils\fluid_ringbuffer.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\utils\fluid_ringbuffer.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\utils\fluid_settings.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\utils\fluid_settings.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\utils\fluidsynth_priv.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\utils\fluid_sys.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\utils\fluid_sys.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\sfloader\fluid_defsfont.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\sfloader\fluid_defsfont.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\sfloader\fluid_ramsfont.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\sfloader\fluid_ramsfont.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\sfloader\fluid_sfont.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_adsr_env.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_adsr_env.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_chorus.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_chorus.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_iir_filter.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_iir_filter.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_lfo.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_lfo.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_rvoice.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_rvoice.c" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_rvoice_dsp.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_rvoice_event.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_rvoice_event.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_rvoice_mixer.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_rvoice_mixer.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_phase.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_rev.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\rvoice\fluid_rev.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_chan.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_chan.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_event.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_event_priv.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_event_queue.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_gen.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_gen.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_mod.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_mod.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_synth.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_synth.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_tuning.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_tuning.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_voice.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\synth\fluid_voice.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\midi\fluid_midi.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\midi\fluid_midi.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\midi\fluid_midi_router.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\midi\fluid_midi_router.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\midi\fluid_seqbind.c" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\midi\fluid_seq.c" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\drivers\fluid_adriver.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\drivers\fluid_adriver.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\drivers\fluid_mdriver.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\drivers\fluid_mdriver.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\drivers\fluid_aufile.c" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\bindings\fluid_cmd.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\bindings\fluid_cmd.h" />
+    <ClCompile Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\bindings\fluid_filerenderer.c" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\audio.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\event.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\gen.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\log.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\midi.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\misc.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\mod.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\ramsfont.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\seq.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\seqbind.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\settings.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\sfont.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\shell.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\synth.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\types.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth\voice.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\include\fluidsynth\version.h" />
+    <ClInclude Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\include\fluidsynth.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/ZERO_CHECK.vcxproj">
+      <Project>DAE02701-96DA-4AF2-BC5F-739E08D412AD</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

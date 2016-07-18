@@ -1,0 +1,2255 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		032F845F99F346B8BAC35B39 /* tarball */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 80F87D576EE1496886CFBD2C /* Build configuration list for PBXAggregateTarget "tarball" */;
+			buildPhases = (
+				B17E2DFDE9FE4F1D977E087A /* CMake Rules */,
+			);
+			dependencies = (
+				3AB4312A24284A5193D7C0CA /* PBXTargetDependency */,
+			);
+			name = tarball;
+			productName = tarball;
+		};
+		35F82135E24947918070BFCA /* package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 02FFF41FDB7B4D98AD7B0772 /* Build configuration list for PBXAggregateTarget "package" */;
+			buildPhases = (
+				5F1CAB0571944CC8A5883A24 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				2AC078865288433A83EAC96F /* PBXTargetDependency */,
+			);
+			name = package;
+			productName = package;
+		};
+		3B0962E89F2F4B5D907A94F9 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 13BC5D632A3D4E6BAE727879 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				4BD08964B6D14EE4B5FAE76D /* CMake Rules */,
+			);
+			dependencies = (
+				4EACAEAFC8F54F169F50BE97 /* PBXTargetDependency */,
+				7899279F7A8F4139991027A3 /* PBXTargetDependency */,
+				2BF565AC8F0A41BB8D2DD301 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		400D5BEFE0F640978D98CFD2 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 31445311E1264D558CAD8C7A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				7AA21193719E494EB5C40310 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		7A7D6343ECE04C6E90993C31 /* uninstall */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9EEFE54E5694449FA7C3F922 /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildPhases = (
+				8EDC4CDE52984E49B9185130 /* CMake Rules */,
+			);
+			dependencies = (
+				3056D49612634B5DAA2BB72E /* PBXTargetDependency */,
+			);
+			name = uninstall;
+			productName = uninstall;
+		};
+		CBB928C3FEEA4A6089C0D111 /* tarball-autotools */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B07538667EDB41369B7F5828 /* Build configuration list for PBXAggregateTarget "tarball-autotools" */;
+			buildPhases = (
+				BF4051F433614D3F88331E32 /* CMake Rules */,
+			);
+			dependencies = (
+				FB3EECC907C141C582F6AAC9 /* PBXTargetDependency */,
+			);
+			name = "tarball-autotools";
+			productName = "tarball-autotools";
+		};
+		FE46ECA162664D53BDE53088 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0A0447E337AA418E840CCF6F /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				958D5EACD47B46859CBB05B6 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				C1E1045799C5454A8A548358 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		01F5EBBB06614852A9123EB6 /* fluid_lfo.c in Sources */ = {isa = PBXBuildFile; fileRef = ED5735CD981243C99094BCAF /* fluid_lfo.c */; settings = {COMPILER_FLAGS = ""; }; };
+		087DC2985A61484C95CF7B10 /* fluid_mod.c in Sources */ = {isa = PBXBuildFile; fileRef = EA51F8BA6BB04DAF8D10FB7C /* fluid_mod.c */; settings = {COMPILER_FLAGS = ""; }; };
+		0BE1CABBB79B4425BD0E894E /* fluid_voice.c in Sources */ = {isa = PBXBuildFile; fileRef = 12BB7C8034A74E0DB55F4C4F /* fluid_voice.c */; settings = {COMPILER_FLAGS = ""; }; };
+		18156BBA747740DBB3F8F888 /* fluid_rev.c in Sources */ = {isa = PBXBuildFile; fileRef = 68D10ABFB6B14232BEE4A9E1 /* fluid_rev.c */; settings = {COMPILER_FLAGS = ""; }; };
+		25F57C50954E4FFCACF479E1 /* fluidsynth.c in Sources */ = {isa = PBXBuildFile; fileRef = 7C252B60EC294CE6BE85880F /* fluidsynth.c */; settings = {COMPILER_FLAGS = ""; }; };
+		2F427EEDB92C4E38B0364FAB /* fluid_aufile.c in Sources */ = {isa = PBXBuildFile; fileRef = BD70B9EE889848DAAC61A902 /* fluid_aufile.c */; settings = {COMPILER_FLAGS = ""; }; };
+		3B48E5CAA0F24075B82FA2A4 /* fluid_list.c in Sources */ = {isa = PBXBuildFile; fileRef = 664F185FB54F44AB88F58450 /* fluid_list.c */; settings = {COMPILER_FLAGS = ""; }; };
+		4A0016B567B6494DA61EFFF0 /* fluid_rvoice_mixer.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B31925637D54C27A81F29F2 /* fluid_rvoice_mixer.c */; settings = {COMPILER_FLAGS = ""; }; };
+		524897D835AA4E92BF851CFF /* fluid_seq.c in Sources */ = {isa = PBXBuildFile; fileRef = 1648ED52EFEB4A1290CD7E42 /* fluid_seq.c */; settings = {COMPILER_FLAGS = ""; }; };
+		6369DEC101CD47D5A443050E /* fluid_adriver.c in Sources */ = {isa = PBXBuildFile; fileRef = BC286E77CA0A40ED9F6B3A41 /* fluid_adriver.c */; settings = {COMPILER_FLAGS = ""; }; };
+		65A07354AA3A4D268F9EE621 /* fluid_sys.c in Sources */ = {isa = PBXBuildFile; fileRef = 19959D54F18A4544B2C3A850 /* fluid_sys.c */; settings = {COMPILER_FLAGS = ""; }; };
+		6AE9445C44D645EBB50FB3E5 /* fluid_mdriver.c in Sources */ = {isa = PBXBuildFile; fileRef = 1760AB146C2848109724BD42 /* fluid_mdriver.c */; settings = {COMPILER_FLAGS = ""; }; };
+		80087FBB6B014ED38F2F83AC /* fluid_ringbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = CD59D4B2DAEF45E1BB335A81 /* fluid_ringbuffer.c */; settings = {COMPILER_FLAGS = ""; }; };
+		815EE8151EBB4CBD9E35159A /* fluid_rvoice.c in Sources */ = {isa = PBXBuildFile; fileRef = 99895A4C06204380899CAC23 /* fluid_rvoice.c */; settings = {COMPILER_FLAGS = ""; }; };
+		866DDD7F29DC421682252A21 /* fluid_synth.c in Sources */ = {isa = PBXBuildFile; fileRef = 5393D887AB924EA3B7AE21B6 /* fluid_synth.c */; settings = {COMPILER_FLAGS = ""; }; };
+		883A1F94533642348D49FA28 /* fluid_midi.c in Sources */ = {isa = PBXBuildFile; fileRef = 16CDFA68C5AC4BE7A3BB6A2C /* fluid_midi.c */; settings = {COMPILER_FLAGS = ""; }; };
+		A7BABDDB3C934FE4AF8EB35F /* fluid_filerenderer.c in Sources */ = {isa = PBXBuildFile; fileRef = B9702921F0AB48458B284E0C /* fluid_filerenderer.c */; settings = {COMPILER_FLAGS = ""; }; };
+		A9F79F8FA939499EA408796F /* fluid_defsfont.c in Sources */ = {isa = PBXBuildFile; fileRef = D9E9EAE5DCBA484BA635E5CC /* fluid_defsfont.c */; settings = {COMPILER_FLAGS = ""; }; };
+		AF57F9EFDAC144FE9CDB647B /* fluid_adsr_env.c in Sources */ = {isa = PBXBuildFile; fileRef = 2818957684044C4D9F3C5F13 /* fluid_adsr_env.c */; settings = {COMPILER_FLAGS = ""; }; };
+		B14D7EE27BEA4127B6A30CEF /* fluid_gen.c in Sources */ = {isa = PBXBuildFile; fileRef = BD8167CC585A4C16A5E5A6EF /* fluid_gen.c */; settings = {COMPILER_FLAGS = ""; }; };
+		B4E9A7B288C743CC9AECCA3F /* fluid_event.c in Sources */ = {isa = PBXBuildFile; fileRef = 419B749335414EC69994DAE0 /* fluid_event.c */; settings = {COMPILER_FLAGS = ""; }; };
+		BEC6DE06F1AC4B25B150A035 /* fluid_seqbind.c in Sources */ = {isa = PBXBuildFile; fileRef = A038C6D03B8641DDBC6115F7 /* fluid_seqbind.c */; settings = {COMPILER_FLAGS = ""; }; };
+		BF6614E71AEA46048EFC42BE /* fluid_rvoice_event.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D8ACDEE29B64F69BB137030 /* fluid_rvoice_event.c */; settings = {COMPILER_FLAGS = ""; }; };
+		C08A2556B5A948F5BE377C9D /* fluid_hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 30F23DD9474E4F3E8CF62730 /* fluid_hash.c */; settings = {COMPILER_FLAGS = ""; }; };
+		C3CDC74B5452463AAE047292 /* fluid_chan.c in Sources */ = {isa = PBXBuildFile; fileRef = E79A97B55496438FBD498081 /* fluid_chan.c */; settings = {COMPILER_FLAGS = ""; }; };
+		C4DE4506936E49F5B1EC09C9 /* fluid_settings.c in Sources */ = {isa = PBXBuildFile; fileRef = F9E1E2FB3B4E418592C91B93 /* fluid_settings.c */; settings = {COMPILER_FLAGS = ""; }; };
+		CEE4443AC8CC4E46853C4E73 /* fluid_ramsfont.c in Sources */ = {isa = PBXBuildFile; fileRef = FC9FE661F5594A00BA2FDFF6 /* fluid_ramsfont.c */; settings = {COMPILER_FLAGS = ""; }; };
+		D77A5FCFEC7D465A9C622782 /* fluid_midi_router.c in Sources */ = {isa = PBXBuildFile; fileRef = 24DF8A56356740169D43046D /* fluid_midi_router.c */; settings = {COMPILER_FLAGS = ""; }; };
+		E171AF3EBC5045FDAC08A10F /* fluid_rvoice_dsp.c in Sources */ = {isa = PBXBuildFile; fileRef = 472332F6B5994F53A580C7D7 /* fluid_rvoice_dsp.c */; settings = {COMPILER_FLAGS = ""; }; };
+		E299579F66BE415981560ECB /* fluid_conv.c in Sources */ = {isa = PBXBuildFile; fileRef = 6CE95D656C054420A10C360E /* fluid_conv.c */; settings = {COMPILER_FLAGS = ""; }; };
+		E8DBB1D578C344FDB813D066 /* fluid_coreaudio.c in Sources */ = {isa = PBXBuildFile; fileRef = A0F5D26B826742D1866C6404 /* fluid_coreaudio.c */; settings = {COMPILER_FLAGS = ""; }; };
+		F0CB664D639E4BABBC46A0E7 /* fluid_cmd.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E41C97F4B334B7F997A5FF4 /* fluid_cmd.c */; settings = {COMPILER_FLAGS = ""; }; };
+		FCE8243C043941F79BA12D62 /* fluid_tuning.c in Sources */ = {isa = PBXBuildFile; fileRef = 41A15952725945A09B3503F7 /* fluid_tuning.c */; settings = {COMPILER_FLAGS = ""; }; };
+		FE89AABD55A74003AEB6C44B /* fluid_chorus.c in Sources */ = {isa = PBXBuildFile; fileRef = 38D54FE4384843529C127EA7 /* fluid_chorus.c */; settings = {COMPILER_FLAGS = ""; }; };
+		FF89CF40A74846C89946C9CB /* fluid_iir_filter.c in Sources */ = {isa = PBXBuildFile; fileRef = C43071F2B99540A4A385EDD3 /* fluid_iir_filter.c */; settings = {COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44436F8162A24A2986D0D0F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E22FC725AB6F40679950FC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B0962E89F2F4B5D907A94F9;
+			remoteInfo = ALL_BUILD;
+		};
+		4A0D0425B8B6499B9C91CB65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E22FC725AB6F40679950FC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C612CB2E0BDF4436B81D9071;
+			remoteInfo = libfluidsynth;
+		};
+		5E09FA4D96934EC4B6499D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E22FC725AB6F40679950FC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 400D5BEFE0F640978D98CFD2;
+			remoteInfo = ZERO_CHECK;
+		};
+		7FA42E85F88F4679A04DE09F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E22FC725AB6F40679950FC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 400D5BEFE0F640978D98CFD2;
+			remoteInfo = ZERO_CHECK;
+		};
+		834C254FF2504C769266C736 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E22FC725AB6F40679950FC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB66A284793245E6B8A264DA;
+			remoteInfo = fluidsynth;
+		};
+		92685593013B42F9810180AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E22FC725AB6F40679950FC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 400D5BEFE0F640978D98CFD2;
+			remoteInfo = ZERO_CHECK;
+		};
+		A00EF4013BAE4068A42C6010 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E22FC725AB6F40679950FC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 400D5BEFE0F640978D98CFD2;
+			remoteInfo = ZERO_CHECK;
+		};
+		AC6131152F1E46B9B0D4BD21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E22FC725AB6F40679950FC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C612CB2E0BDF4436B81D9071;
+			remoteInfo = libfluidsynth;
+		};
+		AD4E773F8DC84B57976290F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E22FC725AB6F40679950FC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 400D5BEFE0F640978D98CFD2;
+			remoteInfo = ZERO_CHECK;
+		};
+		D3A032D5590A46BA9A1F0E36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E22FC725AB6F40679950FC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B0962E89F2F4B5D907A94F9;
+			remoteInfo = ALL_BUILD;
+		};
+		F4FD4444C3AA4CAF9571F6FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E22FC725AB6F40679950FC5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 400D5BEFE0F640978D98CFD2;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0561E2DE76764B8CA6DBBE0D /* fluid_event_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_event_queue.h; path = src/synth/fluid_event_queue.h; sourceTree = SOURCE_ROOT; };
+		0B602F21BFFC4B86AA9A3335 /* fluid_rvoice_event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_rvoice_event.h; path = src/rvoice/fluid_rvoice_event.h; sourceTree = SOURCE_ROOT; };
+		0EAA2F7C551C4780BFDA2015 /* fluid_hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_hash.h; path = src/utils/fluid_hash.h; sourceTree = SOURCE_ROOT; };
+		11B4C33EAB76431BA5145B22 /* fluid_conv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_conv.h; path = src/utils/fluid_conv.h; sourceTree = SOURCE_ROOT; };
+		12587FC4987A45F1894EF8FA /* settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = settings.h; path = include/fluidsynth/settings.h; sourceTree = SOURCE_ROOT; };
+		12BB7C8034A74E0DB55F4C4F /* fluid_voice.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_voice.c; path = src/synth/fluid_voice.c; sourceTree = SOURCE_ROOT; };
+		140A9D949EE44A3886FB1EE2 /* libfluidsynth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libfluidsynth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1648ED52EFEB4A1290CD7E42 /* fluid_seq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_seq.c; path = src/midi/fluid_seq.c; sourceTree = SOURCE_ROOT; };
+		164949E7FBD54839A5C2C50A /* misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = misc.h; path = include/fluidsynth/misc.h; sourceTree = SOURCE_ROOT; };
+		16CDFA68C5AC4BE7A3BB6A2C /* fluid_midi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_midi.c; path = src/midi/fluid_midi.c; sourceTree = SOURCE_ROOT; };
+		1760AB146C2848109724BD42 /* fluid_mdriver.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_mdriver.c; path = src/drivers/fluid_mdriver.c; sourceTree = SOURCE_ROOT; };
+		19959D54F18A4544B2C3A850 /* fluid_sys.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_sys.c; path = src/utils/fluid_sys.c; sourceTree = SOURCE_ROOT; };
+		1A62137E56EB4950B9384152 /* fluid_phase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_phase.h; path = src/rvoice/fluid_phase.h; sourceTree = SOURCE_ROOT; };
+		1E41C97F4B334B7F997A5FF4 /* fluid_cmd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_cmd.c; path = src/bindings/fluid_cmd.c; sourceTree = SOURCE_ROOT; };
+		2324C658C73F40D3A718058C /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = build_mac/config.h; sourceTree = SOURCE_ROOT; };
+		246AE2544C1C464F84DCAB1A /* mod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mod.h; path = include/fluidsynth/mod.h; sourceTree = SOURCE_ROOT; };
+		24DF8A56356740169D43046D /* fluid_midi_router.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_midi_router.c; path = src/midi/fluid_midi_router.c; sourceTree = SOURCE_ROOT; };
+		2679DE02AC9F40EABAFB04A2 /* fluid_mdriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_mdriver.h; path = src/drivers/fluid_mdriver.h; sourceTree = SOURCE_ROOT; };
+		276D55A1AD9A4AD4B8BF6DC4 /* fluid_ramsfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_ramsfont.h; path = src/sfloader/fluid_ramsfont.h; sourceTree = SOURCE_ROOT; };
+		2818957684044C4D9F3C5F13 /* fluid_adsr_env.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_adsr_env.c; path = src/rvoice/fluid_adsr_env.c; sourceTree = SOURCE_ROOT; };
+		30F23DD9474E4F3E8CF62730 /* fluid_hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_hash.c; path = src/utils/fluid_hash.c; sourceTree = SOURCE_ROOT; };
+		38D54FE4384843529C127EA7 /* fluid_chorus.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_chorus.c; path = src/rvoice/fluid_chorus.c; sourceTree = SOURCE_ROOT; };
+		3F17523201A54F93AAB77B86 /* fluid_chan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_chan.h; path = src/synth/fluid_chan.h; sourceTree = SOURCE_ROOT; };
+		419B749335414EC69994DAE0 /* fluid_event.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_event.c; path = src/synth/fluid_event.c; sourceTree = SOURCE_ROOT; };
+		41A15952725945A09B3503F7 /* fluid_tuning.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_tuning.c; path = src/synth/fluid_tuning.c; sourceTree = SOURCE_ROOT; };
+		4486659D8AC947089A4F1878 /* fluid_chorus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_chorus.h; path = src/rvoice/fluid_chorus.h; sourceTree = SOURCE_ROOT; };
+		472332F6B5994F53A580C7D7 /* fluid_rvoice_dsp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_rvoice_dsp.c; path = src/rvoice/fluid_rvoice_dsp.c; sourceTree = SOURCE_ROOT; };
+		477435A20F5F478891CDE96D /* fluid_iir_filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_iir_filter.h; path = src/rvoice/fluid_iir_filter.h; sourceTree = SOURCE_ROOT; };
+		4AD431BF94384115A6CEE8C0 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = types.h; path = include/fluidsynth/types.h; sourceTree = SOURCE_ROOT; };
+		4F27EFDEA77140828CBFCACD /* midi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = midi.h; path = include/fluidsynth/midi.h; sourceTree = SOURCE_ROOT; };
+		4FCD03472FD1455A9DF8AF38 /* fluid_adriver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_adriver.h; path = src/drivers/fluid_adriver.h; sourceTree = SOURCE_ROOT; };
+		5393D887AB924EA3B7AE21B6 /* fluid_synth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_synth.c; path = src/synth/fluid_synth.c; sourceTree = SOURCE_ROOT; };
+		5BA702B71B824D5FBF9763EE /* fluid_midi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_midi.h; path = src/midi/fluid_midi.h; sourceTree = SOURCE_ROOT; };
+		5D8ACDEE29B64F69BB137030 /* fluid_rvoice_event.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_rvoice_event.c; path = src/rvoice/fluid_rvoice_event.c; sourceTree = SOURCE_ROOT; };
+		5ECCE47EC7364A85BBDAF28F /* sfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sfont.h; path = include/fluidsynth/sfont.h; sourceTree = SOURCE_ROOT; };
+		5EF48DC869AB4C2DB098EBFA /* fluid_rev.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_rev.h; path = src/rvoice/fluid_rev.h; sourceTree = SOURCE_ROOT; };
+		614543418F6D444EBCC81FCC /* audio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = audio.h; path = include/fluidsynth/audio.h; sourceTree = SOURCE_ROOT; };
+		664F185FB54F44AB88F58450 /* fluid_list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_list.c; path = src/utils/fluid_list.c; sourceTree = SOURCE_ROOT; };
+		68D10ABFB6B14232BEE4A9E1 /* fluid_rev.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_rev.c; path = src/rvoice/fluid_rev.c; sourceTree = SOURCE_ROOT; };
+		6ABFDE2536BD42F5B302F44B /* fluid_defsfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_defsfont.h; path = src/sfloader/fluid_defsfont.h; sourceTree = SOURCE_ROOT; };
+		6B31925637D54C27A81F29F2 /* fluid_rvoice_mixer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_rvoice_mixer.c; path = src/rvoice/fluid_rvoice_mixer.c; sourceTree = SOURCE_ROOT; };
+		6CE95D656C054420A10C360E /* fluid_conv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_conv.c; path = src/utils/fluid_conv.c; sourceTree = SOURCE_ROOT; };
+		6D2230062E47446DAC21781E /* fluidsynth */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = fluidsynth; sourceTree = BUILT_PRODUCTS_DIR; };
+		7190109017404BB4AE2C50DA /* ramsfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ramsfont.h; path = include/fluidsynth/ramsfont.h; sourceTree = SOURCE_ROOT; };
+		72B68569F4124FC5B54A4512 /* fluid_lfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_lfo.h; path = src/rvoice/fluid_lfo.h; sourceTree = SOURCE_ROOT; };
+		74A7192ECF484AD197389E5E /* fluid_midi_router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_midi_router.h; path = src/midi/fluid_midi_router.h; sourceTree = SOURCE_ROOT; };
+		7BCAA45EE79F4583B00A7000 /* fluid_rvoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_rvoice.h; path = src/rvoice/fluid_rvoice.h; sourceTree = SOURCE_ROOT; };
+		7C252B60EC294CE6BE85880F /* fluidsynth.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluidsynth.c; path = src/fluidsynth.c; sourceTree = SOURCE_ROOT; };
+		7E6008DB2DE747EE9FA0BDE1 /* log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = log.h; path = include/fluidsynth/log.h; sourceTree = SOURCE_ROOT; };
+		85478B40A35148389EC5FD22 /* fluid_cmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_cmd.h; path = src/bindings/fluid_cmd.h; sourceTree = SOURCE_ROOT; };
+		89D0595433494A4993B6C6A4 /* fluid_tuning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_tuning.h; path = src/synth/fluid_tuning.h; sourceTree = SOURCE_ROOT; };
+		8A6F9414EDE14DFFB657B5AD /* fluid_sys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_sys.h; path = src/utils/fluid_sys.h; sourceTree = SOURCE_ROOT; };
+		8BD5A4BAC7D34DB9B09D4D03 /* fluid_voice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_voice.h; path = src/synth/fluid_voice.h; sourceTree = SOURCE_ROOT; };
+		95487D9531CB4B1C9ECD255B /* gen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gen.h; path = include/fluidsynth/gen.h; sourceTree = SOURCE_ROOT; };
+		9653304F93504AA3BAE9E375 /* fluid_adsr_env.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_adsr_env.h; path = src/rvoice/fluid_adsr_env.h; sourceTree = SOURCE_ROOT; };
+		9717941870984EAFB20B0EA6 /* fluid_sfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_sfont.h; path = src/sfloader/fluid_sfont.h; sourceTree = SOURCE_ROOT; };
+		99895A4C06204380899CAC23 /* fluid_rvoice.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_rvoice.c; path = src/rvoice/fluid_rvoice.c; sourceTree = SOURCE_ROOT; };
+		9EB47C13D80E43338507133C /* synth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = synth.h; path = include/fluidsynth/synth.h; sourceTree = SOURCE_ROOT; };
+		A038C6D03B8641DDBC6115F7 /* fluid_seqbind.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_seqbind.c; path = src/midi/fluid_seqbind.c; sourceTree = SOURCE_ROOT; };
+		A0F5D26B826742D1866C6404 /* fluid_coreaudio.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_coreaudio.c; path = src/drivers/fluid_coreaudio.c; sourceTree = SOURCE_ROOT; };
+		A15D71929B7C4561B7EE224F /* fluidsynth_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluidsynth_priv.h; path = src/utils/fluidsynth_priv.h; sourceTree = SOURCE_ROOT; };
+		A4AFFBDC16AF4C3C841638E5 /* fluid_rvoice_mixer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_rvoice_mixer.h; path = src/rvoice/fluid_rvoice_mixer.h; sourceTree = SOURCE_ROOT; };
+		AB7EEDAE66134CEABA12C844 /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = version.h; path = build_mac/include/fluidsynth/version.h; sourceTree = SOURCE_ROOT; };
+		B4A9A60B8ADA4523B227EF06 /* fluid_settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_settings.h; path = src/utils/fluid_settings.h; sourceTree = SOURCE_ROOT; };
+		B9702921F0AB48458B284E0C /* fluid_filerenderer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_filerenderer.c; path = src/bindings/fluid_filerenderer.c; sourceTree = SOURCE_ROOT; };
+		BC286E77CA0A40ED9F6B3A41 /* fluid_adriver.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_adriver.c; path = src/drivers/fluid_adriver.c; sourceTree = SOURCE_ROOT; };
+		BD70B9EE889848DAAC61A902 /* fluid_aufile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_aufile.c; path = src/drivers/fluid_aufile.c; sourceTree = SOURCE_ROOT; };
+		BD8167CC585A4C16A5E5A6EF /* fluid_gen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_gen.c; path = src/synth/fluid_gen.c; sourceTree = SOURCE_ROOT; };
+		C43071F2B99540A4A385EDD3 /* fluid_iir_filter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_iir_filter.c; path = src/rvoice/fluid_iir_filter.c; sourceTree = SOURCE_ROOT; };
+		CD59D4B2DAEF45E1BB335A81 /* fluid_ringbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_ringbuffer.c; path = src/utils/fluid_ringbuffer.c; sourceTree = SOURCE_ROOT; };
+		CE0D66857F9D47F495B9066D /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.text; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D244BB993C5A4A18A1871351 /* fluid_mod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_mod.h; path = src/synth/fluid_mod.h; sourceTree = SOURCE_ROOT; };
+		D29F99FD76184C5BBD625759 /* shell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shell.h; path = include/fluidsynth/shell.h; sourceTree = SOURCE_ROOT; };
+		D9AFBF4A3A594E52930673CA /* fluid_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_list.h; path = src/utils/fluid_list.h; sourceTree = SOURCE_ROOT; };
+		D9E9EAE5DCBA484BA635E5CC /* fluid_defsfont.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_defsfont.c; path = src/sfloader/fluid_defsfont.c; sourceTree = SOURCE_ROOT; };
+		DF7D72DE5F464975B19C30AD /* fluidsynth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluidsynth.h; path = include/fluidsynth.h; sourceTree = SOURCE_ROOT; };
+		E03633A76FCA49DFAB2EEE9B /* seq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = seq.h; path = include/fluidsynth/seq.h; sourceTree = SOURCE_ROOT; };
+		E43BDEB11E474EAB91B331D5 /* fluid_ringbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_ringbuffer.h; path = src/utils/fluid_ringbuffer.h; sourceTree = SOURCE_ROOT; };
+		E54B4F008F9A487FA4B85861 /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = event.h; path = include/fluidsynth/event.h; sourceTree = SOURCE_ROOT; };
+		E54B792D0AB94C63B423ADA5 /* fluid_event_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_event_priv.h; path = src/synth/fluid_event_priv.h; sourceTree = SOURCE_ROOT; };
+		E79A97B55496438FBD498081 /* fluid_chan.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_chan.c; path = src/synth/fluid_chan.c; sourceTree = SOURCE_ROOT; };
+		EA51F8BA6BB04DAF8D10FB7C /* fluid_mod.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_mod.c; path = src/synth/fluid_mod.c; sourceTree = SOURCE_ROOT; };
+		ECED20829027471DAEC55C62 /* fluid_synth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_synth.h; path = src/synth/fluid_synth.h; sourceTree = SOURCE_ROOT; };
+		ED5735CD981243C99094BCAF /* fluid_lfo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_lfo.c; path = src/rvoice/fluid_lfo.c; sourceTree = SOURCE_ROOT; };
+		F370056CB4274040A48A37F7 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F85B82FE274A4894B16627B1 /* voice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = voice.h; path = include/fluidsynth/voice.h; sourceTree = SOURCE_ROOT; };
+		F9D801C319CF46119A898E60 /* fluid_gen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fluid_gen.h; path = src/synth/fluid_gen.h; sourceTree = SOURCE_ROOT; };
+		F9E1E2FB3B4E418592C91B93 /* fluid_settings.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_settings.c; path = src/utils/fluid_settings.c; sourceTree = SOURCE_ROOT; };
+		FC9FE661F5594A00BA2FDFF6 /* fluid_ramsfont.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fluid_ramsfont.c; path = src/sfloader/fluid_ramsfont.c; sourceTree = SOURCE_ROOT; };
+		FF540A409FFB4A32A8F5AC19 /* seqbind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = seqbind.h; path = include/fluidsynth/seqbind.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		01BA6F220FFC476D9FF8F8FC /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				72ADC68694B841879440D46E /* CMake Rules */,
+				F370056CB4274040A48A37F7 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		0680B514A0104F18B06D5B46 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		14D6C4138645479682B96186 /* tarball-autotools */ = {
+			isa = PBXGroup;
+			children = (
+				0680B514A0104F18B06D5B46 /* CMake Rules */,
+				F370056CB4274040A48A37F7 /* CMakeLists.txt */,
+			);
+			name = "tarball-autotools";
+			sourceTree = "<group>";
+		};
+		2BFD201428494018B8EEA4D5 = {
+			isa = PBXGroup;
+			children = (
+				A7C379841E384062BC18E3E0 /* Sources */,
+				8C58844D98394596994E7A8E /* Resources */,
+				CB626B6D62924BA09B97DBA0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CE40919DEC349A3A8D42D85 /* uninstall */ = {
+			isa = PBXGroup;
+			children = (
+				D6B2BDB0E46149B39C18CCBF /* CMake Rules */,
+				F370056CB4274040A48A37F7 /* CMakeLists.txt */,
+			);
+			name = uninstall;
+			sourceTree = "<group>";
+		};
+		3A689BC87B434B6E90963742 /* tarball */ = {
+			isa = PBXGroup;
+			children = (
+				3F917D4ADDAA48959F39220F /* CMake Rules */,
+				F370056CB4274040A48A37F7 /* CMakeLists.txt */,
+			);
+			name = tarball;
+			sourceTree = "<group>";
+		};
+		3F917D4ADDAA48959F39220F /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		5DE49CA6A7A248AFB21C5E44 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E41C97F4B334B7F997A5FF4 /* fluid_cmd.c */,
+				B9702921F0AB48458B284E0C /* fluid_filerenderer.c */,
+				BC286E77CA0A40ED9F6B3A41 /* fluid_adriver.c */,
+				BD70B9EE889848DAAC61A902 /* fluid_aufile.c */,
+				A0F5D26B826742D1866C6404 /* fluid_coreaudio.c */,
+				1760AB146C2848109724BD42 /* fluid_mdriver.c */,
+				16CDFA68C5AC4BE7A3BB6A2C /* fluid_midi.c */,
+				24DF8A56356740169D43046D /* fluid_midi_router.c */,
+				1648ED52EFEB4A1290CD7E42 /* fluid_seq.c */,
+				A038C6D03B8641DDBC6115F7 /* fluid_seqbind.c */,
+				2818957684044C4D9F3C5F13 /* fluid_adsr_env.c */,
+				38D54FE4384843529C127EA7 /* fluid_chorus.c */,
+				C43071F2B99540A4A385EDD3 /* fluid_iir_filter.c */,
+				ED5735CD981243C99094BCAF /* fluid_lfo.c */,
+				68D10ABFB6B14232BEE4A9E1 /* fluid_rev.c */,
+				99895A4C06204380899CAC23 /* fluid_rvoice.c */,
+				472332F6B5994F53A580C7D7 /* fluid_rvoice_dsp.c */,
+				5D8ACDEE29B64F69BB137030 /* fluid_rvoice_event.c */,
+				6B31925637D54C27A81F29F2 /* fluid_rvoice_mixer.c */,
+				D9E9EAE5DCBA484BA635E5CC /* fluid_defsfont.c */,
+				FC9FE661F5594A00BA2FDFF6 /* fluid_ramsfont.c */,
+				E79A97B55496438FBD498081 /* fluid_chan.c */,
+				419B749335414EC69994DAE0 /* fluid_event.c */,
+				BD8167CC585A4C16A5E5A6EF /* fluid_gen.c */,
+				EA51F8BA6BB04DAF8D10FB7C /* fluid_mod.c */,
+				5393D887AB924EA3B7AE21B6 /* fluid_synth.c */,
+				41A15952725945A09B3503F7 /* fluid_tuning.c */,
+				12BB7C8034A74E0DB55F4C4F /* fluid_voice.c */,
+				6CE95D656C054420A10C360E /* fluid_conv.c */,
+				30F23DD9474E4F3E8CF62730 /* fluid_hash.c */,
+				664F185FB54F44AB88F58450 /* fluid_list.c */,
+				CD59D4B2DAEF45E1BB335A81 /* fluid_ringbuffer.c */,
+				F9E1E2FB3B4E418592C91B93 /* fluid_settings.c */,
+				19959D54F18A4544B2C3A850 /* fluid_sys.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		72ADC68694B841879440D46E /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		8C58844D98394596994E7A8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		929A7149B07843938C765507 /* fluidsynth */ = {
+			isa = PBXGroup;
+			children = (
+				E9D247E33C9749008698D5DA /* Source Files */,
+				CE0D66857F9D47F495B9066D /* CMakeLists.txt */,
+			);
+			name = fluidsynth;
+			sourceTree = "<group>";
+		};
+		A29DD12460714A00B607BCA1 /* libfluidsynth */ = {
+			isa = PBXGroup;
+			children = (
+				FBF5D2E1AFA249E3B4639D7B /* Header Files */,
+				5DE49CA6A7A248AFB21C5E44 /* Source Files */,
+				CE0D66857F9D47F495B9066D /* CMakeLists.txt */,
+			);
+			name = libfluidsynth;
+			sourceTree = "<group>";
+		};
+		A7C379841E384062BC18E3E0 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				01BA6F220FFC476D9FF8F8FC /* ALL_BUILD */,
+				A82361AE912C4FFABC28D87A /* ZERO_CHECK */,
+				3A689BC87B434B6E90963742 /* tarball */,
+				14D6C4138645479682B96186 /* tarball-autotools */,
+				2CE40919DEC349A3A8D42D85 /* uninstall */,
+				929A7149B07843938C765507 /* fluidsynth */,
+				A29DD12460714A00B607BCA1 /* libfluidsynth */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		A82361AE912C4FFABC28D87A /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				DC62408642304AB19CA60F60 /* CMake Rules */,
+				F370056CB4274040A48A37F7 /* CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		CB626B6D62924BA09B97DBA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D2230062E47446DAC21781E /* fluidsynth */,
+				140A9D949EE44A3886FB1EE2 /* libfluidsynth.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D6B2BDB0E46149B39C18CCBF /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		DC62408642304AB19CA60F60 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		E9D247E33C9749008698D5DA /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C252B60EC294CE6BE85880F /* fluidsynth.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		FBF5D2E1AFA249E3B4639D7B /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				2324C658C73F40D3A718058C /* config.h */,
+				AB7EEDAE66134CEABA12C844 /* version.h */,
+				DF7D72DE5F464975B19C30AD /* fluidsynth.h */,
+				614543418F6D444EBCC81FCC /* audio.h */,
+				E54B4F008F9A487FA4B85861 /* event.h */,
+				95487D9531CB4B1C9ECD255B /* gen.h */,
+				7E6008DB2DE747EE9FA0BDE1 /* log.h */,
+				4F27EFDEA77140828CBFCACD /* midi.h */,
+				164949E7FBD54839A5C2C50A /* misc.h */,
+				246AE2544C1C464F84DCAB1A /* mod.h */,
+				7190109017404BB4AE2C50DA /* ramsfont.h */,
+				E03633A76FCA49DFAB2EEE9B /* seq.h */,
+				FF540A409FFB4A32A8F5AC19 /* seqbind.h */,
+				12587FC4987A45F1894EF8FA /* settings.h */,
+				5ECCE47EC7364A85BBDAF28F /* sfont.h */,
+				D29F99FD76184C5BBD625759 /* shell.h */,
+				9EB47C13D80E43338507133C /* synth.h */,
+				4AD431BF94384115A6CEE8C0 /* types.h */,
+				F85B82FE274A4894B16627B1 /* voice.h */,
+				85478B40A35148389EC5FD22 /* fluid_cmd.h */,
+				4FCD03472FD1455A9DF8AF38 /* fluid_adriver.h */,
+				2679DE02AC9F40EABAFB04A2 /* fluid_mdriver.h */,
+				5BA702B71B824D5FBF9763EE /* fluid_midi.h */,
+				74A7192ECF484AD197389E5E /* fluid_midi_router.h */,
+				9653304F93504AA3BAE9E375 /* fluid_adsr_env.h */,
+				4486659D8AC947089A4F1878 /* fluid_chorus.h */,
+				477435A20F5F478891CDE96D /* fluid_iir_filter.h */,
+				72B68569F4124FC5B54A4512 /* fluid_lfo.h */,
+				1A62137E56EB4950B9384152 /* fluid_phase.h */,
+				5EF48DC869AB4C2DB098EBFA /* fluid_rev.h */,
+				7BCAA45EE79F4583B00A7000 /* fluid_rvoice.h */,
+				0B602F21BFFC4B86AA9A3335 /* fluid_rvoice_event.h */,
+				A4AFFBDC16AF4C3C841638E5 /* fluid_rvoice_mixer.h */,
+				6ABFDE2536BD42F5B302F44B /* fluid_defsfont.h */,
+				276D55A1AD9A4AD4B8BF6DC4 /* fluid_ramsfont.h */,
+				9717941870984EAFB20B0EA6 /* fluid_sfont.h */,
+				3F17523201A54F93AAB77B86 /* fluid_chan.h */,
+				E54B792D0AB94C63B423ADA5 /* fluid_event_priv.h */,
+				0561E2DE76764B8CA6DBBE0D /* fluid_event_queue.h */,
+				F9D801C319CF46119A898E60 /* fluid_gen.h */,
+				D244BB993C5A4A18A1871351 /* fluid_mod.h */,
+				ECED20829027471DAEC55C62 /* fluid_synth.h */,
+				89D0595433494A4993B6C6A4 /* fluid_tuning.h */,
+				8BD5A4BAC7D34DB9B09D4D03 /* fluid_voice.h */,
+				11B4C33EAB76431BA5145B22 /* fluid_conv.h */,
+				0EAA2F7C551C4780BFDA2015 /* fluid_hash.h */,
+				D9AFBF4A3A594E52930673CA /* fluid_list.h */,
+				E43BDEB11E474EAB91B331D5 /* fluid_ringbuffer.h */,
+				B4A9A60B8ADA4523B227EF06 /* fluid_settings.h */,
+				8A6F9414EDE14DFFB657B5AD /* fluid_sys.h */,
+				A15D71929B7C4561B7EE224F /* fluidsynth_priv.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C612CB2E0BDF4436B81D9071 /* libfluidsynth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FE51AF13C10420D86229C3D /* Build configuration list for PBXNativeTarget "libfluidsynth" */;
+			buildPhases = (
+				AC073DC293484F2DA1D20988 /* Sources */,
+				6919272A152E463A857C406C /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F1935DA3F3D4E32A645148B /* PBXTargetDependency */,
+			);
+			name = libfluidsynth;
+			productName = libfluidsynth;
+			productReference = 140A9D949EE44A3886FB1EE2 /* libfluidsynth.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DB66A284793245E6B8A264DA /* fluidsynth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CE5DDCC68E4729A285615C /* Build configuration list for PBXNativeTarget "fluidsynth" */;
+			buildPhases = (
+				446F1A59590F4681A8C91EAD /* Sources */,
+				C7FA887EC3694D0BA5F6006B /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD4E7FEF56974CF7AC6F83D5 /* PBXTargetDependency */,
+				F36F0B49642D463E9F3A5B8D /* PBXTargetDependency */,
+			);
+			name = fluidsynth;
+			productName = fluidsynth;
+			productReference = 6D2230062E47446DAC21781E /* fluidsynth */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E22FC725AB6F40679950FC5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = FAECC7C8BC694CAF9377AD65 /* Build configuration list for PBXProject "FluidSynth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2BFD201428494018B8EEA4D5;
+			projectDirPath = ..;
+			projectRoot = "";
+			targets = (
+				3B0962E89F2F4B5D907A94F9 /* ALL_BUILD */,
+				400D5BEFE0F640978D98CFD2 /* ZERO_CHECK */,
+				FE46ECA162664D53BDE53088 /* install */,
+				35F82135E24947918070BFCA /* package */,
+				032F845F99F346B8BAC35B39 /* tarball */,
+				CBB928C3FEEA4A6089C0D111 /* tarball-autotools */,
+				7A7D6343ECE04C6E90993C31 /* uninstall */,
+				DB66A284793245E6B8A264DA /* fluidsynth */,
+				C612CB2E0BDF4436B81D9071 /* libfluidsynth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BD08964B6D14EE4B5FAE76D /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac -f /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		5F1CAB0571944CC8A5883A24 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac -f /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeScripts/package_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		6919272A152E463A857C406C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src -f /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src/CMakeScripts/libfluidsynth_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		7AA21193719E494EB5C40310 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac -f /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		8EDC4CDE52984E49B9185130 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac -f /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeScripts/uninstall_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		958D5EACD47B46859CBB05B6 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac -f /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		B17E2DFDE9FE4F1D977E087A /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac -f /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeScripts/tarball_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		BF4051F433614D3F88331E32 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac -f /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeScripts/tarball-autotools_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		C7FA887EC3694D0BA5F6006B /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src -f /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src/CMakeScripts/fluidsynth_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		446F1A59590F4681A8C91EAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25F57C50954E4FFCACF479E1 /* fluidsynth.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC073DC293484F2DA1D20988 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0CB664D639E4BABBC46A0E7 /* fluid_cmd.c in Sources */,
+				A7BABDDB3C934FE4AF8EB35F /* fluid_filerenderer.c in Sources */,
+				6369DEC101CD47D5A443050E /* fluid_adriver.c in Sources */,
+				2F427EEDB92C4E38B0364FAB /* fluid_aufile.c in Sources */,
+				E8DBB1D578C344FDB813D066 /* fluid_coreaudio.c in Sources */,
+				6AE9445C44D645EBB50FB3E5 /* fluid_mdriver.c in Sources */,
+				883A1F94533642348D49FA28 /* fluid_midi.c in Sources */,
+				D77A5FCFEC7D465A9C622782 /* fluid_midi_router.c in Sources */,
+				524897D835AA4E92BF851CFF /* fluid_seq.c in Sources */,
+				BEC6DE06F1AC4B25B150A035 /* fluid_seqbind.c in Sources */,
+				AF57F9EFDAC144FE9CDB647B /* fluid_adsr_env.c in Sources */,
+				FE89AABD55A74003AEB6C44B /* fluid_chorus.c in Sources */,
+				FF89CF40A74846C89946C9CB /* fluid_iir_filter.c in Sources */,
+				01F5EBBB06614852A9123EB6 /* fluid_lfo.c in Sources */,
+				18156BBA747740DBB3F8F888 /* fluid_rev.c in Sources */,
+				815EE8151EBB4CBD9E35159A /* fluid_rvoice.c in Sources */,
+				E171AF3EBC5045FDAC08A10F /* fluid_rvoice_dsp.c in Sources */,
+				BF6614E71AEA46048EFC42BE /* fluid_rvoice_event.c in Sources */,
+				4A0016B567B6494DA61EFFF0 /* fluid_rvoice_mixer.c in Sources */,
+				A9F79F8FA939499EA408796F /* fluid_defsfont.c in Sources */,
+				CEE4443AC8CC4E46853C4E73 /* fluid_ramsfont.c in Sources */,
+				C3CDC74B5452463AAE047292 /* fluid_chan.c in Sources */,
+				B4E9A7B288C743CC9AECCA3F /* fluid_event.c in Sources */,
+				B14D7EE27BEA4127B6A30CEF /* fluid_gen.c in Sources */,
+				087DC2985A61484C95CF7B10 /* fluid_mod.c in Sources */,
+				866DDD7F29DC421682252A21 /* fluid_synth.c in Sources */,
+				FCE8243C043941F79BA12D62 /* fluid_tuning.c in Sources */,
+				0BE1CABBB79B4425BD0E894E /* fluid_voice.c in Sources */,
+				E299579F66BE415981560ECB /* fluid_conv.c in Sources */,
+				C08A2556B5A948F5BE377C9D /* fluid_hash.c in Sources */,
+				3B48E5CAA0F24075B82FA2A4 /* fluid_list.c in Sources */,
+				80087FBB6B014ED38F2F83AC /* fluid_ringbuffer.c in Sources */,
+				C4DE4506936E49F5B1EC09C9 /* fluid_settings.c in Sources */,
+				65A07354AA3A4D268F9EE621 /* fluid_sys.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2AC078865288433A83EAC96F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B0962E89F2F4B5D907A94F9 /* ALL_BUILD */;
+			targetProxy = 44436F8162A24A2986D0D0F0 /* PBXContainerItemProxy */;
+		};
+		2BF565AC8F0A41BB8D2DD301 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 400D5BEFE0F640978D98CFD2 /* ZERO_CHECK */;
+			targetProxy = F4FD4444C3AA4CAF9571F6FC /* PBXContainerItemProxy */;
+		};
+		3056D49612634B5DAA2BB72E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 400D5BEFE0F640978D98CFD2 /* ZERO_CHECK */;
+			targetProxy = AD4E773F8DC84B57976290F1 /* PBXContainerItemProxy */;
+		};
+		3AB4312A24284A5193D7C0CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 400D5BEFE0F640978D98CFD2 /* ZERO_CHECK */;
+			targetProxy = 5E09FA4D96934EC4B6499D9D /* PBXContainerItemProxy */;
+		};
+		3F1935DA3F3D4E32A645148B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 400D5BEFE0F640978D98CFD2 /* ZERO_CHECK */;
+			targetProxy = 7FA42E85F88F4679A04DE09F /* PBXContainerItemProxy */;
+		};
+		4EACAEAFC8F54F169F50BE97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C612CB2E0BDF4436B81D9071 /* libfluidsynth */;
+			targetProxy = AC6131152F1E46B9B0D4BD21 /* PBXContainerItemProxy */;
+		};
+		7899279F7A8F4139991027A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB66A284793245E6B8A264DA /* fluidsynth */;
+			targetProxy = 834C254FF2504C769266C736 /* PBXContainerItemProxy */;
+		};
+		C1E1045799C5454A8A548358 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B0962E89F2F4B5D907A94F9 /* ALL_BUILD */;
+			targetProxy = D3A032D5590A46BA9A1F0E36 /* PBXContainerItemProxy */;
+		};
+		CD4E7FEF56974CF7AC6F83D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C612CB2E0BDF4436B81D9071 /* libfluidsynth */;
+			targetProxy = 4A0D0425B8B6499B9C91CB65 /* PBXContainerItemProxy */;
+		};
+		F36F0B49642D463E9F3A5B8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 400D5BEFE0F640978D98CFD2 /* ZERO_CHECK */;
+			targetProxy = 92685593013B42F9810180AE /* PBXContainerItemProxy */;
+		};
+		FB3EECC907C141C582F6AAC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 400D5BEFE0F640978D98CFD2 /* ZERO_CHECK */;
+			targetProxy = A00EF4013BAE4068A42C6010 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00F12ADCF06F4045B4CC575B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		07540A76B50942A8A6ACC78D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/drivers",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/synth",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/rvoice",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/midi",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/utils",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/sfloader",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/bindings",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/include",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/include",
+					"/usr/local/Cellar/glib/2.36.3/include/glib-2.0",
+					"/usr/local/Cellar/glib/2.36.3/lib/glib-2.0/include",
+					/usr/local/opt/gettext/include,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/glib/2.36.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/Cellar/glib/2.36.3/lib,
+					"/usr/local/opt/gettext/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/gettext/lib,
+				);
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src/Debug/libfluidsynth.a",
+					"-lgthread-2.0",
+					"-lglib-2.0",
+					"-lintl",
+					"-Wl,-framework,CoreAudio,-framework,AudioUnit",
+					"-lm",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fluidsynth;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		0C508E90C4B44529B70E3CF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.7;
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/build";
+			};
+			name = Debug;
+		};
+		147C2489F0114C4CBF50231E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		15E2D0DE827B472F97FD0CD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		1AAEA55898454C7EBCBBD40F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "tarball-autotools";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		360C771BF28A4A6584E3573F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		36D548162BC84103B57FCEF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		387A47AC07AF4369ABAB2C46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "tarball-autotools";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		3BA364AA185247CDA8FDFD9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		40C1E93B1D854DA7BDBBCB50 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = tarball;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		44832AC857B94658B9AF3401 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		49E33F2F8C0543CB8BF68049 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		53483D3C15A44060B793F535 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/drivers",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/synth",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/rvoice",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/midi",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/utils",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/sfloader",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/bindings",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/include",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/include",
+					"/usr/local/Cellar/glib/2.36.3/include/glib-2.0",
+					"/usr/local/Cellar/glib/2.36.3/lib/glib-2.0/include",
+					/usr/local/opt/gettext/include,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fluidsynth;
+				SDKROOT = macosx10.7;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		54EDF59392364FA5B0754758 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.7;
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/build";
+			};
+			name = RelWithDebInfo;
+		};
+		54FB1D71512549B1BECDE625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		5D1421FA12284339928BB4F2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		5FE6823953904242815029E1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/drivers",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/synth",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/rvoice",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/midi",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/utils",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/sfloader",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/bindings",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/include",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/include",
+					"/usr/local/Cellar/glib/2.36.3/include/glib-2.0",
+					"/usr/local/Cellar/glib/2.36.3/lib/glib-2.0/include",
+					/usr/local/opt/gettext/include,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fluidsynth;
+				SDKROOT = macosx10.7;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		6170456E012D45D2968C9162 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/drivers",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/synth",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/rvoice",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/midi",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/utils",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/sfloader",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/bindings",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/include",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/include",
+					"/usr/local/Cellar/glib/2.36.3/include/glib-2.0",
+					"/usr/local/Cellar/glib/2.36.3/lib/glib-2.0/include",
+					/usr/local/opt/gettext/include,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/glib/2.36.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/Cellar/glib/2.36.3/lib,
+					"/usr/local/opt/gettext/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/gettext/lib,
+				);
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src/MinSizeRel/libfluidsynth.a",
+					"-lgthread-2.0",
+					"-lglib-2.0",
+					"-lintl",
+					"-Wl,-framework,CoreAudio,-framework,AudioUnit",
+					"-lm",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fluidsynth;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		7791DA0BEA1343CDAF4015B1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		811BEBE702E14E48AF361CE4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/drivers",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/synth",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/rvoice",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/midi",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/utils",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/sfloader",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/bindings",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/include",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/include",
+					"/usr/local/Cellar/glib/2.36.3/include/glib-2.0",
+					"/usr/local/Cellar/glib/2.36.3/lib/glib-2.0/include",
+					/usr/local/opt/gettext/include,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/glib/2.36.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/Cellar/glib/2.36.3/lib,
+					"/usr/local/opt/gettext/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/gettext/lib,
+				);
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src/RelWithDebInfo/libfluidsynth.a",
+					"-lgthread-2.0",
+					"-lglib-2.0",
+					"-lintl",
+					"-Wl,-framework,CoreAudio,-framework,AudioUnit",
+					"-lm",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fluidsynth;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		8DAAF561F9AA4DA489A57F3F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.7;
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/build";
+			};
+			name = MinSizeRel;
+		};
+		8E13ACB99BF34777BB453684 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		9576A5AC32E041019A61D488 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "tarball-autotools";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		9D1241C4F87B46DD9BFC40D5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		9FA5F967880148BBB7D8D840 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		A35FAE4386BE4336826A82A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		A56A46E89FDB4ADF989E4B86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = tarball;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		A6946FDC80644C84916A07E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		B57A28173E754A7E94E94981 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/drivers",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/synth",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/rvoice",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/midi",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/utils",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/sfloader",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/bindings",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/include",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/include",
+					"/usr/local/Cellar/glib/2.36.3/include/glib-2.0",
+					"/usr/local/Cellar/glib/2.36.3/lib/glib-2.0/include",
+					/usr/local/opt/gettext/include,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fluidsynth;
+				SDKROOT = macosx10.7;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		BA69908B5C624D1792CEAC56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "tarball-autotools";
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		BF63A38E44084BE29C875E4D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		CDF50ACF8C93481D9DD7C987 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.7;
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/build";
+			};
+			name = Release;
+		};
+		D4F168BF7F0C4549BDDC46AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		D586393BB8C84708A3DCE019 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = tarball;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		E4B57152E8F048BBB1D594B7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = tarball;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		E5E4A57AAA2E40BF9D888843 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		E8B5CFB6B7AF41E780767DD4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		EAD0C3F1C6734CE2A6264C9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/drivers",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/synth",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/rvoice",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/midi",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/utils",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/sfloader",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/bindings",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/include",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/include",
+					"/usr/local/Cellar/glib/2.36.3/include/glib-2.0",
+					"/usr/local/Cellar/glib/2.36.3/lib/glib-2.0/include",
+					/usr/local/opt/gettext/include,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/glib/2.36.3/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/Cellar/glib/2.36.3/lib,
+					"/usr/local/opt/gettext/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/opt/gettext/lib,
+				);
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src/Release/libfluidsynth.a",
+					"-lgthread-2.0",
+					"-lglib-2.0",
+					"-lintl",
+					"-Wl,-framework,CoreAudio,-framework,AudioUnit",
+					"-lm",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fluidsynth;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		F51BFBAADFE94E77BC3C3F13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/drivers",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/synth",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/rvoice",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/midi",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/utils",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/sfloader",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/src/bindings",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/include",
+					"/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/include",
+					"/usr/local/Cellar/glib/2.36.3/include/glib-2.0",
+					"/usr/local/Cellar/glib/2.36.3/lib/glib-2.0/include",
+					/usr/local/opt/gettext/include,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = fluidsynth;
+				SDKROOT = macosx10.7;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02FFF41FDB7B4D98AD7B0772 /* Build configuration list for PBXAggregateTarget "package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				147C2489F0114C4CBF50231E /* Debug */,
+				A6946FDC80644C84916A07E6 /* Release */,
+				44832AC857B94658B9AF3401 /* MinSizeRel */,
+				7791DA0BEA1343CDAF4015B1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0A0447E337AA418E840CCF6F /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A35FAE4386BE4336826A82A0 /* Debug */,
+				36D548162BC84103B57FCEF4 /* Release */,
+				E5E4A57AAA2E40BF9D888843 /* MinSizeRel */,
+				5D1421FA12284339928BB4F2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		13BC5D632A3D4E6BAE727879 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA364AA185247CDA8FDFD9E /* Debug */,
+				15E2D0DE827B472F97FD0CD5 /* Release */,
+				E8B5CFB6B7AF41E780767DD4 /* MinSizeRel */,
+				8E13ACB99BF34777BB453684 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		31445311E1264D558CAD8C7A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00F12ADCF06F4045B4CC575B /* Debug */,
+				D4F168BF7F0C4549BDDC46AF /* Release */,
+				360C771BF28A4A6584E3573F /* MinSizeRel */,
+				9FA5F967880148BBB7D8D840 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		5FE51AF13C10420D86229C3D /* Build configuration list for PBXNativeTarget "libfluidsynth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57A28173E754A7E94E94981 /* Debug */,
+				F51BFBAADFE94E77BC3C3F13 /* Release */,
+				53483D3C15A44060B793F535 /* MinSizeRel */,
+				5FE6823953904242815029E1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		80F87D576EE1496886CFBD2C /* Build configuration list for PBXAggregateTarget "tarball" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D586393BB8C84708A3DCE019 /* Debug */,
+				A56A46E89FDB4ADF989E4B86 /* Release */,
+				E4B57152E8F048BBB1D594B7 /* MinSizeRel */,
+				40C1E93B1D854DA7BDBBCB50 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		84CE5DDCC68E4729A285615C /* Build configuration list for PBXNativeTarget "fluidsynth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07540A76B50942A8A6ACC78D /* Debug */,
+				EAD0C3F1C6734CE2A6264C9B /* Release */,
+				6170456E012D45D2968C9162 /* MinSizeRel */,
+				811BEBE702E14E48AF361CE4 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9EEFE54E5694449FA7C3F922 /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54FB1D71512549B1BECDE625 /* Debug */,
+				49E33F2F8C0543CB8BF68049 /* Release */,
+				9D1241C4F87B46DD9BFC40D5 /* MinSizeRel */,
+				BF63A38E44084BE29C875E4D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B07538667EDB41369B7F5828 /* Build configuration list for PBXAggregateTarget "tarball-autotools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA69908B5C624D1792CEAC56 /* Debug */,
+				387A47AC07AF4369ABAB2C46 /* Release */,
+				1AAEA55898454C7EBCBBD40F /* MinSizeRel */,
+				9576A5AC32E041019A61D488 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FAECC7C8BC694CAF9377AD65 /* Build configuration list for PBXProject "FluidSynth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C508E90C4B44529B70E3CF2 /* Debug */,
+				CDF50ACF8C93481D9DD7C987 /* Release */,
+				8DAAF561F9AA4DA489A57F3F /* MinSizeRel */,
+				54EDF59392364FA5B0754758 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E22FC725AB6F40679950FC5A /* Project object */;
+}
