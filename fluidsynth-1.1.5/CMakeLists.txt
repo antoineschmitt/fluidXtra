@@ -157,7 +157,11 @@ if ( WIN32 )
   check_include_files ( "windows.h;mmsystem.h" HAVE_MMSYSTEM_H )
   set ( WINDOWS_SUPPORT ${HAVE_WINDOWS_H} )
   set ( WINDOWS_LIBS "dsound;winmm;ws2_32" )
-  set ( LIBFLUID_CPPFLAGS "-DFLUIDSYNTH_DLL_EXPORTS" )
+  if (BUILD_SHARED_LIBS)
+    set ( LIBFLUID_CPPFLAGS "-DFLUIDSYNTH_DLL_EXPORTS" )
+  else (BUILD_SHARED_LIBS)
+    set ( LIBFLUID_CPPFLAGS "-DFLUIDSYNTH_NOT_A_DLL" )
+  endif (BUILD_SHARED_LIBS)
   set ( FLUID_CPPFLAGS "-DFLUIDSYNTH_NOT_A_DLL" )
   set ( CMAKE_DEBUG_POSTFIX "_debug" )
   # MinGW compiler (a Windows GCC port)
@@ -275,7 +279,11 @@ endif ( CMAKE_BUILD_TYPE MATCHES "Debug" )
 find_package ( PkgConfig REQUIRED )
 
 # Mandatory libraries: glib and gthread
+if ( WIN32 )
+# no check because directly linked
+else ( WIN32 )
 pkg_check_modules ( GLIB REQUIRED glib-2.0>=2.6.5 gthread-2.0>=2.6.5 )
+endif ( WIN32 )
 
 include ( UnsetPkgConfig )
 

@@ -36,6 +36,15 @@ include_directories (
     ${GLIB_INCLUDE_DIRS}
 )
 
+if ( WIN32 )
+  # glib direct support
+  include_directories (
+    ${CMAKE_SOURCE_DIR}/../glib_dev/vs10/Win32/include
+    ${CMAKE_SOURCE_DIR}/../glib_dev/vs10/Win32/include/glib-2.0
+    ${CMAKE_SOURCE_DIR}/../glib_dev/vs10/Win32/lib/glib-2.0/include
+  )
+endif ( WINDOWS_SUPPORT )
+
 # ************ library ************
 
 if ( READLINE_SUPPORT )
