@@ -1,4 +1,14 @@
-C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/ALL_BUILD.dir
-C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/ZERO_CHECK.dir
-C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/src/CMakeFiles/fluidsynth.dir
-C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/src/CMakeFiles/libfluidsynth.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/PACKAGE.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/INSTALL.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/ALL_BUILD.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/ZERO_CHECK.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/src/CMakeFiles/libfluidsynth.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/src/CMakeFiles/PACKAGE.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/src/CMakeFiles/fluidsynth.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/src/CMakeFiles/INSTALL.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/include/CMakeFiles/PACKAGE.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/include/CMakeFiles/INSTALL.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/include/fluidsynth/CMakeFiles/PACKAGE.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/include/fluidsynth/CMakeFiles/INSTALL.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/doc/CMakeFiles/PACKAGE.dir
+C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/doc/CMakeFiles/INSTALL.dir

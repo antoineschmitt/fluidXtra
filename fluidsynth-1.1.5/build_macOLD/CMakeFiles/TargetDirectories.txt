@@ -1,7 +1,0 @@
-/Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/ALL_BUILD.dir
-/Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/ZERO_CHECK.dir
-/Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src/CMakeFiles/fluidsynth.dir
-/Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/src/CMakeFiles/libfluidsynth.dir
-/Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/tarball.dir
-/Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/tarball-autotools.dir
-/Users/antoine/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/uninstall.dir

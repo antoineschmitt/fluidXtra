@@ -1,47 +1,54 @@
-# Install script for directory: C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5
+# Install script for directory: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5
 
 # Set the install prefix
-IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "C:/Program Files/FluidSynth")
-ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files/FluidSynth")
+endif()
+string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
 # Set the install configuration name.
-IF(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
-  IF(BUILD_TYPE)
-    STRING(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
+if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+  if(BUILD_TYPE)
+    string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
-  ELSE(BUILD_TYPE)
-    SET(CMAKE_INSTALL_CONFIG_NAME "Release")
-  ENDIF(BUILD_TYPE)
-  MESSAGE(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
-ENDIF(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
+  else()
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+  endif()
+  message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
+endif()
 
 # Set the component getting installed.
-IF(NOT CMAKE_INSTALL_COMPONENT)
-  IF(COMPONENT)
-    MESSAGE(STATUS "Install component: \"${COMPONENT}\"")
-    SET(CMAKE_INSTALL_COMPONENT "${COMPONENT}")
-  ELSE(COMPONENT)
-    SET(CMAKE_INSTALL_COMPONENT)
-  ENDIF(COMPONENT)
-ENDIF(NOT CMAKE_INSTALL_COMPONENT)
+if(NOT CMAKE_INSTALL_COMPONENT)
+  if(COMPONENT)
+    message(STATUS "Install component: \"${COMPONENT}\"")
+    set(CMAKE_INSTALL_COMPONENT "${COMPONENT}")
+  else()
+    set(CMAKE_INSTALL_COMPONENT)
+  endif()
+endif()
 
-IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE PROGRAM FILES
+    "C:/Program Files/Microsoft Visual Studio 11.0/VC/redist/x86/Microsoft.VC110.CRT/msvcp110.dll"
+    "C:/Program Files/Microsoft Visual Studio 11.0/VC/redist/x86/Microsoft.VC110.CRT/msvcr110.dll"
+    )
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/src/cmake_install.cmake")
-  INCLUDE("C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/include/cmake_install.cmake")
-  INCLUDE("C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/doc/cmake_install.cmake")
+  include("C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/src/cmake_install.cmake")
+  include("C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/include/cmake_install.cmake")
+  include("C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/doc/cmake_install.cmake")
 
-ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
+endif()
 
-IF(CMAKE_INSTALL_COMPONENT)
-  SET(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
-ELSE(CMAKE_INSTALL_COMPONENT)
-  SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
-ENDIF(CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT)
+  set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
+else()
+  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
+endif()
 
-FILE(WRITE "C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/${CMAKE_INSTALL_MANIFEST}" "")
-FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
-ENDFOREACH(file)
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+file(WRITE "C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/${CMAKE_INSTALL_MANIFEST}"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")

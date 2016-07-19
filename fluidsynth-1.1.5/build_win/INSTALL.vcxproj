@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -19,37 +19,42 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGUID>{7260C57F-B70C-49F9-81CC-90CF12013B5B}</ProjectGUID>
+    <ProjectGUID>{F6C738AC-7DE6-3378-A786-9067B231691E}</ProjectGUID>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
     <ProjectName>INSTALL</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType></ConfigurationType>
+    <ConfigurationType>Utility</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType></ConfigurationType>
+    <ConfigurationType>Utility</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
-    <ConfigurationType></ConfigurationType>
+    <ConfigurationType>Utility</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
-    <ConfigurationType></ConfigurationType>
+    <ConfigurationType>Utility</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
     <PropertyGroup>
       <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
@@ -61,7 +66,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
@@ -70,7 +75,7 @@
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake 2.8\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -83,7 +88,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
@@ -92,7 +97,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake 2.8\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -105,7 +110,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
@@ -114,7 +119,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake 2.8\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -127,7 +132,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
@@ -136,7 +141,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-"C:\Program Files\CMake 2.8\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
+"C:\Program Files\CMake\bin\cmake.exe" -DBUILD_TYPE=$(Configuration) -P cmake_install.cmake
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -147,7 +152,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="CMakeFiles\INSTALL_force.rule">
+    <CustomBuild Include="C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\f64ffe5129c82cef1a6ea1514060fc19\INSTALL_force.rule">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
 cd .
@@ -158,8 +163,9 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/f64ffe5129c82cef1a6ea1514060fc19/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\INSTALL_force</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
 cd .
@@ -170,8 +176,9 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/f64ffe5129c82cef1a6ea1514060fc19/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\INSTALL_force</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
 cd .
@@ -182,8 +189,9 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/f64ffe5129c82cef1a6ea1514060fc19/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\INSTALL_force</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
 cd .
@@ -194,65 +202,17 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/CMakeFiles/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\INSTALL_force</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/f64ffe5129c82cef1a6ea1514060fc19/INSTALL_force.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\INSTALL_force</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files\CMake 2.8\bin\cmake.exe" "-HC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5" "-BC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win" --check-stamp-file "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\generate.stamp"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeSystem.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeCPlatform.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\DefaultDirs.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\CheckSTDC.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\CheckPrototypeExists.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\CheckDIRSymbolExists.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\TestInline.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\TestVLA.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\UnsetPkgConfig.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\FindOSS.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\config.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\config_win32.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\report.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files\CMake 2.8\bin\cmake.exe" "-HC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5" "-BC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win" --check-stamp-file "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\generate.stamp"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeSystem.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeCPlatform.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\DefaultDirs.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\CheckSTDC.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\CheckPrototypeExists.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\CheckDIRSymbolExists.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\TestInline.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\TestVLA.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\UnsetPkgConfig.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\FindOSS.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\config.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\config_win32.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\report.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files\CMake 2.8\bin\cmake.exe" "-HC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5" "-BC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win" --check-stamp-file "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\generate.stamp"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeSystem.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeCPlatform.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\DefaultDirs.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\CheckSTDC.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\CheckPrototypeExists.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\CheckDIRSymbolExists.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\TestInline.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\TestVLA.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\UnsetPkgConfig.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\FindOSS.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\config.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\config_win32.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\report.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\generate.stamp</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files\CMake 2.8\bin\cmake.exe" "-HC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5" "-BC:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win" --check-stamp-file "C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\generate.stamp"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\CMakeLists.txt;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeSystem.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeCPlatform.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\DefaultDirs.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\CheckSTDC.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\CheckPrototypeExists.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\CheckDIRSymbolExists.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFile.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\TestInline.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\TestVLA.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\TestBigEndian.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\UnsetPkgConfig.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\FindOSS.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\config.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\src\config_win32.cmake;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\cmake_admin\report.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\generate.stamp</Outputs>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="C:/Documents and Settings/Antoine/Mes documents/fluidXtra/src/fluidsynth-1.1.5/build_win/ALL_BUILD.vcxproj">
-      <Project>798D7462-A4FA-4B88-8C71-92561F023AB1</Project>
+    <ProjectReference Include="C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/ZERO_CHECK.vcxproj">
+      <Project>05839FAC-8C58-32DC-9C6B-C3ABB499C536</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/ALL_BUILD.vcxproj">
+      <Project>7B843AFB-062C-31BB-9B67-4C554ADC0C92</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

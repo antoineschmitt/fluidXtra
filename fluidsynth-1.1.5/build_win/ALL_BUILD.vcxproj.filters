@@ -1,25 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <CustomBuild Include="C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="CMakeFiles\ALL_BUILD.rule">
-      <Filter>CMake Rules</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="CMake Rules">
-      <UniqueIdentifier>{431AA3C6-80E2-4066-AFC2-0BA9516CDE5C}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="C:\Documents and Settings\Antoine\Mes documents\fluidXtra\src\fluidsynth-1.1.5\build_win\CMakeFiles\ALL_BUILD" />
   </ItemGroup>
 </Project>
