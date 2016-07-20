@@ -162,6 +162,8 @@ EXTERN_BEGIN_DEFINE_CLASS_INTERFACE(FLUIDXtra, IMoaMmXScript)
      EXTERN_DEFINE_METHOD(MoaError, getSoundFontsStack, (PMoaDrCallInfo))
      EXTERN_DEFINE_METHOD(MoaError, getSoundFontInfo, (PMoaDrCallInfo))
      EXTERN_DEFINE_METHOD(MoaError, loadSampleFile, (PMoaDrCallInfo))
+     EXTERN_DEFINE_METHOD(MoaError, loadSampleFileExtract, (PMoaDrCallInfo))
+     EXTERN_DEFINE_METHOD(MoaError, getSampleFileSamples, (PMoaDrCallInfo))
      EXTERN_DEFINE_METHOD(MoaError, loadSampleMember, (PMoaDrCallInfo))
      EXTERN_DEFINE_METHOD(MoaError, deleteSample, (PMoaDrCallInfo))
      EXTERN_DEFINE_METHOD(MoaError, getSampleName, (PMoaDrCallInfo))
@@ -232,7 +234,8 @@ EXTERN_BEGIN_DEFINE_CLASS_INTERFACE(FLUIDXtra, IMoaMmXScript)
      EXTERN_DEFINE_METHOD(void, _deleteRamSamplesForRamsfont, (fluid_ramsfont_t*))   
      EXTERN_DEFINE_METHOD(fluid_xtra_sample_t*, _getRamSample, (unsigned int))   
      EXTERN_DEFINE_METHOD(short, _getSourceIdForName, (char *, bool))
-     EXTERN_DEFINE_METHOD(MoaError, _addSample, (PMoaDrCallInfo, short*, short*, short*, unsigned int, unsigned int, int))
+     EXTERN_DEFINE_METHOD(MoaError, _addSample, (PMoaDrCallInfo, int, short*, short*, short*, long, int, int))
+     EXTERN_DEFINE_METHOD(MoaError, _loadSampleFile, (PMoaDrCallInfo, int, long, long))
      EXTERN_DEFINE_METHOD(MoaError, getControl, (PMoaDrCallInfo))
      EXTERN_DEFINE_METHOD(MoaError, getControls, (PMoaDrCallInfo))
      EXTERN_DEFINE_METHOD(MoaError, setGenerator, (PMoaDrCallInfo))
@@ -266,6 +269,8 @@ enum {
   m_getSoundFontsStack,
   m_getSoundFontInfo,
   m_loadSampleFile,
+  m_loadSampleFileExtract,
+  m_getSampleFileSamples,
   m_loadSampleMember,
   m_deleteSample,
   m_getSampleName,
@@ -347,6 +352,7 @@ typedef enum {
     FLUIDXTRAERR_OPENREADFILE,
     FLUIDXTRAERR_READFILE,
     FLUIDXTRAERR_BADFILEFORMAT,
+    FLUIDXTRAERR_SEEKFILE,
     
     FLUIDXTRAERR_STDERROR
 } fluid_xtra_errornum;

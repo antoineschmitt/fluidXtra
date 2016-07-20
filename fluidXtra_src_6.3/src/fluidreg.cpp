@@ -56,7 +56,9 @@ const static char msgTable1[] = {
   "reloadSoundFont object me, * -- reloads the soundfont, arg stackID is optional\n"
   "getSoundFontsStack object me -- returns list of current stackIDs\n"
   "getSoundFontInfo object me, * -- returns info about SoundFont, arg stackID is optional\n"
-  "loadSampleFile object me, string filepath, int soundFontID, * -- loads a sample into a memory soundfont\n"
+  "loadSampleFile object me, string filepath, int soundFontID, * -- loads a sample from a file into a memory soundfont\n"
+  "loadSampleFileExtract object me, string filepath, int startSample, int nbSamples, int soundFontID, * -- loads a sample from an extract of a file into a memory soundfont\n"
+  "getSampleFileSamples object me, string filepath -- returns the number of samples in a file\n"
   "loadSampleMember object me, * -- loads a member into a memory soundfont\n"
   "deleteSample object me, int sampleID -- deletes the sample\n"
   "getSampleName object me, int sampleID -- returns the name of the sample\n"
@@ -68,10 +70,10 @@ const static char msgTable1[] = {
   "getLoop object me, int sampleID -- is the sample looped\n"
   "setLoopPoints object me, int sampleID, int firstframe, int lastframe -- sets the loop points\n"
   "getLoopPoints object me, int sampleID -- gets the loop points list\n"
-  "setEnvelope object me, int sampleID, * -- sets the envelope\n"
-  "getEnvelope object me, int sampleID -- gets the envelope list\n"
 };
 const static char msgTable2[] = { 
+    "setEnvelope object me, int sampleID, * -- sets the envelope\n"
+    "getEnvelope object me, int sampleID -- gets the envelope list\n"
   "-- Reverb/chorus\n"
   "setReverb object me, int\n"
   "getReverb object me\n"
@@ -100,10 +102,10 @@ const static char msgTable2[] = {
   "controlChange object me, int chan, any ctrlParams, * -- ctrlParams = plist of ctrlSymbol/value. Optional seq.\n"
   "getControl object me, int channel, any ctrlSymbol -- returns the current value\n"
   "getControls object me, int channel -- returns the current values of all controls\n"
-  "setGenerator object me, int channel, int generator, *\n"
-  "getGenerator object me, int channel, int generator\n"
 };
 const static char msgTable3[] = { 
+    "setGenerator object me, int channel, int generator, *\n"
+    "getGenerator object me, int channel, int generator\n"
   "-- Recording\n"
   "startRecord object me, string filepath -- starts recording to filePath\n"
   "stopRecord object me -- stops recording\n"

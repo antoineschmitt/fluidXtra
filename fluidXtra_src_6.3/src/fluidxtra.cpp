@@ -2828,7 +2828,7 @@ FLUIDXtra_IMoaMmXScript::getEnvelope(PMoaDrCallInfo callPtr) {
 // If needed, and if provided, left and right buffers are used
 // If data, left and right are owned by the function : used or freed
 MoaError 
-FLUIDXtra_IMoaMmXScript::_addSample(PMoaDrCallInfo callPtr, short* data, short* left, short* right, unsigned int nbframes, unsigned int framerate, int nbChannels)
+FLUIDXtra_IMoaMmXScript::_addSample(PMoaDrCallInfo callPtr, int sfontArgNb, short* data, short* left, short* right, long nbframes, int framerate, int nbChannels)
 {
 	/* parse arguments:
 		presetNum or
@@ -2872,10 +2872,10 @@ FLUIDXtra_IMoaMmXScript::_addSample(PMoaDrCallInfo callPtr, short* data, short* 
 	presetName[0] = 0;
 	
   // get the sfID
- 	if (_getIntArg(callPtr, 3, "soundFontID", &sfID, true) < 0)
+ 	if (_getIntArg(callPtr, sfontArgNb++, "soundFontID", &sfID, true) < 0)
     return kMoaErr_NoErr;
 	
-	GetArgByIndex(4, &tempArg);
+	GetArgByIndex(sfontArgNb++, &tempArg);
   if (_checkValueType(&tempArg, kMoaMmValueType_Integer)) {
 		pObj->pMmValue->ValueToInteger(&tempArg, &presetNum);
   	
@@ -3029,7 +3029,7 @@ FLUIDXtra_IMoaMmXScript::_addSample(PMoaDrCallInfo callPtr, short* data, short* 
             }
 			
 			// de-interleave
-			unsigned long i;
+            long i;
 			short *tmp = data, *tmp11 = tmp1, *tmp22 = tmp2;
 			for (i = 0 ; i < nbframes ; i++) {
 				*tmp11++ = *tmp++;
@@ -3619,7 +3619,7 @@ FLUIDXtra_IMoaMmXScript::loadSampleMember(PMoaDrCallInfo callPtr)
 						goto exit_gracefully;
                     }
                     memcpy(newdata, pmarker, myNumFrames*nbChannels*sizeof(short));
-					_addSample(callPtr, (short *)newdata, NULL, NULL, myNumFrames, sampleRate, nbChannels);
+					_addSample(callPtr, 3, (short *)newdata, NULL, NULL, myNumFrames, sampleRate, nbChannels);
 
 					pmarker += *chunkSize;
 					dataFound = true;
@@ -3690,7 +3690,7 @@ exit_gracefully:
                     pObj->pMmValue->IntegerToValue(err, &callPtr->resultValue);
                 } else {
                     memcpy(newdata, samples, myNumFrames*nbChannels*sizeof(short));
-                    _addSample(callPtr, samples, NULL, NULL, myNumFrames, samplerate, nbChannels);
+                    _addSample(callPtr, 3, samples, NULL, NULL, myNumFrames, samplerate, nbChannels);
                 }
 
 				HUnlock(sndHdl);
@@ -3718,14 +3718,69 @@ exit_gracefully:
 	return kMoaErr_NoErr;
 }
 
+MoaError
+FLUIDXtra_IMoaMmXScript::getSampleFileSamples(PMoaDrCallInfo callPtr) {
+    MoaError err;
 
-MoaError 
-FLUIDXtra_IMoaMmXScript::loadSampleFile(PMoaDrCallInfo callPtr)
+    /* Load sample file */
+    MoaMmValue value;
+    MoaChar filename[1024];
+    
+    GetArgByIndex(2, &value);
+	if (!_checkValueType(&value, kMoaMmValueType_String)) {
+        fluid_log(FLUID_ERR, "filepath should be a string");
+		pObj->pMmValue->IntegerToValue(FLUIDXTRAERR_BADARGUMENT, &callPtr->resultValue);
+        return kMoaErr_NoErr;
+    }
+    
+    _valueToString(pObj, &value, filename, 1024);
+    pathHFS2POSIX(filename, 1024);
+    fluid_log(FLUID_DBG, "fluidsynth: loading sample file '%s'", filename);
+    
+	// read data
+    long nbFileFrames;
+	int nbChannels;
+    err = fluid_sample_import_compute_file_samples(filename, &nbFileFrames, &nbChannels);
+    if (err < 0) {
+        if (err == FLUIDXTRAERR_OPENREADFILE) _fluid_xtra_setErrorString(pObj, (char *)"Cannot open file for reading");
+        if (err == FLUIDXTRAERR_BADFILEFORMAT) _fluid_xtra_setErrorString(pObj, (char *)"Bad file format, should be 16bits");
+		pObj->pMmValue->IntegerToValue(err, &callPtr->resultValue);
+        return kMoaErr_NoErr;
+    }
+    
+    pObj->pMmValue->IntegerToValue(nbFileFrames, &callPtr->resultValue);
+    
+    return kMoaErr_NoErr;
+}
+
+MoaError
+FLUIDXtra_IMoaMmXScript::loadSampleFile(PMoaDrCallInfo callPtr) {
+    return _loadSampleFile(callPtr, 3, 0, -1);
+}
+
+MoaError
+FLUIDXtra_IMoaMmXScript::loadSampleFileExtract(PMoaDrCallInfo callPtr) {
+    long startFrame;
+    long nbFrames;
+	int res;
+    
+	res = _getIntArg(callPtr, 3, "startFrame", &startFrame, true);
+ 	if (res == -1) return kMoaErr_NoErr;
+    if (startFrame < 0) startFrame = 0;
+    
+	res = _getIntArg(callPtr, 4, "nbFrames", &nbFrames, true);
+ 	if (res == -1) return kMoaErr_NoErr;
+
+    return _loadSampleFile(callPtr, 5, startFrame, nbFrames);
+}
+
+MoaError
+FLUIDXtra_IMoaMmXScript::_loadSampleFile(PMoaDrCallInfo callPtr, int sfontArgNb, long startFrame, long nbFramesToRead)
 {
   MoaError err;
 	short *data = NULL;
-	unsigned int nbframes = 0;
-	unsigned int framerate;
+	long nbFramesLoaded = 0;
+    int framerate;
 	int nbChannels;
 	
   /* Load sample file */
@@ -3745,14 +3800,20 @@ FLUIDXtra_IMoaMmXScript::loadSampleFile(PMoaDrCallInfo callPtr)
 
 	// read data
 	data = NULL;
-    unsigned long bytesNeeded;
-    err = fluid_sample_import_compute_file_data(filename, &bytesNeeded, &nbChannels);
+    long bytesNeeded, nbFileFrames;
+    err = fluid_sample_import_compute_file_samples(filename, &nbFileFrames, &nbChannels);
     if (err < 0) {
         if (err == FLUIDXTRAERR_OPENREADFILE) _fluid_xtra_setErrorString(pObj, (char *)"Cannot open file for reading");
         if (err == FLUIDXTRAERR_BADFILEFORMAT) _fluid_xtra_setErrorString(pObj, (char *)"Bad file format, should be 16bits");
 		pObj->pMmValue->IntegerToValue(err, &callPtr->resultValue);
         return kMoaErr_NoErr;
     }
+    
+    // bytesNeeded
+    long realFramesToRead = nbFileFrames - startFrame;
+    if (nbFramesToRead >= 0) realFramesToRead = nbFramesToRead;
+    if (realFramesToRead > nbFileFrames - startFrame) realFramesToRead = nbFileFrames - startFrame;
+    bytesNeeded = realFramesToRead*nbChannels*2;
     
     data = fluidxtra_malloc_buffer(bytesNeeded);
     if (data == NULL) {
@@ -3786,16 +3847,16 @@ FLUIDXtra_IMoaMmXScript::loadSampleFile(PMoaDrCallInfo callPtr)
         }
     }
     
-	err = fluid_sample_import_file(filename, data, &nbframes, &framerate, &nbChannels);
+	err = fluid_sample_import_file(filename, data, startFrame, realFramesToRead, &nbFramesLoaded, &framerate, &nbChannels);
 	if (err != kMoaErr_NoErr) {
         if (err == FLUIDXTRAERR_OPENREADFILE) _fluid_xtra_setErrorString(pObj, (char *)"Cannot open file for reading");
         if (err == FLUIDXTRAERR_BADFILEFORMAT) _fluid_xtra_setErrorString(pObj, (char *)"Bad file format, should be 16bits");
+        if (err == FLUIDXTRAERR_SEEKFILE) _fluid_xtra_setErrorString(pObj, (char *)"Error seeking file, bad position");
 		pObj->pMmValue->IntegerToValue(err, &callPtr->resultValue);
         return kMoaErr_NoErr;
 	}
 	
-	_addSample(callPtr, data, left, right, nbframes, framerate, nbChannels);
-	
+	_addSample(callPtr, sfontArgNb, data, left, right, nbFramesLoaded, framerate, nbChannels);
 	
 	return kMoaErr_NoErr;
 }
@@ -5851,10 +5912,18 @@ FLUIDXtra_IMoaMmXScript::Call(PMoaMmCallInfo callPtr)
 			  getSoundFontInfo(callPtr);
 			  break;
 			  
-			case m_loadSampleFile:
-			  loadSampleFile(callPtr);
-			  break;
-			  
+                case m_loadSampleFile:
+                    loadSampleFile(callPtr);
+                    break;
+                    
+                case m_loadSampleFileExtract:
+                    loadSampleFileExtract(callPtr);
+                    break;
+                    
+                case m_getSampleFileSamples:
+                    getSampleFileSamples(callPtr);
+                    break;
+	
 			case m_loadSampleMember:
 			  loadSampleMember(callPtr);
 			  break;

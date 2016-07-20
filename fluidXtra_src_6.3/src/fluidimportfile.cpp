@@ -30,7 +30,7 @@
 #include "sndfile.h"
 #include <stdlib.h>
 
-int fluid_sample_import_compute_file_data(char * filepath, unsigned long* bytes, int* nbChannels) {
+int fluid_sample_import_compute_file_samples(char * filepath, long* nbFrames, int* nbChannels) {
 	SNDFILE *		infile = NULL;
 	SF_INFO			sfinfo;
 	int 			bytesPerSample;
@@ -48,7 +48,7 @@ int fluid_sample_import_compute_file_data(char * filepath, unsigned long* bytes,
         return FLUIDXTRAERR_BADFILEFORMAT;
     }
 	
-	*bytes = (unsigned long)sfinfo.samples*sfinfo.channels*bytesPerSample;
+	*nbFrames = (long)sfinfo.samples;
     *nbChannels = sfinfo.channels;
     
     if (infile) sf_close (infile);
@@ -57,17 +57,18 @@ int fluid_sample_import_compute_file_data(char * filepath, unsigned long* bytes,
     return err;
 }
 
-int fluid_sample_import_file(char * filepath, short *data, unsigned int *nbsamples, unsigned int *samplerate, int *nbchannels)
+int fluid_sample_import_file(char * filepath, short *data, long seekPos, long nbFramesToLoad, long *nbFramesLoaded, int *samplerate, int *nbchannels)
 {
 	int err;
 	int 			bytesPerSample;
 	int				bytesPerFrame;
 	unsigned long			fileBytes;
-	long 			nbShortsRead;
+	long 			nbSamplesRead;
 	short 			needsTwoComplementing;
 	SNDFILE *		infile;
 	SF_INFO			sfinfo;
-	
+	long            samplesToRead;
+    
 	// open file, read info
 	infile = sf_open_read (filepath, &sfinfo) ;
 	if (!infile) {
@@ -84,14 +85,19 @@ int fluid_sample_import_file(char * filepath, short *data, unsigned int *nbsampl
 	fileBytes = (unsigned long)sfinfo.samples*bytesPerFrame;
 	needsTwoComplementing = (sfinfo.format & SF_FORMAT_AIFF) && (bytesPerSample == 1);
 
-	nbShortsRead = sf_read_short (infile, data, sfinfo.samples*sfinfo.channels);
-	if (nbShortsRead != (long)sfinfo.samples*(long)sfinfo.channels) {
-		err = FLUIDXTRAERR_READFILE;
-		*nbsamples = 0;
-		goto bail;
-	}
+    if (seekPos > 0) {
+        off_t res =	sf_seek(infile, seekPos, SEEK_SET);
+        if (res < 0) {
+            err = FLUIDXTRAERR_SEEKFILE;
+            *nbFramesLoaded = 0;
+            goto bail;
+        }
+    }
+    
+    samplesToRead = (nbFramesToLoad >= 0 ? nbFramesToLoad : sfinfo.samples)*sfinfo.channels;
+	nbSamplesRead = sf_read_short (infile, data, samplesToRead);
 	
-	*nbsamples = sfinfo.samples;
+	*nbFramesLoaded = nbSamplesRead/sfinfo.channels;
 	*samplerate = sfinfo.samplerate;
 	*nbchannels = sfinfo.channels;
 

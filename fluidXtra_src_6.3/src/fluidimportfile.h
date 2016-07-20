@@ -30,14 +30,19 @@
 
 #include "fluidsynth.h"
 
-// Computes the nuber of bytes and number of channels of the file. In order to see if loadable first.
-int fluid_sample_import_compute_file_data(char * filepath, unsigned long* bytes, int* nbChannels);
+// Gets the number of frames and channels in the file
+// samples are expected to be 2 bytes (SHORT)
+// a frame is channels samples
+// bytes total is thus frames*channels*2
+// Can fail if not shorts, or no file, or unknown format
+int fluid_sample_import_compute_file_samples(char * filepath, long* nbFrames, int* nbChannels);
 
     /* 	Fills data and nbsamples
      On returns, data is be 16bits, 44.1KHz, mono
      data should be allocated !!
+     if nbSamplesToLoad < 0, loads everything starting from seekPos.
      */
-int fluid_sample_import_file(char * filepath, short *data, unsigned int * nbsample, unsigned int *samplerate, int *nbchannels);
+int fluid_sample_import_file(char * filepath, short *data, long seekPos, long nbFramesToLoad, long * nbFramesLoaded, int *samplerate, int *nbchannels);
 
 short *fluidxtra_malloc_buffer(unsigned long bytesnb);
 void fluidxtra_free_buffer(short *buf);

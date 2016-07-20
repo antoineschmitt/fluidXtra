@@ -590,18 +590,25 @@ Returns the ratio (i.e. downloadedBytes/totalBytes), which is a float between 0.
 
 loadSampleFile(object me, string filePath, int soundFontID, plist presetInfo)
 loadSampleFile(object me, string filePath, int soundFontID, int presetNumber)
+loadSampleFileExtract(object me, string filePath, int startSample, int nbSamples, int soundFontID, int presetNumber)
+loadSampleFileExtract(object me, string filePath, int startSample, int nbSamples, int soundFontID, plist presetInfo)
+
 -----------------
 ex : sampleID = loadSampleFile(fluidObj, the moviePath&"Piano.aiff", 1, 2)
 ex : sampleID = loadSampleFile(fluidObj, the moviePath&"Piano.aiff", 1, [#number:2])
 ex : sampleID = loadSampleFile(fluidObj, the moviePath&"MidPiano.aiff", 1,
 [#name:"piano", #bank:0, #number:1, #rootKey:60, #keyRangeStart:50, #keyRangeEnd :70])
 
+ex : sampleID = loadSampleFileExtract(fluidObj, the moviePath&"Piano.aiff", 10, 200, 1, 2)
+
 
 Loads a sample file from filePath and adds it to a preset of a memory soundfont. This is a simple way of creating a preset from a specific sample.
 
-The 'filePath' is absolute, and should be expressed with the local
-file system conventions. Accepted sample formats are : wav and aiff.
+The 'filePath' is absolute, and should be expressed with the local file system conventions. Accepted sample formats are : wav and aiff.
 It must be 16 bits, mono or stereo, with a samplerate up to 192 kHz.
+
+loadSampleFileExtract only loads nbSamples samples, starting from sample startSample (included). See function getSampleFileSamples to get the total number of samples in the file.
+loadSampleFile loads all samples in the file.
 
 The preset is in a ram (memory) SoundFont (type #ram), specified with the argument soundFontID, which should be created from a 'createSoundFont' function call. In all cases, the preset is given the name of the sample, if any.
 
@@ -677,6 +684,16 @@ Note : this function requires the "Sound Import Export" Xtra to be present. This
 
 Returns a sampleID for the sample, or an error code (no synth, no file, bad file format, not enough memory, bad bank number, bad preset number, bad key).
 This sampleID can be used with functions that expect a sampleID (setLoop, getFrameCount, setLoopPoints, etc..)
+
+
+
+getSampleFileSamples(object me, string filePath)
+-----------------
+ex : nbSamples = getSampleFileSamples(fluidObj, the moviePath&"Piano.aiff")
+
+Returns the number of samples in the file.
+Or an error code.
+
 
 
 loadSampleMember(object me, obj member, int soundFontID, plist presetInfo)

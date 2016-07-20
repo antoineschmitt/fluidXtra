@@ -26,8 +26,8 @@ be found before the copy in the include folder and so you can customize it as yo
 #define VER_MAJORVERSION 6				    
 #define VER_MAJORVERSION_STRING "6"
 
-#define VER_MINORVERSION 3
-#define VER_MINORVERSION_STRING "3" 
+#define VER_MINORVERSION 4
+#define VER_MINORVERSION_STRING "4"
 														
 #define VER_BUGFIXVERSION 0
 #define VER_BUGFIXVERSION_STRING "0"

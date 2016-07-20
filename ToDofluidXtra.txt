@@ -1,8 +1,15 @@
 --- To Do Now fluidsynth ---
 
+- partial sound loading
+- secondary channels : coreaudio Mac + portaudio/ASIO on windows
+	- API
+-Mac fixing the headphone crash
+-Mac deprecated API warning
+-loadSampleFile error investigate
+
 ----
 
-Clarify the doc for download sondonft in shockwave :
+Clarify the doc for download soundonft in shockwave :
 for shockwave, please just do not call the function, so that it will use the default location. In shockwave, this is the way to go : do not specify any download location, start download : downloadFolderStartDownload("http://myserver/mysoundfont.sf2", "mysoundfont.sf2"). The soundfont will be downloaded to the default (hidden) location, use downloadFolderGetDownloadRatio() to check when download is done. Then use just the soundfont filename when calling loadSoundFont, it will be found in the download folder : loadSoundFont("mysoundfont.sf2"). I realize that the documentation is not clear about this, sorry.
 
 -------

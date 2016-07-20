@@ -364,7 +364,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				GCC_PREFIX_HEADER = "~/Documents/Code/XtraDev/xdk11_mac/Include/MACMach/prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = _DIRECTOR_XCODE;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = (
 					"$(INFOPLIST_PREPROCESSOR_DEFINITIONS_QUOTED_7)",
 					"$(INFOPLIST_PREPROCESSOR_DEFINITIONS_QUOTED_8)",
@@ -375,15 +375,12 @@
 				INFOPLIST_PREPROCESSOR_DEFINITIONS_QUOTED_9 = "Exec=\"fluidXtra\"";
 				LIBRARY_SEARCH_PATHS = (
 					"../../fluidsynth-1.1.5/build_mac/src/Debug/",
-					"/usr/local/lib//**",
+					"/usr/local/lib/**",
 				);
 				OBJROOT = "~/Code/_tmp";
-				OTHER_LDFLAGS = (
-					"-static-libstdc",
-					"-static-libstdc++",
-				);
+				OTHER_LDFLAGS = "-static-libstdc++";
 				PRODUCT_NAME = fluidXtra;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.6;
 				SHARED_PRECOMPS_DIR = "$(PROJECT_TEMP_DIR)/Precompiled";
 				SYMROOT = ../../products;
 				USER_HEADER_SEARCH_PATHS = "../src ../../libsndfile/MacOS ../../libsndfile/src /usr/local/include/glib-2.0 /usr/local/lib/glib-2.0/include ../../fluidsynth-1.1.5/build_mac/include ../../fluidsynth-1.1.5/include \"~/Documents/Code/XtraDev/xdk11_mac/Include/MACMach\" \"~/Documents/Code/XtraDev/xdk11_mac/Include\" $(inherited)";
@@ -399,7 +396,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				GCC_PREFIX_HEADER = "~/Documents/Code/XtraDev/xdk11_mac/Include/MACMach/prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = _DIRECTOR_XCODE;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				INFOPLIST_PREPROCESSOR_DEFINITIONS = (
 					"$(INFOPLIST_PREPROCESSOR_DEFINITIONS_QUOTED_10)",
 					"$(INFOPLIST_PREPROCESSOR_DEFINITIONS_QUOTED_11)",
@@ -413,12 +410,9 @@
 					"/usr/local/lib//**",
 				);
 				OBJROOT = "~/Code/_tmp";
-				OTHER_LDFLAGS = (
-					"-static-libstdc",
-					"-static-libstdc++",
-				);
+				OTHER_LDFLAGS = "-static-libstdc++";
 				PRODUCT_NAME = fluidXtra;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.6;
 				SHARED_PRECOMPS_DIR = "$(PROJECT_TEMP_DIR)/Precompiled";
 				SYMROOT = ../../products;
 				USER_HEADER_SEARCH_PATHS = "../src ../../libsndfile/MacOS ../../libsndfile/src /usr/local/include/glib-2.0 /usr/local/lib/glib-2.0/include ../../fluidsynth-1.1.5/build_mac/include ../../fluidsynth-1.1.5/include ~/Documents/Code/XtraDev/xdk11_mac/Include/MACMach ~/Documents/Code/XtraDev/xdk11_mac/Include $(inherited)";

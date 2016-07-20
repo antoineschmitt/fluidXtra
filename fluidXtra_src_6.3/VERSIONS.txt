@@ -60,3 +60,7 @@ Dec13 : v6.3
 - fixed removeEvents source
 - compiled with latest VC with XP compatibility on Windows
 
+JUL16 : v6.4
+- added loadSampleExtract
+- added getSampleFileSamples
+
