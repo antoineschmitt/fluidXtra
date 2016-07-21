@@ -85,6 +85,8 @@ void fluid_dsound_audio_driver_settings(fluid_settings_t* settings);
 void fluid_portaudio_driver_settings (fluid_settings_t *settings);
 fluid_audio_driver_t* new_fluid_portaudio_driver(fluid_settings_t* settings,
 						 fluid_synth_t* synth);
+fluid_audio_driver_t* new_fluid_portaudio_driver2(fluid_settings_t *settings,
+						fluid_audio_func_t func, void* data);
 int delete_fluid_portaudio_driver(fluid_audio_driver_t* p);
 #endif
 
@@ -165,7 +167,7 @@ fluid_audriver_definition_t fluid_audio_drivers[] = {
 #if PORTAUDIO_SUPPORT
   { "portaudio",
     new_fluid_portaudio_driver,
-    NULL,
+    new_fluid_portaudio_driver2,
     delete_fluid_portaudio_driver,
     fluid_portaudio_driver_settings },
 #endif

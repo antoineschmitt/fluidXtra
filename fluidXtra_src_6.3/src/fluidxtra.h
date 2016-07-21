@@ -102,6 +102,9 @@ EXTERN_BEGIN_DEFINE_CLASS_INSTANCE_VARS(FLUIDXtra)
 	 fluid_synth_t* synth;
 	 fluid_audio_driver_t* adriver;
 	 fluid_sequencer_t* sequencer;
+#ifdef _WIN32
+	 bool dsoundDriver;
+#endif
 	 int reverbOn;
 	 int chorusOn;
 	 short synthSeqID;
@@ -133,9 +136,7 @@ EXTERN_BEGIN_DEFINE_CLASS_INSTANCE_VARS(FLUIDXtra)
 	SNDFILE *			pRecFile;
 	int					pRecError;
 	GThread *			pWritingThread;
-#ifndef _WIN32
 	short *				pOutBufShort;
-#endif
 	short *				pWriteBufShort;
 	int					pWriteBufFrameCount;
 EXTERN_END_DEFINE_CLASS_INSTANCE_VARS
@@ -147,9 +148,8 @@ EXTERN_BEGIN_DEFINE_CLASS_INTERFACE(FLUIDXtra, IMoaMmXScript)
 	 EXTERN_DEFINE_METHOD(void, _recordWriteThread, ())
 #ifdef _WIN32
 	EXTERN_DEFINE_METHOD(void, _dsound_cb, (int, short*))
-#else
-	EXTERN_DEFINE_METHOD(int, _coreaudio_cb, (int , int , float** , int , float** ))
 #endif
+	EXTERN_DEFINE_METHOD(int, _coreaudio_cb, (int , int , float** , int , float** ))
   private:
      EXTERN_DEFINE_METHOD(MoaError, free, (PMoaDrCallInfo))
      EXTERN_DEFINE_METHOD(MoaError, mynew, (PMoaDrCallInfo))

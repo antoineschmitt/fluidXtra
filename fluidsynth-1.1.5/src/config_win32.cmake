@@ -3,7 +3,8 @@
 #cmakedefine HAVE_IO_H @HAVE_IO_H@
 
 #define DSOUND_SUPPORT 1
-#define WINMIDI_SUPPORT 1
+#define WINMIDI_SUPPORT 0
+#define PORTAUDIO_SUPPORT 1
 
 #define snprintf _snprintf
 #define strcasecmp _stricmp

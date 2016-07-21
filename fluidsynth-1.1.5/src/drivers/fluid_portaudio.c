@@ -38,10 +38,11 @@
 #if PORTAUDIO_SUPPORT
 
 #include <fcntl.h>
-#include <unistd.h>
+//#include <unistd.h>
 #include <errno.h>
 #include <portaudio.h>
 
+#define bzero(b,len) (memset((b), '\0', (len)), (void) 0)
 
 /** fluid_portaudio_driver_t
  *
@@ -51,9 +52,12 @@
 typedef struct
 {
   fluid_audio_driver_t driver;
-  fluid_synth_t *synth;
-  fluid_audio_callback_t read;
   PaStream *stream;
+  int chanL, chanR, chansOpen;
+  void* data;
+  fluid_audio_func_t callback;
+  unsigned int buffer_size;
+  float* buffers[2];
 } fluid_portaudio_driver_t;
 
 static int
@@ -61,6 +65,9 @@ fluid_portaudio_run (const void *input, void *output, unsigned long frameCount,
                      const PaStreamCallbackTimeInfo* timeInfo,
                      PaStreamCallbackFlags statusFlags, void *userData);
 int delete_fluid_portaudio_driver (fluid_audio_driver_t *p);
+
+fluid_audio_driver_t *
+new_fluid_portaudio_driver2 (fluid_settings_t *settings, fluid_audio_func_t func, void* data);
 
 #define PORTAUDIO_DEFAULT_DEVICE "PortAudio Default"
 
@@ -74,6 +81,8 @@ fluid_portaudio_driver_settings (fluid_settings_t *settings)
 
   fluid_settings_register_str (settings, "audio.portaudio.device", PORTAUDIO_DEFAULT_DEVICE, 0, NULL, NULL);
   fluid_settings_add_option (settings, "audio.portaudio.device", PORTAUDIO_DEFAULT_DEVICE);
+  fluid_settings_register_int (settings, "audio.portaudio.channelL", 0, 0, 32, 0, NULL, NULL);
+  fluid_settings_register_int (settings, "audio.portaudio.channelR", 1, 0, 32, 1, NULL, NULL);
 
   err = Pa_Initialize();
 
@@ -98,6 +107,12 @@ fluid_portaudio_driver_settings (fluid_settings_t *settings)
     if ( deviceInfo->maxOutputChannels >= 2 )
       fluid_settings_add_option (settings, "audio.portaudio.device",
                                  deviceInfo->name);
+		{
+			int nb_outputs = deviceInfo->maxOutputChannels;
+		  char tmp_setting__name[1024];
+		  snprintf(tmp_setting__name, sizeof(tmp_setting__name), "audio.portaudio.%s.channels", deviceInfo->name);
+		  fluid_settings_register_int (settings, tmp_setting__name, nb_outputs, 0, 32, 0, NULL, NULL);
+		}
   }
 
   /* done with PortAudio for now, may get reopened later */
@@ -108,7 +123,13 @@ fluid_portaudio_driver_settings (fluid_settings_t *settings)
 }
 
 fluid_audio_driver_t *
-new_fluid_portaudio_driver (fluid_settings_t *settings, fluid_synth_t *synth)
+new_fluid_portaudio_driver (fluid_settings_t *settings, fluid_synth_t *synth) {
+  return new_fluid_portaudio_driver2 ( settings,
+                                        NULL,
+                                        (void*) synth );}
+
+fluid_audio_driver_t *
+new_fluid_portaudio_driver2 (fluid_settings_t *settings, fluid_audio_func_t func, void* data)
 {
   fluid_portaudio_driver_t *dev = NULL;
   PaStreamParameters outputParams;
@@ -116,6 +137,7 @@ new_fluid_portaudio_driver (fluid_settings_t *settings, fluid_synth_t *synth)
   double sample_rate;
   int period_size;
   PaError err;
+  int numOutputs = 2;
 
   dev = FLUID_NEW (fluid_portaudio_driver_t);
 
@@ -136,18 +158,17 @@ new_fluid_portaudio_driver (fluid_settings_t *settings, fluid_synth_t *synth)
   }
 
   FLUID_MEMSET (dev, 0, sizeof (fluid_portaudio_driver_t));
+  dev->data = data;
+  dev->callback = func;
 
-  dev->synth = synth;
+  bzero (&outputParams, sizeof (outputParams));
 
   fluid_settings_getint (settings, "audio.period-size", &period_size);
   fluid_settings_getnum (settings, "synth.sample-rate", &sample_rate);
   fluid_settings_dupstr(settings, "audio.portaudio.device", &device);   /* ++ alloc device name */
 
-  bzero (&outputParams, sizeof (outputParams));
-  outputParams.channelCount = 2;
-  outputParams.suggestedLatency = (PaTime)period_size / sample_rate;
-
   /* Locate the device if specified */
+
   if (strcmp (device, PORTAUDIO_DEFAULT_DEVICE) != 0)
   {
     const PaDeviceInfo *deviceInfo;
@@ -169,6 +190,7 @@ new_fluid_portaudio_driver (fluid_settings_t *settings, fluid_synth_t *synth)
       if (strcmp (device, deviceInfo->name) == 0)
       {
         outputParams.device = i;
+		numOutputs = deviceInfo->maxOutputChannels;
         break;
       }
     }
@@ -181,21 +203,23 @@ new_fluid_portaudio_driver (fluid_settings_t *settings, fluid_synth_t *synth)
   }
   else outputParams.device = Pa_GetDefaultOutputDevice();
 
-  if (fluid_settings_str_equal (settings, "audio.sample-format", "16bits"))
-  {
-    outputParams.sampleFormat = paInt16;
-    dev->read = fluid_synth_write_s16;
-  }
-  else if (fluid_settings_str_equal (settings, "audio.sample-format", "float"))
-  {
-    outputParams.sampleFormat = paFloat32;
-    dev->read = fluid_synth_write_float;
-  }
-  else
-  {
-    FLUID_LOG (FLUID_ERR, "Unknown sample format");
+  fluid_settings_getint(settings, "audio.portaudio.channelL", &(dev->chanL));
+  fluid_settings_getint(settings, "audio.portaudio.channelR", &(dev->chanR));
+  dev->chansOpen = 1 + ((dev->chanL > dev->chanR) ? dev->chanL : dev->chanR);
+  if (dev->chansOpen > numOutputs) {
+    // error
+    FLUID_LOG (FLUID_ERR, "Error setting the output channel. Too big. L=%d, R=%d, max=%d\n", dev->chanL, dev->chanR, numOutputs);
     goto error_recovery;
   }
+  dev->buffer_size = period_size;
+  dev->buffers[0] = FLUID_ARRAY(float, dev->buffer_size);
+  dev->buffers[1] = FLUID_ARRAY(float, dev->buffer_size);
+
+  outputParams.channelCount = dev->chansOpen;
+  outputParams.suggestedLatency = (PaTime)period_size / sample_rate;
+
+  // force float format
+  outputParams.sampleFormat = paFloat32;
 
   /* PortAudio section */
 
@@ -244,8 +268,25 @@ fluid_portaudio_run (const void *input, void *output, unsigned long frameCount,
                      PaStreamCallbackFlags statusFlags, void *userData)
 {
   fluid_portaudio_driver_t *dev = (fluid_portaudio_driver_t *)userData;
-  /* it's as simple as that: */
-  dev->read (dev->synth, frameCount, output, 0, 2, output, 1, 2);
+
+  if (dev->callback) {
+    float* left = dev->buffers[0];
+    float* right = dev->buffers[1];
+	int i, r, l;
+	long len = frameCount;
+    float* buffer = (float *)output;
+
+	// callback fills dev->buffers
+    (*dev->callback)(dev->data, len, 0, NULL, 2, dev->buffers);
+
+    bzero(buffer, dev->chansOpen*len*sizeof(float));
+    for (i = 0, l = dev->chanL, r = dev->chanR; i < len; i++, l += dev->chansOpen, r += dev->chansOpen) {
+      buffer[l] = left[i];
+      buffer[r] = right[i];
+    }
+  } else
+	/* it's as simple as that: */
+	fluid_synth_write_float ((fluid_synth_t *)dev->data, frameCount, output, dev->chanL, dev->chansOpen, output, dev->chanR, dev->chansOpen);
   return 0;
 }
 
@@ -268,6 +309,13 @@ delete_fluid_portaudio_driver(fluid_audio_driver_t *p)
 
   if (err != paNoError)
     printf ("PortAudio termination error: %s\n", Pa_GetErrorText (err) );
+
+  if (dev->buffers[0]) {
+    FLUID_FREE(dev->buffers[0]);
+  }
+  if (dev->buffers[1]) {
+    FLUID_FREE(dev->buffers[1]);
+  }
 
   FLUID_FREE (dev);
   return FLUID_OK;

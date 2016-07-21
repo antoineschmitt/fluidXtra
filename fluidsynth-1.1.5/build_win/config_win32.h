@@ -3,7 +3,8 @@
 #define HAVE_IO_H 1
 
 #define DSOUND_SUPPORT 1
-#define WINMIDI_SUPPORT 1
+#define WINMIDI_SUPPORT 0
+#define PORTAUDIO_SUPPORT 1
 
 #define snprintf _snprintf
 #define strcasecmp _stricmp

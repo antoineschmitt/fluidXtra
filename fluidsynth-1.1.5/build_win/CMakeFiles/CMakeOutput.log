@@ -1,7 +1,7 @@
 The system is: Windows - 6.1.7601 - x86
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler:  
-Build flags: 
+Build flags: ;/DWIN32;/D_WINDOWS;/W3
 Id flags: 
 
 The output was:
@@ -10,7 +10,7 @@ Microsoft (R) Build Engine version 4.6.1055.0
 [Microsoft .NET Framework, version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 19/07/2016 22:45:32.
+Build started 21/07/2016 17:34:43.
 Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\3.5.2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -35,7 +35,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:04.08
+Time Elapsed 00:00:08.79
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -47,840 +47,76 @@ The C compiler identification is MSVC, found in "C:/Users/quantique1/Documents/f
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_696bb.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
+Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_1fa93.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
 Microsoft (R) Build Engine version 4.6.1055.0
 [Microsoft .NET Framework, version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 19/07/2016 22:45:37.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_696bb.vcxproj" on node 1 (default targets).
+Build started 21/07/2016 17:34:54.
+Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_1fa93.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_696bb.dir\Debug\".
+  Creating directory "cmTC_1fa93.dir\Debug\".
   Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
 InitializeBuildStatus:
-  Creating "cmTC_696bb.dir\Debug\cmTC_696bb.unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_1fa93.dir\Debug\cmTC_1fa93.unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_696bb.dir\Debug\\" /Fd"cmTC_696bb.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\testCCompiler.c"
+  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_1fa93.dir\Debug\\" /Fd"cmTC_1fa93.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\testCCompiler.c"
   Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
   Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_696bb.dir\Debug\\" /Fd"cmTC_696bb.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\testCCompiler.c"
-  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_1fa93.dir\Debug\\" /Fd"cmTC_1fa93.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\testCCompiler.c"
   testCCompiler.c
+  
 Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_696bb.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_696bb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_696bb.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_696bb.dir\Debug\testCCompiler.obj
-  cmTC_696bb.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_696bb.exe
+  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_1fa93.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_1fa93.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_1fa93.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_1fa93.dir\Debug\testCCompiler.obj
+  cmTC_1fa93.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_1fa93.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_696bb.dir\Debug\cmTC_696bb.unsuccessfulbuild".
-  Touching "cmTC_696bb.dir\Debug\cmTC_696bb.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_696bb.vcxproj" (default targets).
+  Deleting file "cmTC_1fa93.dir\Debug\cmTC_1fa93.unsuccessfulbuild".
+  Touching "cmTC_1fa93.dir\Debug\cmTC_1fa93.lastbuildstate".
+Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_1fa93.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:02.50
+Time Elapsed 00:00:03.33
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_dc855.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
+Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_b8771.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
 Microsoft (R) Build Engine version 4.6.1055.0
 [Microsoft .NET Framework, version 4.0.30319.42000]
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 19/07/2016 22:45:40.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_dc855.vcxproj" on node 1 (default targets).
+Build started 21/07/2016 17:34:59.
+Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_b8771.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_dc855.dir\Debug\".
+  Creating directory "cmTC_b8771.dir\Debug\".
   Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
 InitializeBuildStatus:
-  Creating "cmTC_dc855.dir\Debug\cmTC_dc855.unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_b8771.dir\Debug\cmTC_b8771.unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_dc855.dir\Debug\\" /Fd"cmTC_dc855.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.5\Modules\CMakeCCompilerABI.c"
+  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_b8771.dir\Debug\\" /Fd"cmTC_b8771.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.5\Modules\CMakeCCompilerABI.c"
   Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
   Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
   
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_dc855.dir\Debug\\" /Fd"cmTC_dc855.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.5\Modules\CMakeCCompilerABI.c"
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_b8771.dir\Debug\\" /Fd"cmTC_b8771.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files\CMake\share\cmake-3.5\Modules\CMakeCCompilerABI.c"
   
   CMakeCCompilerABI.c
 Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_dc855.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_dc855.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_dc855.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_dc855.dir\Debug\CMakeCCompilerABI.obj
-  cmTC_dc855.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_dc855.exe
+  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_b8771.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_b8771.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_b8771.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_b8771.dir\Debug\CMakeCCompilerABI.obj
+  cmTC_b8771.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_b8771.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_dc855.dir\Debug\cmTC_dc855.unsuccessfulbuild".
-  Touching "cmTC_dc855.dir\Debug\cmTC_dc855.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_dc855.vcxproj" (default targets).
+  Deleting file "cmTC_b8771.dir\Debug\cmTC_b8771.unsuccessfulbuild".
+  Touching "cmTC_b8771.dir\Debug\cmTC_b8771.lastbuildstate".
+Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_b8771.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:02.23
-
-
-Determining if the include file string.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_1e0b6.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:45:50.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_1e0b6.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_1e0b6.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_1e0b6.dir\Debug\cmTC_1e0b6.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_1e0b6.dir\Debug\\" /Fd"cmTC_1e0b6.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_1e0b6.dir\Debug\\" /Fd"cmTC_1e0b6.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_1e0b6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_1e0b6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_1e0b6.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_1e0b6.dir\Debug\CheckIncludeFile.obj
-  cmTC_1e0b6.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_1e0b6.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_1e0b6.dir\Debug\cmTC_1e0b6.unsuccessfulbuild".
-  Touching "cmTC_1e0b6.dir\Debug\cmTC_1e0b6.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_1e0b6.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.40
-
-
-Determining if the include file stdlib.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_4784f.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:45:53.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_4784f.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_4784f.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_4784f.dir\Debug\cmTC_4784f.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_4784f.dir\Debug\\" /Fd"cmTC_4784f.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_4784f.dir\Debug\\" /Fd"cmTC_4784f.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_4784f.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_4784f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_4784f.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_4784f.dir\Debug\CheckIncludeFile.obj
-  cmTC_4784f.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_4784f.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_4784f.dir\Debug\cmTC_4784f.unsuccessfulbuild".
-  Touching "cmTC_4784f.dir\Debug\cmTC_4784f.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_4784f.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.98
-
-
-Determining if the include file stdio.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_baa72.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:45:57.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_baa72.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_baa72.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_baa72.dir\Debug\cmTC_baa72.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_baa72.dir\Debug\\" /Fd"cmTC_baa72.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_baa72.dir\Debug\\" /Fd"cmTC_baa72.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_baa72.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_baa72.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_baa72.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_baa72.dir\Debug\CheckIncludeFile.obj
-  cmTC_baa72.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_baa72.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_baa72.dir\Debug\cmTC_baa72.unsuccessfulbuild".
-  Touching "cmTC_baa72.dir\Debug\cmTC_baa72.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_baa72.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.60
-
-
-Determining if the include file math.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_52332.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:46:00.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_52332.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_52332.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_52332.dir\Debug\cmTC_52332.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_52332.dir\Debug\\" /Fd"cmTC_52332.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_52332.dir\Debug\\" /Fd"cmTC_52332.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_52332.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_52332.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_52332.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_52332.dir\Debug\CheckIncludeFile.obj
-  cmTC_52332.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_52332.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_52332.dir\Debug\cmTC_52332.unsuccessfulbuild".
-  Touching "cmTC_52332.dir\Debug\cmTC_52332.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_52332.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:03.17
-
-
-Determining if the include file errno.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_9084a.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:46:04.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_9084a.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_9084a.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_9084a.dir\Debug\cmTC_9084a.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_9084a.dir\Debug\\" /Fd"cmTC_9084a.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_9084a.dir\Debug\\" /Fd"cmTC_9084a.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_9084a.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_9084a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_9084a.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_9084a.dir\Debug\CheckIncludeFile.obj
-  cmTC_9084a.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_9084a.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_9084a.dir\Debug\cmTC_9084a.unsuccessfulbuild".
-  Touching "cmTC_9084a.dir\Debug\cmTC_9084a.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_9084a.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:03.42
-
-
-Determining if the include file stdarg.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_ce927.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:46:08.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_ce927.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_ce927.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_ce927.dir\Debug\cmTC_ce927.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_ce927.dir\Debug\\" /Fd"cmTC_ce927.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_ce927.dir\Debug\\" /Fd"cmTC_ce927.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_ce927.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_ce927.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_ce927.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ce927.dir\Debug\CheckIncludeFile.obj
-  cmTC_ce927.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_ce927.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_ce927.dir\Debug\cmTC_ce927.unsuccessfulbuild".
-  Touching "cmTC_ce927.dir\Debug\cmTC_ce927.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_ce927.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.48
-
-
-Determining if the include file memory.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_a7685.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:46:12.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_a7685.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_a7685.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_a7685.dir\Debug\cmTC_a7685.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_a7685.dir\Debug\\" /Fd"cmTC_a7685.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_a7685.dir\Debug\\" /Fd"cmTC_a7685.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_a7685.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_a7685.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_a7685.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_a7685.dir\Debug\CheckIncludeFile.obj
-  cmTC_a7685.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_a7685.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_a7685.dir\Debug\cmTC_a7685.unsuccessfulbuild".
-  Touching "cmTC_a7685.dir\Debug\cmTC_a7685.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_a7685.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.45
-
-
-Determining if the include file sys/types.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_82fde.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:46:17.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_82fde.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_82fde.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_82fde.dir\Debug\cmTC_82fde.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_82fde.dir\Debug\\" /Fd"cmTC_82fde.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_82fde.dir\Debug\\" /Fd"cmTC_82fde.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_82fde.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_82fde.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_82fde.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_82fde.dir\Debug\CheckIncludeFile.obj
-  cmTC_82fde.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_82fde.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_82fde.dir\Debug\cmTC_82fde.unsuccessfulbuild".
-  Touching "cmTC_82fde.dir\Debug\cmTC_82fde.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_82fde.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.30
-
-
-Determining if the include file sys/stat.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_41cce.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:46:22.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_41cce.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_41cce.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_41cce.dir\Debug\cmTC_41cce.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_41cce.dir\Debug\\" /Fd"cmTC_41cce.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_41cce.dir\Debug\\" /Fd"cmTC_41cce.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_41cce.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_41cce.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_41cce.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_41cce.dir\Debug\CheckIncludeFile.obj
-  cmTC_41cce.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_41cce.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_41cce.dir\Debug\cmTC_41cce.unsuccessfulbuild".
-  Touching "cmTC_41cce.dir\Debug\cmTC_41cce.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_41cce.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.21
-
-
-Determining if the include file fcntl.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_99b6d.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:46:27.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_99b6d.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_99b6d.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_99b6d.dir\Debug\cmTC_99b6d.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_99b6d.dir\Debug\\" /Fd"cmTC_99b6d.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_99b6d.dir\Debug\\" /Fd"cmTC_99b6d.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_99b6d.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_99b6d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_99b6d.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_99b6d.dir\Debug\CheckIncludeFile.obj
-  cmTC_99b6d.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_99b6d.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_99b6d.dir\Debug\cmTC_99b6d.unsuccessfulbuild".
-  Touching "cmTC_99b6d.dir\Debug\cmTC_99b6d.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_99b6d.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.38
-
-
-Determining if the include file limits.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_9c654.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:46:38.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_9c654.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_9c654.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_9c654.dir\Debug\cmTC_9c654.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_9c654.dir\Debug\\" /Fd"cmTC_9c654.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_9c654.dir\Debug\\" /Fd"cmTC_9c654.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_9c654.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_9c654.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_9c654.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_9c654.dir\Debug\CheckIncludeFile.obj
-  cmTC_9c654.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_9c654.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_9c654.dir\Debug\cmTC_9c654.unsuccessfulbuild".
-  Touching "cmTC_9c654.dir\Debug\cmTC_9c654.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_9c654.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.22
-
-
-Determining if the include file signal.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_6360e.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:46:43.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_6360e.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_6360e.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_6360e.dir\Debug\cmTC_6360e.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_6360e.dir\Debug\\" /Fd"cmTC_6360e.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_6360e.dir\Debug\\" /Fd"cmTC_6360e.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_6360e.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_6360e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_6360e.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_6360e.dir\Debug\CheckIncludeFile.obj
-  cmTC_6360e.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_6360e.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_6360e.dir\Debug\cmTC_6360e.unsuccessfulbuild".
-  Touching "cmTC_6360e.dir\Debug\cmTC_6360e.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_6360e.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.20
-
-
-Performing C SOURCE FILE Test _have___inline succeeded with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_ef7ec.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:46:50.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_ef7ec.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_ef7ec.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_ef7ec.dir\Debug\cmTC_ef7ec.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _have___inline /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_ef7ec.dir\Debug\\" /Fd"cmTC_ef7ec.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _have___inline /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_ef7ec.dir\Debug\\" /Fd"cmTC_ef7ec.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\src.c"
-  
-  src.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_ef7ec.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_ef7ec.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_ef7ec.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ef7ec.dir\Debug\src.obj
-  cmTC_ef7ec.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_ef7ec.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_ef7ec.dir\Debug\cmTC_ef7ec.unsuccessfulbuild".
-  Touching "cmTC_ef7ec.dir\Debug\cmTC_ef7ec.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_ef7ec.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.17
-
-Source file was:
-typedef int foo_t;
-             static TESTKEYWORD foo_t static_foo(){return 0;}
-             foo_t foo(){return 0;}
-             int main(int argc, char *argv[]){return 0;}
-Determining if the include file stdint.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_26809.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:46:55.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_26809.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_26809.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_26809.dir\Debug\cmTC_26809.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_26809.dir\Debug\\" /Fd"cmTC_26809.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_26809.dir\Debug\\" /Fd"cmTC_26809.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_26809.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_26809.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_26809.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_26809.dir\Debug\CheckIncludeFile.obj
-  cmTC_26809.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_26809.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_26809.dir\Debug\cmTC_26809.unsuccessfulbuild".
-  Touching "cmTC_26809.dir\Debug\cmTC_26809.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_26809.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.47
-
-
-Determining if the include file stddef.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_2f28b.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:46:59.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_2f28b.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_2f28b.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_2f28b.dir\Debug\cmTC_2f28b.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_2f28b.dir\Debug\\" /Fd"cmTC_2f28b.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_2f28b.dir\Debug\\" /Fd"cmTC_2f28b.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_2f28b.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_2f28b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_2f28b.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_2f28b.dir\Debug\CheckIncludeFile.obj
-  cmTC_2f28b.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_2f28b.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_2f28b.dir\Debug\cmTC_2f28b.unsuccessfulbuild".
-  Touching "cmTC_2f28b.dir\Debug\cmTC_2f28b.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_2f28b.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.41
-
-
-Determining size of unsigned short passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_24789.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:47:02.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_24789.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_24789.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_24789.dir\Debug\cmTC_24789.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_24789.dir\Debug\\" /Fd"cmTC_24789.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CheckTypeSize\CMAKE_SIZEOF_UNSIGNED_SHORT.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_24789.dir\Debug\\" /Fd"cmTC_24789.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CheckTypeSize\CMAKE_SIZEOF_UNSIGNED_SHORT.c"
-  
-  CMAKE_SIZEOF_UNSIGNED_SHORT.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_24789.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_24789.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_24789.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_24789.dir\Debug\CMAKE_SIZEOF_UNSIGNED_SHORT.obj
-  cmTC_24789.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_24789.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_24789.dir\Debug\cmTC_24789.unsuccessfulbuild".
-  Touching "cmTC_24789.dir\Debug\cmTC_24789.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_24789.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.39
-
-
-Determining if the include file windows.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_bf03f.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:47:09.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_bf03f.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_bf03f.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_bf03f.dir\Debug\cmTC_bf03f.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_bf03f.dir\Debug\\" /Fd"cmTC_bf03f.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_bf03f.dir\Debug\\" /Fd"cmTC_bf03f.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_bf03f.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_bf03f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_bf03f.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_bf03f.dir\Debug\CheckIncludeFile.obj
-  cmTC_bf03f.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_bf03f.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_bf03f.dir\Debug\cmTC_bf03f.unsuccessfulbuild".
-  Touching "cmTC_bf03f.dir\Debug\cmTC_bf03f.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_bf03f.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:05.88
-
-
-Determining if the include file io.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_13008.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:47:16.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_13008.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_13008.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_13008.dir\Debug\cmTC_13008.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_13008.dir\Debug\\" /Fd"cmTC_13008.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_13008.dir\Debug\\" /Fd"cmTC_13008.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_13008.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_13008.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_13008.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_13008.dir\Debug\CheckIncludeFile.obj
-  cmTC_13008.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_13008.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_13008.dir\Debug\cmTC_13008.unsuccessfulbuild".
-  Touching "cmTC_13008.dir\Debug\cmTC_13008.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_13008.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:02.12
-
-
-Determining if the include file dsound.h exists passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_ebba7.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:47:19.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_ebba7.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_ebba7.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_ebba7.dir\Debug\cmTC_ebba7.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_ebba7.dir\Debug\\" /Fd"cmTC_ebba7.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_ebba7.dir\Debug\\" /Fd"cmTC_ebba7.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
-  
-  CheckIncludeFile.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_ebba7.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_ebba7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_ebba7.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ebba7.dir\Debug\CheckIncludeFile.obj
-  cmTC_ebba7.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_ebba7.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_ebba7.dir\Debug\cmTC_ebba7.unsuccessfulbuild".
-  Touching "cmTC_ebba7.dir\Debug\cmTC_ebba7.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_ebba7.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:04.54
-
-
-Determining if files windows.h;mmsystem.h exist passed with the following output:
-Change Dir: C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp
-
-Run Build Command:"C:/windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTC_b60d0.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=11.0"
-Microsoft (R) Build Engine version 4.6.1055.0
-[Microsoft .NET Framework, version 4.0.30319.42000]
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-Build started 19/07/2016 22:47:24.
-Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_b60d0.vcxproj" on node 1 (default targets).
-PrepareForBuild:
-  Creating directory "cmTC_b60d0.dir\Debug\".
-  Creating directory "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\".
-InitializeBuildStatus:
-  Creating "cmTC_b60d0.dir\Debug\cmTC_b60d0.unsuccessfulbuild" because "AlwaysCreate" was specified.
-ClCompile:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_b60d0.dir\Debug\\" /Fd"cmTC_b60d0.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
-  Compilateur d'optimisation Microsoft (R) C/C++ versionÿ17.00.61030 pour x86
-  Copyright (C) Microsoft Corporation. Tous droits r‚serv‚s.
-  
-  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D TESTKEYWORD=__inline /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTC_b60d0.dir\Debug\\" /Fd"cmTC_b60d0.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
-  
-  CheckIncludeFiles.c
-Link:
-  C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_b60d0.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_b60d0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/quantique1/Documents/fluidXtra/fluidXtra/fluidsynth-1.1.5/build_win/CMakeFiles/CMakeTmp/Debug/cmTC_b60d0.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_b60d0.dir\Debug\CheckIncludeFiles.obj
-  cmTC_b60d0.vcxproj -> C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\Debug\cmTC_b60d0.exe
-FinalizeBuildStatus:
-  Deleting file "cmTC_b60d0.dir\Debug\cmTC_b60d0.unsuccessfulbuild".
-  Touching "cmTC_b60d0.dir\Debug\cmTC_b60d0.lastbuildstate".
-Done Building Project "C:\Users\quantique1\Documents\fluidXtra\fluidXtra\fluidsynth-1.1.5\build_win\CMakeFiles\CMakeTmp\cmTC_b60d0.vcxproj" (default targets).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:04.57
+Time Elapsed 00:00:02.93
 
 

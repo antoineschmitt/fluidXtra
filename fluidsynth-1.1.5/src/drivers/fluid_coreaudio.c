@@ -50,7 +50,7 @@ typedef struct {
   void* data;
   unsigned int buffer_size;
   float* buffers[2];
-  double phase;
+  double phase; // ??
   int chanL, chanR, chansOpen;
 } fluid_core_audio_driver_t;
 

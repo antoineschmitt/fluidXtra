@@ -170,7 +170,7 @@
 /* #undef PACKAGE_VERSION */
 
 /* Define to enable PortAudio driver */
-/* #undef PORTAUDIO_SUPPORT */
+#define PORTAUDIO_SUPPORT 1
 
 /* Define to enable PulseAudio driver */
 /* #undef PULSE_SUPPORT */

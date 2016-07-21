@@ -50,11 +50,11 @@ void _stopRecord(FLUIDXtra FAR * pObj, bool fromWritingThread);
 
 #ifdef _WIN32
 extern "C" int fluid_dsound_cb(void* data, int len, short* out);
-#else
+#endif
 int fluid_coreaudio_cb(void* data, int len,
 				 int nin, float** in,
 				 int nout, float** out);
-#endif
+
 
 /**********************************************/
 /************** FLUIDXtra  *****************/
@@ -1137,7 +1137,14 @@ FLUIDXtra_IMoaMmXScript::mynew(PMoaDrCallInfo callPtr)
   }
 
 #ifdef _WIN32
-  pObj->adriver = new_fluid_audio_driver(settings, pObj->synth);
+  char *tmpStr;
+  if (!fluid_settings_getstr(settings, "audio.driver", &tmpStr))
+    tmpStr = fluid_settings_getstr_default(settings, "audio.driver");
+  pObj->dsoundDriver = (!strcmp(tmpStr, "dsound"));
+  if (pObj->dsoundDriver)
+	pObj->adriver = new_fluid_audio_driver(settings, pObj->synth);
+  else // portaudio
+	pObj->adriver = new_fluid_audio_driver2(settings, fluid_coreaudio_cb, (void *)this);
 #else
   pObj->adriver = new_fluid_audio_driver2(settings, fluid_coreaudio_cb, (void *)this);
 #endif
@@ -1296,7 +1303,7 @@ FLUIDXtra_IMoaMmXScript::setMasterGain(PMoaDrCallInfo callPtr)
 // ---------------------------------------------
 // these callbacks receive from sound thread and push to FIFO
 
-#ifndef _WIN32 // Macintosh
+// for mac and portaudio/Win
 int fluid_coreaudio_cb(void* data, int len, int nin, float** in, int nout, float** out) {
 	FLUIDXtra_IMoaMmXScript *This = (FLUIDXtra_IMoaMmXScript *)data;
 	return This->_coreaudio_cb(len, nin, in, nout, out);
@@ -1334,9 +1341,8 @@ int FLUIDXtra_IMoaMmXScript::_coreaudio_cb(int len, int nin, float** in, int nou
 	}
 	return res;
 }
-#endif
 
-#ifdef _WIN32 // Windows
+#ifdef _WIN32 // Windows/dsound
 extern "C" int
 fluid_dsound_cb(void* arg, int len, short* data) {
 	FLUIDXtra_IMoaMmXScript *This = (FLUIDXtra_IMoaMmXScript *)arg;
@@ -1455,14 +1461,21 @@ FLUIDXtra_IMoaMmXScript::startRecord(PMoaDrCallInfo callPtr)
 	int nbOutBuffers = 64;
 	pObj->pFifo = new bytesfifo(pObj->pWriteBufFrameCount*2*sizeof(short)*nbOutBuffers, false);
 	pObj->pWriteBufShort = (short *)malloc(pObj->pWriteBufFrameCount*2*sizeof(short));
+	pObj->pOutBufShort = NULL;
 #ifndef _WIN32
 	pObj->pOutBufShort = (short *)malloc(pObj->pWriteBufFrameCount*2*sizeof(short));
 #endif
+#ifdef _WIN32
+	if (!pObj->dsoundDriver)
+		pObj->pOutBufShort = (short *)malloc(pObj->pWriteBufFrameCount*2*sizeof(short));
+#endif
+
 	GError *err = NULL;
 	pObj->pWritingThread = g_thread_create((GThreadFunc)(&writeThread), (void *)this, true, &err);
 	
 #ifdef _WIN32
-	fluid_dsound_audio_driver_setcallback(pObj->adriver, fluid_dsound_cb, (void *)this);
+	if (pObj->dsoundDriver)
+		fluid_dsound_audio_driver_setcallback(pObj->adriver, fluid_dsound_cb, (void *)this);
 #endif
 	
 	fluid_log(FLUID_DBG, "startRecord started");
@@ -1502,7 +1515,7 @@ _stopRecord(FLUIDXtra FAR * pObj, bool fromWritingThread) {
 		// stops recording
 		pObj->isRecordingP = false;
 #ifdef _WIN32
-		if (pObj->adriver) {
+		if (pObj->adriver && pObj->dsoundDriver) {
 			fluid_dsound_audio_driver_setcallback(pObj->adriver, NULL, NULL);
 		}
 #endif
@@ -1519,12 +1532,12 @@ _stopRecord(FLUIDXtra FAR * pObj, bool fromWritingThread) {
 		free(pObj->pWriteBufShort);
 		pObj->pWriteBufShort = NULL;
 	}
-#ifndef _WIN32
+
 	if (pObj->pOutBufShort != NULL) {
 		free(pObj->pOutBufShort);
 		pObj->pOutBufShort = NULL;
 	}
-#endif	
+
 	if (pObj->pRecFile != NULL) {
 		// close file
 		sf_close (pObj->pRecFile) ;
