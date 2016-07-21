@@ -233,7 +233,15 @@ ex :   xtraObj = (xtra "fluidsynth")
 xtraObj.getSettingsOptions("audio.coreaudio.device") -- mac
 xtraObj.getSettingsOptions("audio.dsound.device") -- windows
 
-Returns the list of possible values for the given option, in the form of a comma-separated string of options.  Its primary intended use is to identify all possible sound output device values for the audio.dsound.device/audio.coreaudio.device settings.  Does not work with most other settings.
+Returns the list of possible values for the given option, in the form of a comma-separated string of options.  Its primary intended use is to identify all possible sound output device values for the audio.dsound.device/audio.coreaudio.device settings.  Only works with string settings.
+
+
++ getSettingDefaultValue(string option)
+-----------------
+ex :   xtraObj = (xtra "fluidsynth")
+xtraObj.getSettingDefaultValue("audio.coreaudio.MYDEVICE.channels") -- mac
+
+Returns the default value for the setting.
 
 
 
@@ -607,8 +615,8 @@ Loads a sample file from filePath and adds it to a preset of a memory soundfont.
 The 'filePath' is absolute, and should be expressed with the local file system conventions. Accepted sample formats are : wav and aiff.
 It must be 16 bits, mono or stereo, with a samplerate up to 192 kHz.
 
-loadSampleFileExtract only loads nbSamples samples, starting from sample startSample (included). See function getSampleFileSamples to get the total number of samples in the file.
 loadSampleFile loads all samples in the file.
+loadSampleFileExtract only loads nbSamples samples, starting from sample startSample (included). If nbSamples is negative, reads the file until the last frame. See function getSampleFileSamples to get the total number of samples in the file.
 
 The preset is in a ram (memory) SoundFont (type #ram), specified with the argument soundFontID, which should be created from a 'createSoundFont' function call. In all cases, the preset is given the name of the sample, if any.
 

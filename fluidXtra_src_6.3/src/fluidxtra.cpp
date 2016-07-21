@@ -1187,9 +1187,19 @@ FLUIDXtra_IMoaMmXScript::getSettingsOptions(PMoaDrCallInfo callPtr)
 		return kMoaErr_NoErr;
     
 	fluid_settings_t* settings = new_fluid_settings(); // fluid_synth_get_settings(pObj->synth);
-	char * optionsStr = fluid_settings_option_concat(settings, propStr, ",");
-	_stringToValue(pObj, optionsStr, &callPtr->resultValue);
-	return kMoaErr_NoErr;
+	int settingType = fluid_settings_get_type(settings, propStr);
+	if (settingType == FLUID_STR_TYPE) {
+    char * optionsStr = fluid_settings_option_concat(settings, propStr, ",");
+    _stringToValue(pObj, optionsStr, &callPtr->resultValue);
+    delete_fluid_settings(settings);
+    return kMoaErr_NoErr;
+  }
+  
+  // default to 0
+  pObj->pMmValue->IntegerToValue(0, &callPtr->resultValue);
+  
+  delete_fluid_settings(settings);
+  return kMoaErr_NoErr;
 }
 
 MoaError
@@ -1198,8 +1208,9 @@ FLUIDXtra_IMoaMmXScript::getSetting(PMoaDrCallInfo callPtr)
 	char propStr[1024];
 	if (_getAnsiStringArg(callPtr, 2, (char *)"setting", propStr, 1024, true) < 0)
 		return kMoaErr_NoErr;
-    
-	fluid_settings_t* settings = fluid_synth_get_settings(pObj->synth);
+  
+  // a synth, use synth settings, otherwise, use default
+	fluid_settings_t* settings = (pObj->synth == NULL) ? new_fluid_settings() : fluid_synth_get_settings(pObj->synth);
 	int settingType = fluid_settings_get_type(settings, propStr);
 	
 	if (settingType == FLUID_INT_TYPE) {
@@ -1207,28 +1218,27 @@ FLUIDXtra_IMoaMmXScript::getSetting(PMoaDrCallInfo callPtr)
 		if (!fluid_settings_getint(settings, propStr, &val))
 			val = fluid_settings_getint_default(settings, propStr);
 		pObj->pMmValue->IntegerToValue(val, &callPtr->resultValue);
-		return kMoaErr_NoErr;
-	}
-	
-	if (settingType == FLUID_NUM_TYPE) {
+    
+	} else if (settingType == FLUID_NUM_TYPE) {
 		double val;
 		if (!fluid_settings_getnum(settings, propStr, &val))
 			val = fluid_settings_getnum_default(settings, propStr);
 		pObj->pMmValue->FloatToValue(val, &callPtr->resultValue);
-		return kMoaErr_NoErr;
-	}
-	
-	if (settingType == FLUID_STR_TYPE) {
+    
+	} else if (settingType == FLUID_STR_TYPE) {
 		char *tmpStr;
 		if (!fluid_settings_getstr(settings, propStr, &tmpStr))
 			tmpStr = fluid_settings_getstr_default(settings, propStr);
 		_stringToValue(pObj, tmpStr, &callPtr->resultValue);
-		return kMoaErr_NoErr;
-	}
-	
-	// failure
-	fluid_log(FLUID_ERR, "Settings : Failed to get '%s' - most likely the setting does not exist.\n", propStr);
-	pObj->pMmValue->IntegerToValue(FLUIDXTRAERR_BADARGUMENT, &callPtr->resultValue);
+	} else {
+    
+    // failure
+    fluid_log(FLUID_ERR, "Settings : Failed to get '%s' - most likely the setting does not exist.\n", propStr);
+    pObj->pMmValue->IntegerToValue(FLUIDXTRAERR_BADARGUMENT, &callPtr->resultValue);
+  }
+  
+  if (pObj->synth == NULL) delete_fluid_settings(settings); // delete default
+
 	return kMoaErr_NoErr;
 }
 
@@ -3810,6 +3820,7 @@ FLUIDXtra_IMoaMmXScript::_loadSampleFile(PMoaDrCallInfo callPtr, int sfontArgNb,
     }
     
     // bytesNeeded
+    if (startFrame < 0) startFrame = 0;
     long realFramesToRead = nbFileFrames - startFrame;
     if (nbFramesToRead >= 0) realFramesToRead = nbFramesToRead;
     if (realFramesToRead > nbFileFrames - startFrame) realFramesToRead = nbFileFrames - startFrame;
@@ -5838,6 +5849,9 @@ FLUIDXtra_IMoaMmXScript::Call(PMoaMmCallInfo callPtr)
 		
 	} else if (callPtr->methodSelector == m_getSettingsOptions) {
 		getSettingsOptions(callPtr);
+    
+	} else if (callPtr->methodSelector == m_getSettingDefaultValue) {
+		getSetting(callPtr);
 		
 	} else if (callPtr->methodSelector == m_free) {
 	  free(callPtr);
@@ -5880,10 +5894,6 @@ FLUIDXtra_IMoaMmXScript::Call(PMoaMmCallInfo callPtr)
 			  downloadFolderAbortDownload(callPtr);
 			  break;
 		
-			case m_getSetting:
-			  getSetting(callPtr);
-			  break;
-
 			case m_getChannelsCount:
 			  getChannelsCount(callPtr);
 			  break;
@@ -5896,9 +5906,13 @@ FLUIDXtra_IMoaMmXScript::Call(PMoaMmCallInfo callPtr)
 			  createSoundFont(callPtr, true);
 			  break;
 
-			case m_unloadSoundFont:
-			  unloadSoundFont(callPtr);
-			  break;
+        case m_unloadSoundFont:
+          unloadSoundFont(callPtr);
+          break;
+          
+        case m_getSetting:
+          getSetting(callPtr);
+          break;
 
 			case m_reloadSoundFont:
 			  reloadSoundFont(callPtr);

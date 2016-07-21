@@ -259,6 +259,7 @@ enum {
   m_reset,
   m_getSetting,
   m_getSettingsOptions,
+  m_getSettingDefaultValue,
   m_getChannelsCount,
   m_getMasterGain,
   m_setMasterGain,

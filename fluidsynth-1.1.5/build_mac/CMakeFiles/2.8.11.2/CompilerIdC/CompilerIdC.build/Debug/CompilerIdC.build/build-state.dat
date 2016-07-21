@@ -1,68 +1,0 @@
-TCompilerIdC
-v5
-r1
-cCheck dependencies
-cCompileC ./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/CMakeCCompilerId.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC normal i386
-cPhaseScriptExecution "Run Script" /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
-
-N/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC
-t2
-s0
-
-N/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o
-t2
-s0
-
-N/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CompilerIdC.LinkFileList
-c0000000051FD70C000000000000000BA
-t1375563968
-s186
-
-N/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
-c0000000051FD70C0000000000000002A
-t1375563968
-s42
-
-N/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/CMakeCCompilerId.c
-c0000000051FD70BF0000000000002E9E
-t1375563967
-s11934
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies04730840a8adb741^16be1240a8adb741^---0#1#0#--18"Check dependencies36"264C9EFA-FF9E-4299-84D3-B8AA32728A2F-
-
-CCompileC ./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/CMakeCCompilerId.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
-s397256768.076905
-e397256768.098674
-r1
-xCompileC
-x./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o
-x/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/CMakeCCompilerId.c
-xnormal
-xi386
-xc
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection129"Compile /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/CMakeCCompilerId.c7dcc1340a8adb741^4e421940a8adb741^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/CMakeCCompilerId.c0000000000000000^2764"CompileC ./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o CMakeCCompilerId.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -I/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.hmap -I/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources/i386 -I/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources -F/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC -MMD -MT dependencies -MF /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.d --serialize-diagnostics /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.dia -c /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/CMakeCCompilerId.c -o /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o36"65085135-2B26-4668-9F2E-0B969D751212-
-
-CLd /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC normal i386
-s397256768.105747
-e397256768.122951
-r1
-xLd
-x/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC
-xnormal
-xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Link /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC39261b40a8adb741^a7791f40a8adb741^---0#0#0#--779"Ld ./CompilerIdC normal i386    cd /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -L/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC -F/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC -filelist /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CompilerIdC.LinkFileList -o /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC36"29734B87-7CA8-41DE-B5A3-B70CECEB3FF0-
-
-CPhaseScriptExecution "Run Script" /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
-s397256768.131445
-e397256768.151273
-r1
-xPhaseScriptExecution
-xRun Script
-x/Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
-oGCC_VERSION=com.apple.compilers.llvm.clang.1_0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Run custom shell script 'Run Script'68242240a8adb741^aabb2640a8adb741^-47"GCC_VERSION=com.apple.compilers.llvm.clang.1_01(21%IDEActivityLogMessage2@47"GCC_VERSION=com.apple.compilers.llvm.clang.1_0-397256768#0#47#-0#-----0#0#0#--420"PhaseScriptExecution "Run Script" ./CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh    cd /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC    /bin/sh -c /Users/antoine/Documents/Code/fluidXtra/src/fluidsynth-1.1.5/build_mac/CMakeFiles/2.8.11.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh36"851C8BC3-CBBE-4120-A3E6-4D4156B27CDE-
-

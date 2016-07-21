@@ -1,10 +1,16 @@
 --- To Do Now fluidsynth ---
 
-- partial sound loading
-- secondary channels : coreaudio Mac + portaudio/ASIO on windows
-	- API
--Mac fixing the headphone crash
 -Mac deprecated API warning
+	WARNING:  140: This application, or a library it uses, is using the deprecated Carbon Component Manager for hosting Audio Units. Support for this will be removed in a future release. Also, this makes the host incompatible with version 3 audio units. Please transition to the API's in AudioComponent.h.
+
+- secondary channels :
+	- portaudio/ASIO on windows
+	- setting for the maximum number of channels OK
+	- coreaudio Mac OK
+	- API OK
+
+- bonnes erreurs quand erreur dans fluidSynth..
+-Mac fixing the headphone crash
 -loadSampleFile error investigate
 
 ----
@@ -85,3 +91,6 @@ Plan
 - loadSampleFile on UNICODE filenames (windows) OK
 - TEST all PC
 - improve panning of stereo sounds ? BUG dans fluidsynth...
+
+20july16
+- partial sound loading OK

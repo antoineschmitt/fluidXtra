@@ -51,6 +51,7 @@ typedef struct {
   unsigned int buffer_size;
   float* buffers[2];
   double phase;
+  int chanL, chanR, chansOpen;
 } fluid_core_audio_driver_t;
 
 fluid_audio_driver_t* new_fluid_core_audio_driver (fluid_settings_t* settings, fluid_synth_t* synth);
@@ -111,6 +112,9 @@ fluid_core_audio_driver_settings(fluid_settings_t* settings)
   pa.mScope = kAudioObjectPropertyScopeWildcard;
   pa.mElement = kAudioObjectPropertyElementMaster;
 
+  fluid_settings_register_int (settings, "audio.coreaudio.channelL", 0, 0, 32, 0, NULL, NULL);
+  fluid_settings_register_int (settings, "audio.coreaudio.channelR", 1, 0, 32, 1, NULL, NULL);
+
   fluid_settings_register_str (settings, "audio.coreaudio.device", "default", 0, NULL, NULL);
   fluid_settings_add_option (settings, "audio.coreaudio.device", "default");
   if (OK (AudioObjectGetPropertyDataSize (kAudioObjectSystemObject, &pa, 0, 0, &size))) {
@@ -122,8 +126,12 @@ fluid_core_audio_driver_settings(fluid_settings_t* settings)
         size = sizeof (name);
         pa.mSelector = kAudioDevicePropertyDeviceName;
         if (OK (AudioObjectGetPropertyData (devs[i], &pa, 0, 0, &size, name))) {
-          if ( get_num_outputs (devs[i]) > 0) {
+          int nb_outputs = get_num_outputs (devs[i]);
+          if ( nb_outputs > 0) {
             fluid_settings_add_option (settings, "audio.coreaudio.device", name);
+            char tmp_setting__name[1024];
+            snprintf(tmp_setting__name, sizeof(tmp_setting__name), "audio.coreaudio.%s.channels", name);
+            fluid_settings_register_int (settings, tmp_setting__name, nb_outputs, 0, 32, 0, NULL, NULL);
           }
         }
       }
@@ -206,6 +214,7 @@ new_fluid_core_audio_driver2(fluid_settings_t* settings, fluid_audio_func_t func
   fluid_settings_getint(settings, "audio.period-size", &period_size);
 
   /* get the selected device name. if none is specified, use NULL for the default device. */
+  int numOutputs = 2;
   if (fluid_settings_dupstr(settings, "audio.coreaudio.device", &devname)  /* alloc device name */
       && devname && strlen (devname) > 0) {
     AudioObjectPropertyAddress pa;
@@ -233,6 +242,7 @@ new_fluid_core_audio_driver2(fluid_settings_t* settings, fluid_audio_func_t func
                 FLUID_LOG (FLUID_ERR, "Error setting the selected output device. Status=%ld\n", (long int)status);
                 goto error_recovery;
               }
+              numOutputs = get_num_outputs (devs[i]);
             }
           }
         }
@@ -243,6 +253,14 @@ new_fluid_core_audio_driver2(fluid_settings_t* settings, fluid_audio_func_t func
   if (devname)
     FLUID_FREE (devname); /* free device name */
 
+  fluid_settings_getint(settings, "audio.coreaudio.channelL", &(dev->chanL));
+  fluid_settings_getint(settings, "audio.coreaudio.channelR", &(dev->chanR));
+  dev->chansOpen = 1 + ((dev->chanL > dev->chanR) ? dev->chanL : dev->chanR);
+  if (dev->chansOpen > numOutputs) {
+    // error
+    FLUID_LOG (FLUID_ERR, "Error setting the output channel. Too big. L=%d, R=%d, max=%d\n", dev->chanL, dev->chanR, numOutputs);
+    goto error_recovery;
+  }
   dev->buffer_size = period_size * periods;
 
   // The DefaultOutputUnit should do any format conversions
@@ -250,10 +268,10 @@ new_fluid_core_audio_driver2(fluid_settings_t* settings, fluid_audio_func_t func
   dev->format.mSampleRate = sample_rate; // sample rate of the audio stream
   dev->format.mFormatID = kAudioFormatLinearPCM; // encoding type of the audio stream
   dev->format.mFormatFlags = kLinearPCMFormatFlagIsFloat;
-  dev->format.mBytesPerPacket = 2*sizeof(float);
+  dev->format.mChannelsPerFrame = dev->chansOpen;
+  dev->format.mBytesPerFrame = dev->format.mChannelsPerFrame*sizeof(float);
   dev->format.mFramesPerPacket = 1;
-  dev->format.mBytesPerFrame = 2*sizeof(float);
-  dev->format.mChannelsPerFrame = 2;
+  dev->format.mBytesPerPacket = dev->format.mBytesPerFrame;
   dev->format.mBitsPerChannel = 8*sizeof(float);
 
   FLUID_LOG (FLUID_DBG, "mSampleRate %g", dev->format.mSampleRate);
@@ -346,25 +364,27 @@ fluid_core_audio_callback ( void *data,
                             UInt32 inNumberFrames,
                             AudioBufferList *ioData)
 {
-  int i, k;
+  int i, l, r;
   fluid_core_audio_driver_t* dev = (fluid_core_audio_driver_t*) data;
   int len = inNumberFrames;
   float* buffer = ioData->mBuffers[0].mData;
 
   if (dev->callback)
   {
-    float* left = dev->buffers[0];
-    float* right = dev->buffers[1];
-
+    // callback fills dev->buffers
     (*dev->callback)(dev->data, len, 0, NULL, 2, dev->buffers);
 
-    for (i = 0, k = 0; i < len; i++) {
-      buffer[k++] = left[i];
-      buffer[k++] = right[i];
+    float* left = dev->buffers[0];
+    float* right = dev->buffers[1];
+    
+    bzero(buffer, dev->chansOpen*len*sizeof(float));
+    for (i = 0, l = dev->chanL, r = dev->chanR; i < len; i++, l += dev->chansOpen, r += dev->chansOpen) {
+      buffer[l] = left[i];
+      buffer[r] = right[i];
     }
   }
-  else fluid_synth_write_float((fluid_synth_t*) dev->data, len, buffer, 0, 2,
-                               buffer, 1, 2);
+  else fluid_synth_write_float((fluid_synth_t*) dev->data, len, buffer, dev->chanL, dev->chansOpen,
+                               buffer, dev->chanR, dev->chansOpen);
   return noErr;
 }
 

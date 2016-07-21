@@ -217,6 +217,7 @@ pip-log.txt
 
 # fluidsynth fluidXtra
 fluidsynth-1.1.5/build_win/
+fluidsynth-1.1.5/build_mac/
 fluidXtra_src_6.3/winbuild/Debug/
 TESTS/
 downloads/
