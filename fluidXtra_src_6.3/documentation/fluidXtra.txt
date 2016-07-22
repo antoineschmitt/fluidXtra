@@ -77,6 +77,8 @@ Version 5.6 : added the downloadFolderGetLocalProps API
 Version 6.0 : ported to fluidsynth 1.1.5, added getSettingsOptions, added the recording API, fixed the sound members on Macintosh that were not recognized anymore in D11.x
 Version 6.1 : channel 9 works again as a melodic channel
 Version 6.2 : improved memory management for allowing loading of very large sound files. Improved error reporting related to this.
+Version 6.3 : bug fixes
+Version 6.4 : partial sample file loading, secondary channels, bug fixes 
 
 --- Technical Requirements
 - Macintosh MacOSX
@@ -197,6 +199,11 @@ All the fluid settings are accessible through this API. The standard fluidsynth 
 - audio.periods : buffers count (related to latency)
 - audio.coreaudio.device : output sound device (Mac)
 - audio.dsound.device : output sound device (Windows)
+- audio.portaudio.device : output sound device (Windows)
+- audio.portaudio.channelL : number of the left channel (Windows) 
+- audio.portaudio.channelR : number of the right channel (Windows) 
+- audio.coreaudio.channelL : number of the left channel (Mac) 
+- audio.coreaudio.channelR : number of the right channel (Mac) 
 
 
 
@@ -236,10 +243,25 @@ xtraObj.getSettingsOptions("audio.dsound.device") -- windows
 Returns the list of possible values for the given option, in the form of a comma-separated string of options.  Its primary intended use is to identify all possible sound output device values for the audio.dsound.device/audio.coreaudio.device settings.  Only works with string settings.
 
 
-+ getSettingDefaultValue(string option)
+
++ getSettingsOptionsList(string option)
 -----------------
 ex :   xtraObj = (xtra "fluidsynth")
-xtraObj.getSettingDefaultValue("audio.coreaudio.MYDEVICE.channels") -- mac
+xtraObj.getSettingsOptions("audio.driver") -- returns all audio drivers
+xtraObj.getSettingsOptions("audio.coreaudio.device") -- mac : returns all coreaudio devices names
+xtraObj.getSettingsOptions("audio.dsound.device") -- windows : returns all portaudio devices names
+
+Returns the list of possible values for the given option, in the form of a lingo list.
+For example to identify all possible sound output device values for the audio.dsound.device/audio.coreaudio.device/audio.portaudio.device settings.
+Only works with string settings.
+
+
+
++ getSetting(string option)
+-----------------
+ex :   xtraObj = (xtra "fluidsynth")
+getSetting("audio.coreaudio.MYDEVICE.channels") -- mac
+getSetting("audio.portaudioaudio.MYDEVICE.channels") -- PC
 
 Returns the default value for the setting.
 

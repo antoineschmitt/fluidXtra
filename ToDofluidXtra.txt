@@ -1,16 +1,6 @@
 --- To Do Now fluidsynth ---
 
-highest priority:
--partial sound loading
--Mac addressing other channels than the two first ones
--Win enable the fluidsynth ASIO driver
-
-medium priority:
--Mac fixing the headphone crash
-
-lowest priority:
--Mac deprecated API warning
--loadSampleFile error investigate
+- doc : channels.., drivers, devices
 
 - secondary channels :
 	- portaudio/ASIO on windows OK
@@ -26,7 +16,7 @@ lowest priority:
 		- 2_c.wav : it is actually an AIFF file with a .wav extension. Changing the extension to aiff fixed the problem.
 		- the two "Cell phone vibrate.." files are not standard AIFF file. They contain a 'minf' tag, which is a WAV or Quicktime format. Fixed, with a hack in libsndfile.
 
-- bonnes erreurs quand erreur dans fluidSynth.. OK
+- better error handling fluidSynth.. OK
 	+getError
 	+getSetting
 
