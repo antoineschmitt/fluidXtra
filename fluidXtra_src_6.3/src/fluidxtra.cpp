@@ -276,19 +276,16 @@ char * _MoaNetErrorDesc(int errNb) {
 	return (char *)"Unknown error";
 }
 
+static char _errorString[2048];
 
 void
 _fluid_xtra_setErrorString(FLUIDXtra FAR * pObj, const char * aString) {
-	if (!pObj->inited) return; // errorString no ready
-	
-	pObj->pMmValue->ValueRelease(&pObj->errorString);
-	_stringToValue(pObj, aString, &pObj->errorString);	
+  strncpy(_errorString, aString, 2048);
 }
 
 void
 _fluid_xtra_getErrorString(FLUIDXtra FAR * pObj, PMoaMmCallInfo callPtr) {
-	pObj->pMmValue->ValueAddRef(&pObj->errorString);	
-	callPtr->resultValue = pObj->errorString;
+	_stringToValue(pObj, _errorString, &callPtr->resultValue);
 }
 
 MoaError 
@@ -824,9 +821,6 @@ STDMETHODIMP MoaCreate_FLUIDXtra(FLUIDXtra FAR * pObj) {
 		pObj->pNotification->RegisterNotificationClient(pObj->pNotificationClient, &NID_DrNIdle, &ms, pObj);
 	}
 	
-	// errorString
-	_stringToValue(pObj, "", &pObj->errorString);	
-
 	// soundFontStack
 	pObj->soundFontStack = NULL;
 
@@ -864,11 +858,6 @@ STDMETHODIMP_(void) MoaDestroy_FLUIDXtra(FLUIDXtra FAR * pObj) {
 	fluid_log(FLUID_DBG, ".. Release curCallbacks");
 	if (pObj->inited)
 		pObj->pMmValue->ValueRelease(&pObj->curCallbacks);
-
-	// Release error string
-	fluid_log(FLUID_DBG, ".. Release error string");
-	if (pObj->inited)
-		pObj->pMmValue->ValueRelease(&pObj->errorString);
 	
   if (pObj->pMmList != NULL) {
     pObj->pMmList->Release();
@@ -1186,6 +1175,46 @@ FLUIDXtra_IMoaMmXScript::mynew(PMoaDrCallInfo callPtr)
 }
 
 
+void _fillSettingsOptionsCB_(void *data, char *name, char *option);
+void _fillSettingsOptionsCB_(void *data, char *name, char *option) {
+  FLUIDXtra_IMoaMmXScript *This = (FLUIDXtra_IMoaMmXScript *)data;
+  This->_fillSettingsOptionsCB(name, option);
+}
+
+int FLUIDXtra_IMoaMmXScript::_fillSettingsOptionsCB(char *name, char *option) {
+	MoaMmValue element;
+  _stringToValue(pObj, option, &element);
+  pObj->pMmList->AppendValueToList(&pObj->settingsOptions, &element);
+  pObj->pMmValue->ValueRelease(&element);
+  return 1;
+}
+
+MoaError
+FLUIDXtra_IMoaMmXScript::getSettingsOptionsList(PMoaDrCallInfo callPtr)
+{
+  char propStr[1024];
+  if (_getAnsiStringArg(callPtr, 2, (char *)"setting", propStr, 1024, true) < 0)
+    return kMoaErr_NoErr;
+  
+  fluid_settings_t* settings = new_fluid_settings();
+  int settingType = fluid_settings_get_type(settings, propStr);
+  if (settingType == FLUID_STR_TYPE) {
+    pObj->pMmList->NewListValue(&pObj->settingsOptions);
+    
+    fluid_settings_foreach_option(settings, propStr, (void *)this, _fillSettingsOptionsCB_);
+    
+    callPtr->resultValue = pObj->settingsOptions;
+    
+    return kMoaErr_NoErr;
+  }
+  
+  // default to 0
+  pObj->pMmValue->IntegerToValue(0, &callPtr->resultValue);
+  
+  delete_fluid_settings(settings);
+  return kMoaErr_NoErr;
+}
+
 MoaError
 FLUIDXtra_IMoaMmXScript::getSettingsOptions(PMoaDrCallInfo callPtr)
 {
@@ -1193,7 +1222,7 @@ FLUIDXtra_IMoaMmXScript::getSettingsOptions(PMoaDrCallInfo callPtr)
 	if (_getAnsiStringArg(callPtr, 2, (char *)"setting", propStr, 1024, true) < 0)
 		return kMoaErr_NoErr;
     
-	fluid_settings_t* settings = new_fluid_settings(); // fluid_synth_get_settings(pObj->synth);
+	fluid_settings_t* settings = new_fluid_settings();
 	int settingType = fluid_settings_get_type(settings, propStr);
 	if (settingType == FLUID_STR_TYPE) {
     char * optionsStr = fluid_settings_option_concat(settings, propStr, ",");
@@ -5850,7 +5879,7 @@ STDMETHODIMP
 FLUIDXtra_IMoaMmXScript::Call(PMoaMmCallInfo callPtr)
 {
 	
-	if (callPtr->methodSelector == m_getError) {
+	if (callPtr->methodSelector == m_getError || callPtr->methodSelector == m_getXtraError) {
 		_fluid_xtra_getErrorString(pObj, callPtr);
 		return kMoaErr_NoErr;
 	}
@@ -5862,10 +5891,12 @@ FLUIDXtra_IMoaMmXScript::Call(PMoaMmCallInfo callPtr)
 		
 	} else if (callPtr->methodSelector == m_getSettingsOptions) {
 		getSettingsOptions(callPtr);
+	} else if (callPtr->methodSelector == m_getSettingsOptionsList) {
+		getSettingsOptionsList(callPtr);
     
 	} else if (callPtr->methodSelector == m_getSettingDefaultValue) {
 		getSetting(callPtr);
-		
+				
 	} else if (callPtr->methodSelector == m_free) {
 	  free(callPtr);
 	  

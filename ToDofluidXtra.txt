@@ -1,17 +1,36 @@
 --- To Do Now fluidsynth ---
 
+highest priority:
+-partial sound loading
+-Mac addressing other channels than the two first ones
+-Win enable the fluidsynth ASIO driver
+
+medium priority:
+-Mac fixing the headphone crash
+
+lowest priority:
 -Mac deprecated API warning
-	WARNING:  140: This application, or a library it uses, is using the deprecated Carbon Component Manager for hosting Audio Units. Support for this will be removed in a future release. Also, this makes the host incompatible with version 3 audio units. Please transition to the API's in AudioComponent.h.
+-loadSampleFile error investigate
 
 - secondary channels :
-	- portaudio/ASIO on windows
+	- portaudio/ASIO on windows OK
 	- setting for the maximum number of channels OK
 	- coreaudio Mac OK
 	- API OK
+- Mac deprecated API warning OK
+- Mac fixing the headphone crash (maybe OK, when changed API)
 
-- bonnes erreurs quand erreur dans fluidSynth..
--Mac fixing the headphone crash
--loadSampleFile error investigate
+- loadSampleFile error investigate
+	3 different errors. Remember that the file reading is done through the libsndfile library  (http://www.mega-nerd.com/libsndfile/) and that fluidXtra uses an old version of this 
+		- 1_c.aif : correct AIFF file. The libsndfile had a bug. Fixed.
+		- 2_c.wav : it is actually an AIFF file with a .wav extension. Changing the extension to aiff fixed the problem.
+		- the two "Cell phone vibrate.." files are not standard AIFF file. They contain a 'minf' tag, which is a WAV or Quicktime format. Fixed, with a hack in libsndfile.
+
+- bonnes erreurs quand erreur dans fluidSynth.. OK
+	+getError
+	+getSetting
+
+- getSettingsOptionsList
 
 ----
 

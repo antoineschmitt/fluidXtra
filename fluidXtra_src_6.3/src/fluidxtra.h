@@ -114,7 +114,6 @@ EXTERN_BEGIN_DEFINE_CLASS_INSTANCE_VARS(FLUIDXtra)
 	 int debugSize;
 	 char *debugPtr;
 	 char logFile[1024];
-	 MoaMmValue	errorString;
 	 fluid_xtra_stack_item* soundFontStack; // was soundFontIDs
 	 fluid_xtra_srcname* srcNames;
 	 fluid_xtra_sample_t* ramsamples;
@@ -139,18 +138,20 @@ EXTERN_BEGIN_DEFINE_CLASS_INSTANCE_VARS(FLUIDXtra)
 	short *				pOutBufShort;
 	short *				pWriteBufShort;
 	int					pWriteBufFrameCount;
+  MoaMmValue  settingsOptions;
 EXTERN_END_DEFINE_CLASS_INSTANCE_VARS
 
 
 EXTERN_BEGIN_DEFINE_CLASS_INTERFACE(FLUIDXtra, IMoaMmXScript)
      EXTERN_DEFINE_METHOD(MoaError, Call, (PMoaMmCallInfo))
      EXTERN_DEFINE_METHOD(void, sequencerCallback, (unsigned int, fluid_event_t*, fluid_sequencer_t*))
-	 EXTERN_DEFINE_METHOD(void, _recordWriteThread, ())
+	   EXTERN_DEFINE_METHOD(void, _recordWriteThread, ())
 #ifdef _WIN32
-	EXTERN_DEFINE_METHOD(void, _dsound_cb, (int, short*))
+	   EXTERN_DEFINE_METHOD(void, _dsound_cb, (int, short*))
 #endif
-	EXTERN_DEFINE_METHOD(int, _coreaudio_cb, (int , int , float** , int , float** ))
-  private:
+     EXTERN_DEFINE_METHOD(int, _coreaudio_cb, (int , int , float** , int , float** ))
+     EXTERN_DEFINE_METHOD(int, _fillSettingsOptionsCB, (char*, char* ))
+private:
      EXTERN_DEFINE_METHOD(MoaError, free, (PMoaDrCallInfo))
      EXTERN_DEFINE_METHOD(MoaError, mynew, (PMoaDrCallInfo))
      EXTERN_DEFINE_METHOD(MoaError, getMasterGain, (PMoaDrCallInfo))
@@ -196,7 +197,8 @@ EXTERN_BEGIN_DEFINE_CLASS_INTERFACE(FLUIDXtra, IMoaMmXScript)
      EXTERN_DEFINE_METHOD(MoaError, getChannelsCount, (PMoaDrCallInfo))
      EXTERN_DEFINE_METHOD(MoaError, getSetting, (PMoaDrCallInfo))
      EXTERN_DEFINE_METHOD(MoaError, getSettingsOptions, (PMoaDrCallInfo))
-     
+     EXTERN_DEFINE_METHOD(MoaError, getSettingsOptionsList, (PMoaDrCallInfo))
+
      EXTERN_DEFINE_METHOD(MoaError, getFrameCount, (PMoaDrCallInfo))
      EXTERN_DEFINE_METHOD(MoaError, getFrameRate, (PMoaDrCallInfo))   
      EXTERN_DEFINE_METHOD(MoaError, setLoop, (PMoaDrCallInfo))
@@ -258,8 +260,9 @@ enum {
   m_free,
   m_reset,
   m_getSetting,
-  m_getSettingsOptions,
   m_getSettingDefaultValue,
+  m_getSettingsOptions,
+  m_getSettingsOptionsList,
   m_getChannelsCount,
   m_getMasterGain,
   m_setMasterGain,
@@ -316,6 +319,7 @@ enum {
   m_stopRecord,
   m_isRecording,
   m_getError,
+  m_getXtraError,
   m_debug,
   m_getCPULoad,
   m_downloadFolderSetPath,

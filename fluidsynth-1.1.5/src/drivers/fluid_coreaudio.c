@@ -105,6 +105,7 @@ get_num_outputs (AudioDeviceID deviceID)
 void
 fluid_core_audio_driver_settings(fluid_settings_t* settings)
 {
+  char tmp_setting__name[1024];
   int i;
   UInt32 size;
   AudioObjectPropertyAddress pa;
@@ -117,6 +118,9 @@ fluid_core_audio_driver_settings(fluid_settings_t* settings)
 
   fluid_settings_register_str (settings, "audio.coreaudio.device", "default", 0, NULL, NULL);
   fluid_settings_add_option (settings, "audio.coreaudio.device", "default");
+  snprintf(tmp_setting__name, sizeof(tmp_setting__name), "audio.coreaudio.%s.channels", "default");
+  fluid_settings_register_int (settings, tmp_setting__name, 2, 0, 32, 0, NULL, NULL);
+  
   if (OK (AudioObjectGetPropertyDataSize (kAudioObjectSystemObject, &pa, 0, 0, &size))) {
     int num = size / (int) sizeof (AudioDeviceID);
     AudioDeviceID devs [num];
@@ -129,7 +133,7 @@ fluid_core_audio_driver_settings(fluid_settings_t* settings)
           int nb_outputs = get_num_outputs (devs[i]);
           if ( nb_outputs > 0) {
             fluid_settings_add_option (settings, "audio.coreaudio.device", name);
-            char tmp_setting__name[1024];
+            
             snprintf(tmp_setting__name, sizeof(tmp_setting__name), "audio.coreaudio.%s.channels", name);
             fluid_settings_register_int (settings, tmp_setting__name, nb_outputs, 0, 32, 0, NULL, NULL);
           }
@@ -175,20 +179,21 @@ new_fluid_core_audio_driver2(fluid_settings_t* settings, fluid_audio_func_t func
   dev->data = data;
 
   // Open the default output unit
-  ComponentDescription desc;
+  AudioComponentDescription desc;
+  bzero(&desc, sizeof(desc));
   desc.componentType = kAudioUnitType_Output;
-  desc.componentSubType = kAudioUnitSubType_HALOutput; //kAudioUnitSubType_DefaultOutput;
+  desc.componentSubType = kAudioUnitSubType_DefaultOutput;
   desc.componentManufacturer = kAudioUnitManufacturer_Apple;
   desc.componentFlags = 0;
   desc.componentFlagsMask = 0;
 
-  Component comp = FindNextComponent(NULL, &desc);
+  AudioComponent comp = AudioComponentFindNext(NULL, &desc);
   if (comp == NULL) {
     FLUID_LOG(FLUID_ERR, "Failed to get the default audio device");
     goto error_recovery;
   }
 
-  status = OpenAComponent(comp, &dev->outputUnit);
+  status = AudioComponentInstanceNew(comp, &dev->outputUnit);
   if (status != noErr) {
     FLUID_LOG(FLUID_ERR, "Failed to open the default audio device. Status=%ld\n", (long int)status);
     goto error_recovery;
@@ -258,7 +263,7 @@ new_fluid_core_audio_driver2(fluid_settings_t* settings, fluid_audio_func_t func
   dev->chansOpen = 1 + ((dev->chanL > dev->chanR) ? dev->chanL : dev->chanR);
   if (dev->chansOpen > numOutputs) {
     // error
-    FLUID_LOG (FLUID_ERR, "Error setting the output channel. Too big. L=%d, R=%d, max=%d\n", dev->chanL, dev->chanR, numOutputs);
+    FLUID_LOG (FLUID_ERR, "One specified channel is greater than the maximum number of channels : L=%d, R=%d, max=%d\n", dev->chanL, dev->chanR, numOutputs-1);
     goto error_recovery;
   }
   dev->buffer_size = period_size * periods;
@@ -342,7 +347,7 @@ delete_fluid_core_audio_driver(fluid_audio_driver_t* p)
     return FLUID_OK;
   }
 
-  CloseComponent (dev->outputUnit);
+  AudioComponentInstanceDispose (dev->outputUnit);
 
   if (dev->buffers[0]) {
     FLUID_FREE(dev->buffers[0]);

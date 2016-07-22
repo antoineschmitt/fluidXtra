@@ -48,7 +48,8 @@
 #define SSND_MARKER	(MAKE_MARKER ('S', 'S', 'N', 'D')) 
 #define MARK_MARKER	(MAKE_MARKER ('M', 'A', 'R', 'K')) 
 #define INST_MARKER	(MAKE_MARKER ('I', 'N', 'S', 'T')) 
-#define APPL_MARKER	(MAKE_MARKER ('A', 'P', 'P', 'L')) 
+#define APPL_MARKER	(MAKE_MARKER ('A', 'P', 'P', 'L'))
+#define minf_MARKER	(MAKE_MARKER ('m', 'i', 'n', 'f'))
 
 #define c_MARKER	(MAKE_MARKER ('(', 'c', ')', ' ')) 
 #define NAME_MARKER	(MAKE_MARKER ('N', 'A', 'M', 'E')) 
@@ -118,6 +119,7 @@ int 	__aiff_open_read	(SF_PRIVATE *psf)
 	
 	while (1)
 	{	fread (&marker, sizeof (marker), 1, psf->file) ;
+    __psf_sprintf (psf, "IN MARKER = '%D'\n", marker) ;
 		switch (marker)
 		{	case FORM_MARKER :
 					if (parsestage != 0)
@@ -185,11 +187,12 @@ int 	__aiff_open_read	(SF_PRIVATE *psf)
 						fseek (psf->file, (int) (commsize - (sizeof (dword) + REAL_COMM_SIZE)), SEEK_CUR) ;
 						} ;
 					
-					parsestage = 3 ;
+					//parsestage = 3 ; // chunks can be in any order AS JULY2016
 					break ;
 
 			case SSND_MARKER :
-					if (parsestage != 3)
+      case minf_MARKER :
+					if (parsestage != 2)
 						return SFE_AIFF_NO_SSND ;
 					fread (&dword, sizeof (dword), 1, psf->file) ;
 					psf->datalength = BE2H_INT (dword) - sizeof (SSND_CHUNK) ;
@@ -214,7 +217,7 @@ int 	__aiff_open_read	(SF_PRIVATE *psf)
 					dword = ftell (psf->file) ;
 					if (dword != (off_t) (psf->dataoffset + psf->datalength))
 						__psf_sprintf (psf, "*** fseek past end error ***\n", dword, psf->dataoffset + psf->datalength) ;
-					parsestage = 4 ;
+					//parsestage = 4 ; // chunks can be in any order AS JULY2016
 					break ;
 
 			case NAME_MARKER :
@@ -222,7 +225,7 @@ int 	__aiff_open_read	(SF_PRIVATE *psf)
 			case ANNO_MARKER :
 			case c_MARKER :
 			case FVER_MARKER :
-					if (parsestage < 2)
+					if (parsestage != 2) // chunks can be in any order AS JULY2016
 						return SFE_AIFF_NO_FORM ;
 					fread (&dword, sizeof (dword), 1, psf->file) ;
 					dword = BE2H_INT (dword) ;
@@ -233,7 +236,7 @@ int 	__aiff_open_read	(SF_PRIVATE *psf)
 			case MARK_MARKER :
 			case INST_MARKER :
 			case APPL_MARKER :
-					if (parsestage < 2)
+					if (parsestage != 2) // chunks can be in any order AS JULY2016
 						return SFE_AIFF_NO_FORM ;
 					fread (&dword, sizeof (dword), 1, psf->file) ;
 					dword = BE2H_INT (dword) ;
