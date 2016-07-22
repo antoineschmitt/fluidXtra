@@ -78,9 +78,12 @@ fluid_portaudio_driver_settings (fluid_settings_t *settings)
   int numDevices;
   PaError err;
   int i;
+  char tmp_setting__name[1024];
 
   fluid_settings_register_str (settings, "audio.portaudio.device", PORTAUDIO_DEFAULT_DEVICE, 0, NULL, NULL);
   fluid_settings_add_option (settings, "audio.portaudio.device", PORTAUDIO_DEFAULT_DEVICE);
+  snprintf(tmp_setting__name, sizeof(tmp_setting__name), "audio.portaudio.%s.channels", PORTAUDIO_DEFAULT_DEVICE);
+  fluid_settings_register_int (settings, tmp_setting__name, 2, 0, 32, 0, NULL, NULL);
   fluid_settings_register_int (settings, "audio.portaudio.channelL", 0, 0, 32, 0, NULL, NULL);
   fluid_settings_register_int (settings, "audio.portaudio.channelR", 1, 0, 32, 1, NULL, NULL);
 
@@ -109,7 +112,6 @@ fluid_portaudio_driver_settings (fluid_settings_t *settings)
                                  deviceInfo->name);
 		{
 			int nb_outputs = deviceInfo->maxOutputChannels;
-		  char tmp_setting__name[1024];
 		  snprintf(tmp_setting__name, sizeof(tmp_setting__name), "audio.portaudio.%s.channels", deviceInfo->name);
 		  fluid_settings_register_int (settings, tmp_setting__name, nb_outputs, 0, 32, 0, NULL, NULL);
 		}
@@ -208,7 +210,7 @@ new_fluid_portaudio_driver2 (fluid_settings_t *settings, fluid_audio_func_t func
   dev->chansOpen = 1 + ((dev->chanL > dev->chanR) ? dev->chanL : dev->chanR);
   if (dev->chansOpen > numOutputs) {
     // error
-    FLUID_LOG (FLUID_ERR, "Error setting the output channel. Too big. L=%d, R=%d, max=%d\n", dev->chanL, dev->chanR, numOutputs);
+    FLUID_LOG (FLUID_ERR, "One specified channel is greater than the maximum number of channels: L=%d, R=%d, max=%d\n", dev->chanL, dev->chanR, numOutputs-1);
     goto error_recovery;
   }
   dev->buffer_size = period_size;
