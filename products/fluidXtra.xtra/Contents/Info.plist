@@ -9,19 +9,19 @@
 	<key>CFBundleExecutable</key>
 	<string>fluidXtra</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Antoine Schmitt 6.3.0</string>
+	<string>Antoine Schmitt 6.4.0</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.adobe.xdkexample</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleLongVersionString</key>
-	<string>Antoine Schmitt 6.3.0</string>
+	<string>Antoine Schmitt 6.4.0</string>
 	<key>CFBundleName</key>
 	<string>fluidXtra</string>
 	<key>CFBundlePackageType</key>
 	<string>Xtra</string>
 	<key>CFBundleShortVersionString</key>
-	<string>6.3.0</string>
+	<string>6.4.0</string>
 	<key>CFBundleSignature</key>
 	<string>Xown</string>
 	<key>CFBundleVersion</key>
@@ -43,6 +43,6 @@
 	<key>DTXcodeBuild</key>
 	<string>5B130a</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Antoine Schmitt 6.3.0</string>
+	<string>Antoine Schmitt 6.4.0</string>
 </dict>
 </plist>

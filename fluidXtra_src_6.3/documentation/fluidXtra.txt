@@ -1,5 +1,5 @@
 FluidSynth Xtra Documentation
-Version 6.2 - Oct 2013
+Version 6.4 - Sept 2016
 www.schmittmachine.com/fluidXtra.html
 
 --- Introduction

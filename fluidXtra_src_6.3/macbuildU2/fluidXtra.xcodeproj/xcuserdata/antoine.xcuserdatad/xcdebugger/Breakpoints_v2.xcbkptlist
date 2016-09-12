@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3755"
             endingLineNumber = "3755"
-            landmarkName = "FLUIDXtra_IMoaMmXScript::getSampleFileSamples(PMoaDrCallInfo callPtr)"
+            landmarkName = "FLUIDXtra_IMoaMmXScript::loadSampleMember(PMoaDrCallInfo callPtr)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -111,7 +111,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3771"
             endingLineNumber = "3771"
-            landmarkName = "FLUIDXtra_IMoaMmXScript::getSampleFileSamples(PMoaDrCallInfo callPtr)"
+            landmarkName = "FLUIDXtra_IMoaMmXScript::loadSampleMember(PMoaDrCallInfo callPtr)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -207,7 +207,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "5859"
             endingLineNumber = "5859"
-            landmarkName = "FLUIDXtra_IMoaMmXScript::Call(PMoaMmCallInfo callPtr)"
+            landmarkName = "FLUIDXtra_IMoaMmXScript::scheduleCallback(PMoaDrCallInfo callPtr)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -223,7 +223,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "5858"
             endingLineNumber = "5858"
-            landmarkName = "FLUIDXtra_IMoaMmXScript::Call(PMoaMmCallInfo callPtr)"
+            landmarkName = "FLUIDXtra_IMoaMmXScript::scheduleCallback(PMoaDrCallInfo callPtr)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

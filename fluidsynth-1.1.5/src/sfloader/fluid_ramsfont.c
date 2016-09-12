@@ -811,6 +811,9 @@ fluid_rampreset_remove_izone(fluid_rampreset_t* preset, fluid_sample_t* sample)
 				if (voice->sample == sample) {
 					// uses this sample : turn it off.
 					// our presetvoices struct will be cleaneup at the next update
+          // AS SEPT 16 : added rvoice cleanup, to avoid crashes
+          fluid_voice_unlock_rvoice(voice);
+          fluid_voice_overflow_rvoice_finished(voice);
 					fluid_voice_off(voice);
 				}
 			}
