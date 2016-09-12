@@ -1,26 +1,5 @@
 --- To Do Now fluidsynth ---
 
-- doc : channels.., drivers, devices
-
-- secondary channels :
-	- portaudio/ASIO on windows OK
-	- setting for the maximum number of channels OK
-	- coreaudio Mac OK
-	- API OK
-- Mac deprecated API warning OK
-- Mac fixing the headphone crash (maybe OK, when changed API)
-
-- loadSampleFile error investigate
-	3 different errors. Remember that the file reading is done through the libsndfile library  (http://www.mega-nerd.com/libsndfile/) and that fluidXtra uses an old version of this 
-		- 1_c.aif : correct AIFF file. The libsndfile had a bug. Fixed.
-		- 2_c.wav : it is actually an AIFF file with a .wav extension. Changing the extension to aiff fixed the problem.
-		- the two "Cell phone vibrate.." files are not standard AIFF file. They contain a 'minf' tag, which is a WAV or Quicktime format. Fixed, with a hack in libsndfile.
-
-- better error handling fluidSynth.. OK
-	+getError
-	+getSetting
-
-- getSettingsOptionsList
 
 ----
 
@@ -103,3 +82,26 @@ Plan
 
 20july16
 - partial sound loading OK
+
+- doc : channels.., drivers, devices
+
+- secondary channels :
+	- portaudio/ASIO on windows OK
+	- setting for the maximum number of channels OK
+	- coreaudio Mac OK
+	- API OK
+- Mac deprecated API warning OK
+- Mac fixing the headphone crash (maybe OK, when changed API)
+
+- loadSampleFile error investigate
+	3 different errors. Remember that the file reading is done through the libsndfile library  (http://www.mega-nerd.com/libsndfile/) and that fluidXtra uses an old version of this 
+		- 1_c.aif : correct AIFF file. The libsndfile had a bug. Fixed.
+		- 2_c.wav : it is actually an AIFF file with a .wav extension. Changing the extension to aiff fixed the problem.
+		- the two "Cell phone vibrate.." files are not standard AIFF file. They contain a 'minf' tag, which is a WAV or Quicktime format. Fixed, with a hack in libsndfile.
+
+- better error handling fluidSynth.. OK
+	+getError
+	+getSetting
+
+- getSettingsOptionsList
+

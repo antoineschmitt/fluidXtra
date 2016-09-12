@@ -163,13 +163,68 @@ SoundFont.
 - Channels
 
 According to the MIDI format and protocol, the synthesizer has a fixed
-number of channels. This is the maximum number of presets that may be
+number of MIDI channels. This is the maximum number of presets that may be
 playing at the same time. At all times, one given channel plays at
 most one preset (but can play many notes from this preset). A preset
 is associated to a channel using the 'programChange' function. The
 number of channels of the synthesizer is defined at init time using
 the 'new' function. A given preset may be associated to many
 channels.
+
+- Sound cards, devices, drivers, channels
+
+fluidXtra has one or more drivers available to address sound cards (a.k.a. sound devices).
+For example, the Windows version uses two drivers : the Direct Sound driver
+and the PortAudio driver. The Mac version uses only the CoreAudio driver.
+You can get the list of available drivers using :
+(xtra "fluidsynth").getSettingsOptionsList("audio.driver")
+
+You can choose which driver is used using the setting "audio.driver".
+For example : 
+settings = ["audio.driver":"portaudio"]
+If you do not specify a driver, fluidXtra uses the default driver
+(the first one in the list).
+
+Some drivers like PortAudio and CoreAudio allow access to address additional
+sound cards (sound devices). For example, if you have a secondary sound card
+attached to your computer. If you do not do anything, fluidXtra uses the
+default sound output card (see your system preferences).
+To get the list of sound cards available, use :
+(xtra "fluidsynth").getSettingsOptionsList("audio.portaudio.device") -- Windows
+(xtra "fluidsynth").getSettingsOptionsList("audio.coreaudio.device") -- Mac
+
+In order to force fluidXtra to use another sound card, use the
+audio.portaudio.device setting :
+settings = ["audio.portaudio.device":MYDEVICE]
+Note that MYDEVICE is the name of the device, as returned in the settings option list above. 
+
+Some sound cards have more than two output channels, for multichannel audio
+(for example 4 or 8 output channels, instead of just 2 for a stereo sound card).
+Note that these are NOT MIDI channels (see above), but output channels.
+
+fluidXtra is a stereo sound engine, so it outputs on two channels : Left and Right.
+By default, fluidXtra uses the two first channels of a sound card for Left and Right.
+You can get the number of available output channels of a sound card using :
+(xtra "fluidsynth").getSetting("audio.portaudio."&MYDEVICE&".channels")
+Note that MYDEVICE can contain the '.' character. 
+
+You can ask fluidXtra to use other channels than the first two ones,
+if you use the PortAudio or CoreAudio drivers, using the settings :
+audio.portaudio.channelL and audio.portaudio.channelR -- Windows
+audio.coreaudio.channelL and audio.coreaudio.channelR -- Mac
+The numbering of sound card output channels starts at 0. For example :
+settings = ["audio.portaudio.channelL":0, "audio.portaudio.channelR":1]
+plays on the first two channels (default behavior of fluidXtra)
+settings = ["audio.portaudio.channelL":2, "audio.portaudio.channelR":3]
+plays on the next two channels. The two given channels cannot be the same.
+On Mac, you can create multiple instance of the fluidXtra, each one playing
+on any combination of output channels.
+On Windows, you can only open one fluidXtra instance on a PortAudio driver
+(this comes from a limitation of the ASIO driver, on which PortAudio is built).
+
+So for example : 
+settings = ["audio.driver":"portaudio", "audio.portaudio.device":MYDEVICE, "audio.portaudio.channelL":2, "audio.portaudio.channelR":3]
+opens the portaudio driver, selects the MYDEVICE sound card, and asks fluidXtra to play on channel 2 and 3.
 
 
 -----------------
