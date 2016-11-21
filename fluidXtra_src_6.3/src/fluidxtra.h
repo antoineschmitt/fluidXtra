@@ -135,9 +135,11 @@ EXTERN_BEGIN_DEFINE_CLASS_INSTANCE_VARS(FLUIDXtra)
 	SNDFILE *			pRecFile;
 	int					pRecError;
 	GThread *			pWritingThread;
-	short *				pOutBufShort;
-	short *				pWriteBufShort;
-	int					pWriteBufFrameCount;
+	void *				pTmpConvertBuf;
+	void *				pTmpRecordBuf;
+ 	int					pTmpRecordMaxFrames;
+bool         pRecordFloatsP;
+int         pRecordBytesPerSample;
   MoaMmValue  settingsOptions;
 EXTERN_END_DEFINE_CLASS_INSTANCE_VARS
 

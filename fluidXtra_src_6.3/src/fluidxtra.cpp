@@ -154,10 +154,10 @@ int getDirectorVersion(FLUIDXtra FAR * pObj) {
 	MoaChar			buf[64];
 	int				err;
 
-	if (err = pObj->pCallback->QueryInterface(&IID_IMoaAppInfo, (PPMoaVoid)&pAppInfo))
+	if ((err = pObj->pCallback->QueryInterface(&IID_IMoaAppInfo, (PPMoaVoid)&pAppInfo)))
 		goto exit_gracefully;
 
-	if (err = pAppInfo->GetInfo(kMoaAppInfo_ProductVersion, buf, 64))
+	if ((err = pAppInfo->GetInfo(kMoaAppInfo_ProductVersion, buf, 64)))
 		goto exit_gracefully;
 
 	if (buf[1] == '.') {
@@ -1131,7 +1131,7 @@ FLUIDXtra_IMoaMmXScript::mynew(PMoaDrCallInfo callPtr)
     tmpStr = fluid_settings_getstr_default(settings, "audio.driver");
   pObj->dsoundDriver = (!strcmp(tmpStr, "dsound"));
   if (pObj->dsoundDriver)
-	pObj->adriver = new_fluid_audio_driver(settings, pObj->synth);
+    pObj->adriver = new_fluid_audio_driver(settings, pObj->synth);
   else // portaudio
 	pObj->adriver = new_fluid_audio_driver2(settings, fluid_coreaudio_cb, (void *)this);
 #else
@@ -1341,32 +1341,62 @@ int FLUIDXtra_IMoaMmXScript::_coreaudio_cb(int len, int nin, float** in, int nou
 	// standard stuff
 	int res = fluid_synth_write_float(pObj->synth, len, out[0], 0, 1, out[1], 0, 1);
 
-	if (pObj->isRecordingP && pObj->pFifo && pObj->pOutBufShort) {
+	if (pObj->isRecordingP && pObj->pFifo && pObj->pTmpConvertBuf) {
 		// push to fifo fast
-		// Convert float to short, and interlace
-		int starti = 0, nbFrames;
-		nbFrames = len - starti;
-		if (nbFrames > pObj->pWriteBufFrameCount) nbFrames = pObj->pWriteBufFrameCount;
-		while (nbFrames > 0) {
-			float * left = out[0];
-			float * right = out[1];
-			short * outb = pObj->pOutBufShort;
-			float s;
-			for (int i = 0; i < nbFrames; i++) {
-				
-				s = left[starti+i];
-				if (s > 1.0) s = 1.0; if (s < -1.0) s = -1.0;
-				outb[2*i] = (short)(s*32767.0);
-				
-				s = right[starti+i];
-				if (s > 1.0) s = 1.0; if (s < -1.0) s = -1.0;
-				outb[2*i+1] = (short)(s*32767.0);
-			}
-			pObj->pFifo->queueBytesFrom(pObj->pOutBufShort, nbFrames*2*2);
-			starti += nbFrames;
-			nbFrames = len - starti;
-			if (nbFrames > pObj->pWriteBufFrameCount) nbFrames = pObj->pWriteBufFrameCount;
-		}
+    
+    if (pObj->pRecordFloatsP) {
+      // normalize and interlace to double
+      int starti = 0, nbFrames;
+      nbFrames = len - starti;
+      if (nbFrames > pObj->pTmpRecordMaxFrames) nbFrames = pObj->pTmpRecordMaxFrames;
+      while (nbFrames > 0) {
+        float * left = out[0];
+        float * right = out[1];
+        double * outb = (double *)pObj->pTmpConvertBuf;
+        float s;
+        
+        for (int i = 0; i < nbFrames; i++) {
+          
+          s = left[starti+i];
+          if (s > 1.0) s = 1.0; if (s < -1.0) s = -1.0;
+          outb[2*i] = (double)(s);
+          
+          s = right[starti+i];
+          if (s > 1.0) s = 1.0; if (s < -1.0) s = -1.0;
+          outb[2*i+1] = (double)(s);
+        }
+        pObj->pFifo->queueBytesFrom(pObj->pTmpConvertBuf, nbFrames*2*sizeof(double));
+        starti += nbFrames;
+        nbFrames = len - starti;
+        if (nbFrames > pObj->pTmpRecordMaxFrames) nbFrames = pObj->pTmpRecordMaxFrames;
+      }
+      
+    } else {
+      // Convert float to short, normalize and interlace
+      int starti = 0, nbFrames;
+      nbFrames = len - starti;
+      if (nbFrames > pObj->pTmpRecordMaxFrames) nbFrames = pObj->pTmpRecordMaxFrames;
+      while (nbFrames > 0) {
+        float * left = out[0];
+        float * right = out[1];
+        short * outb = (short *)pObj->pTmpConvertBuf;
+        float s;
+        for (int i = 0; i < nbFrames; i++) {
+          
+          s = left[starti+i];
+          if (s > 1.0) s = 1.0; if (s < -1.0) s = -1.0;
+          outb[2*i] = (short)(s*32767.0);
+          
+          s = right[starti+i];
+          if (s > 1.0) s = 1.0; if (s < -1.0) s = -1.0;
+          outb[2*i+1] = (short)(s*32767.0);
+        }
+        pObj->pFifo->queueBytesFrom(pObj->pTmpConvertBuf, nbFrames*2*sizeof(short));
+        starti += nbFrames;
+        nbFrames = len - starti;
+        if (nbFrames > pObj->pTmpRecordMaxFrames) nbFrames = pObj->pTmpRecordMaxFrames;
+      }
+    }
 	}
 	return res;
 }
@@ -1404,13 +1434,21 @@ void FLUIDXtra_IMoaMmXScript::_recordWriteThread() {
 		
 		if (pObj->pFifo->availableBytes() > 0) {
 			// pump what is possible
-			unsigned int nbFrames = pObj->pWriteBufFrameCount;
+			unsigned int nbFrames = pObj->pTmpRecordMaxFrames;
 			
-			while (pObj->pFifo->unqueueBytesInto(pObj->pWriteBufShort, nbFrames*4) == 0) {
-				if (sf_write_short (pObj->pRecFile, (short *)pObj->pWriteBufShort, nbFrames*2) != nbFrames*2) {
-					errorHere = true;
-					break;
-				}
+			while (pObj->pFifo->unqueueBytesInto(pObj->pTmpRecordBuf, nbFrames*2*pObj->pRecordBytesPerSample) == 0) {
+        if (pObj->pRecordFloatsP) {
+          if (sf_write_double (pObj->pRecFile, (double *)pObj->pTmpRecordBuf, nbFrames*2, true) != nbFrames*2) {
+            errorHere = true;
+            break;
+          }
+        } else {
+          if (sf_write_short (pObj->pRecFile, (short *)pObj->pTmpRecordBuf, nbFrames*2) != nbFrames*2) {
+            errorHere = true;
+            break;
+          }
+        }
+        
 			}
 			
 		}
@@ -1431,15 +1469,20 @@ void FLUIDXtra_IMoaMmXScript::_recordWriteThread() {
 	} else {
 		// stopped because stopped from outside
 		// write all pFifo to file now and leave
-		unsigned int bufBytesCount;
+		unsigned int bufBytesCount = pObj->pTmpRecordMaxFrames*2*pObj->pRecordBytesPerSample;
 		unsigned int bytesCount;
-		bufBytesCount = pObj->pWriteBufFrameCount*4;
+    unsigned int nbSamples;
 		while ((bytesCount = pObj->pFifo->availableBytes()) > 0) {
 			if (bytesCount > bufBytesCount)
 				bytesCount = bufBytesCount;
-			if (pObj->pFifo->unqueueBytesInto(pObj->pWriteBufShort, bytesCount) == 0)
+			if (pObj->pFifo->unqueueBytesInto(pObj->pTmpRecordBuf, bytesCount) == 0)
 				// write to file now
-				sf_write_short (pObj->pRecFile, (short *)pObj->pWriteBufShort, bytesCount/2);
+        nbSamples = bytesCount/pObj->pRecordBytesPerSample;
+        if (pObj->pRecordFloatsP) {
+          sf_write_double (pObj->pRecFile, (double *)pObj->pTmpRecordBuf, nbSamples, true);
+        } else {
+          sf_write_short (pObj->pRecFile, (short *)pObj->pTmpRecordBuf, nbSamples);
+        }
 		}
 	}
 }
@@ -1458,21 +1501,48 @@ FLUIDXtra_IMoaMmXScript::startRecord(PMoaDrCallInfo callPtr)
 	if (_getStringArg(callPtr, 2, (char *)"file", filePath, 1024, true) < 0)
 		return kMoaErr_NoErr;
 	pathHFS2POSIX(filePath, 1024);
-	
+
+  // pRecordFloats a priori
+#ifdef _WIN32
+	if (pObj->dsoundDriver)
+    pObj->pRecordFloatsP = false;
+  else
+    pObj->pRecordFloatsP = true;
+#else
+    pObj->pRecordFloatsP = true;
+#endif
+  if (pObj->pRecordFloatsP) {
+    // check if force shorts
+    MoaLong force16bits = 0;
+    int res = _getIntArg(callPtr, 3, "force16bits", &force16bits, false);
+    if (res == -1)
+      return kMoaErr_NoErr;
+    if (res == 0 && force16bits == 1)
+      pObj->pRecordFloatsP = false;
+  }
+  
+	fluid_settings_t*settings = fluid_synth_get_settings(pObj->synth);
+
 	// Open file
 	SF_INFO	sfinfo ;
 	memset (&sfinfo, 0, sizeof (sfinfo)) ; 	 
 	double synthsamplerate = 44100;
-	fluid_settings_t*settings = fluid_synth_get_settings(pObj->synth);
 	fluid_settings_getnum(settings, "synth.sample-rate", &synthsamplerate);
-	sfinfo.samplerate  = synthsamplerate + 0.5 ; 
-	sfinfo.channels	   = 2 ; 
-	sfinfo.pcmbitwidth = 16 ; 
-	sfinfo.format      = (SF_FORMAT_WAV | SF_FORMAT_PCM) ; 
+	sfinfo.samplerate  = synthsamplerate + 0.5;
+	sfinfo.channels	   = 2;
+  if (pObj->pRecordFloatsP) {
+    sfinfo.format      = (SF_FORMAT_WAV | SF_FORMAT_FLOAT);
+    sfinfo.pcmbitwidth = 32;
+  } else {
+    sfinfo.format      = (SF_FORMAT_WAV | SF_FORMAT_PCM);
+    sfinfo.pcmbitwidth = 16;
+  }
 	
 	fluid_log(FLUID_DBG, "opening record file : %s", filePath);
 	if (! (pObj->pRecFile = sf_open_write (filePath, &sfinfo))) {
-  		fluid_log(FLUID_ERR, "Error opening record file: %s", filePath);
+    char sndFileError[1024];
+    sf_error_str(NULL, sndFileError, 1024);
+    fluid_log(FLUID_ERR, "Error opening record file: %s : %s", filePath, sndFileError);
 		pObj->pMmValue->IntegerToValue(FLUIDXTRAERR_OPENWRITEFILE, &callPtr->resultValue);
 		return kMoaErr_NoErr;
 	}
@@ -1480,23 +1550,26 @@ FLUIDXtra_IMoaMmXScript::startRecord(PMoaDrCallInfo callPtr)
 	// start the record
 	pObj->pRecError = 0;
 	pObj->isRecordingP = 1;
-	
+	pObj->pRecordBytesPerSample = (pObj->pRecordFloatsP ? sizeof(double) : sizeof(short));
+  
 	// start FIFO and write thread
 	// create the FIFO
 	int periods, period_size;
 	fluid_settings_getint(settings, "audio.periods", &periods);
 	fluid_settings_getint(settings, "audio.period-size", &period_size);
-	pObj->pWriteBufFrameCount = period_size*periods;
+	pObj->pTmpRecordMaxFrames = period_size*periods;
 	int nbOutBuffers = 64;
-	pObj->pFifo = new bytesfifo(pObj->pWriteBufFrameCount*2*sizeof(short)*nbOutBuffers, false);
-	pObj->pWriteBufShort = (short *)malloc(pObj->pWriteBufFrameCount*2*sizeof(short));
-	pObj->pOutBufShort = NULL;
+	pObj->pFifo = new bytesfifo(pObj->pTmpRecordMaxFrames*2*pObj->pRecordBytesPerSample*nbOutBuffers, false);
+	pObj->pTmpRecordBuf = malloc(pObj->pTmpRecordMaxFrames*2*pObj->pRecordBytesPerSample);
+	pObj->pTmpConvertBuf = NULL;
 #ifndef _WIN32
-	pObj->pOutBufShort = (short *)malloc(pObj->pWriteBufFrameCount*2*sizeof(short));
+  // CoreAudio
+	pObj->pTmpConvertBuf = (short *)malloc(pObj->pTmpRecordMaxFrames*2*pObj->pRecordBytesPerSample);
 #endif
 #ifdef _WIN32
 	if (!pObj->dsoundDriver)
-		pObj->pOutBufShort = (short *)malloc(pObj->pWriteBufFrameCount*2*sizeof(short));
+    // portaudio/ASIO
+		pObj->pTmpConvertBuf = (short *)malloc(pObj->pTmpRecordMaxFrames*2*pObj->pRecordBytesPerSample);
 #endif
 
 	GError *err = NULL;
@@ -1557,14 +1630,14 @@ _stopRecord(FLUIDXtra FAR * pObj, bool fromWritingThread) {
 		pObj->pWritingThread = NULL;
 	}
 	
-	if (pObj->pWriteBufShort != NULL) {
-		free(pObj->pWriteBufShort);
-		pObj->pWriteBufShort = NULL;
+	if (pObj->pTmpRecordBuf != NULL) {
+		free(pObj->pTmpRecordBuf);
+		pObj->pTmpRecordBuf = NULL;
 	}
 
-	if (pObj->pOutBufShort != NULL) {
-		free(pObj->pOutBufShort);
-		pObj->pOutBufShort = NULL;
+	if (pObj->pTmpConvertBuf != NULL) {
+		free(pObj->pTmpConvertBuf);
+		pObj->pTmpConvertBuf = NULL;
 	}
 
 	if (pObj->pRecFile != NULL) {

@@ -109,7 +109,7 @@ const static char msgTable3[] = {
     "setGenerator object me, int channel, int generator, *\n"
     "getGenerator object me, int channel, int generator\n"
   "-- Recording\n"
-  "startRecord object me, string filepath -- starts recording to filePath\n"
+  "startRecord object me, string filepath, * -- starts recording to filePath\n"
   "stopRecord object me -- stops recording\n"
   "isRecording object me -- returns true if recording\n"
   "-- Utils\n"
