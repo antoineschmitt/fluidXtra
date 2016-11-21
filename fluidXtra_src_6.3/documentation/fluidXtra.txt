@@ -1,5 +1,5 @@
 FluidSynth Xtra Documentation
-Version 6.4 - Sept 2016
+Version 6.5 - Nov 2016
 www.schmittmachine.com/fluidXtra.html
 
 --- Introduction
@@ -79,6 +79,7 @@ Version 6.1 : channel 9 works again as a melodic channel
 Version 6.2 : improved memory management for allowing loading of very large sound files. Improved error reporting related to this.
 Version 6.3 : bug fixes
 Version 6.4 : partial sample file loading, secondary channels, bug fixes 
+Version 6.5 : recording is done in the driver's native format (float or 16bits) by default
 
 --- Technical Requirements
 - Macintosh MacOSX
@@ -1352,13 +1353,16 @@ Resets the synthesizer : stops all sound and resets all the controller values.
 -- Recording
 ---------------------------
 
-startRecord(object me, string soundFile)
+startRecord(object me, string soundFile [,bool force16bits])
 -----------------
 
 ex : fluidObj.startRecord(the moviePath&"record.wav")
+ex : fluidObj.startRecord(the moviePath&"record.wav", true)
 
 Starts recording the output of the synthesizer to a sound file.
-Whatever the name of the soundfile and the platform, the content will be WAV, 16bits, stereo.  The sample rate will be equal to the value of synth.sample-rate.
+Whatever the name of the soundfile and the platform, the content will be WAV, stereo.
+The sample rate will be equal to the value of synth.sample-rate.
+The sample format is by default the same as the driver : float for CoreAudio/portaudio, and 16bits for DirectSound. If the force16bits argument is set to true, recording is done in 16bits even if the driver handles float samples.
 If the soundfile already exists, it is overwritten.
 Records exactly what is sent to the sound output device, until the function stopRecord() is called.
 
